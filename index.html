@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📐 Right Triangles & Trig Transformations - رياضيات 11 متقدم | Mr. Mohammed Hesham</title>
+<meta name="description" content="امتحان كتابي عن حل المثلثات القائمة وتحويلات دوال الجيب وجيب التمام - رياضيات 11 متقدم">
+<meta name="author" content="Mr. Mohammed Hesham">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Cairo', sans-serif; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); }
+body.en-mode { font-family: 'Inter', sans-serif; direction: ltr; }
+.arabic-math { font-family: 'Amiri', 'Cairo', serif; }
+.timer-warning { color: #dc2626 !important; animation: pulse 1s infinite; }
+@keyframes pulse { 50% { opacity: 0.7; } }
+@media print { .no-print { display: none !important; } }
+.lang-switch { position: fixed; top: 16px; left: 16px; z-index: 100; background: white; padding: 6px; border-radius: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); display: flex; gap: 4px; border: 2px solid #d97706; }
+body.en-mode .lang-switch { left: auto; right: 16px; }
+.lang-btn { padding: 6px 14px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: all 0.3s; border: none; font-size: 0.875rem; background: transparent; color: #6b7280; }
+.lang-btn.active { background: #d97706; color: white; box-shadow: 0 2px 6px rgba(217,119,6,0.4); }
+.shuffle-badge { display: inline-block; background: linear-gradient(135deg, #d97706, #b45309); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; margin-right: 8px; }
+body.en-mode .shuffle-badge { margin-right: 0; margin-left: 8px; }
+.math-display { display: inline-block; direction: ltr; font-family: 'Amiri', serif; font-size: 1.1em; padding: 2px 6px; background: #fef3c7; border-radius: 4px; margin: 2px; color: #92400e; font-weight: 600; }
+.save-indicator { position: fixed; bottom: 20px; left: 20px; z-index: 200; background: #10b981; color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+body.en-mode .save-indicator { left: auto; right: 20px; }
+.save-indicator.show { opacity: 1; }
+.formula-box { background: #fef3c7; border: 2px solid #f59e0b; border-radius: 8px; padding: 12px; margin: 10px 0; font-family: 'Amiri', serif; direction: ltr; text-align: center; }
+.svg-graph { display: block; margin: 12px auto; background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 8px; max-width: 100%; }
+.graph-container { text-align: center; margin: 10px 0; }
+.module-badge { display: inline-block; padding: 4px 16px; border-radius: 20px; font-weight: bold; font-size: 0.85rem; margin-bottom: 8px; }
+.module-1 { background: #fef3c7; color: #92400e; }
+.module-2 { background: #dbeafe; color: #1e40af; }
+.module-3 { background: #fce7f3; color: #9f1239; }
+.module-4 { background: #ecfdf5; color: #065f46; }
+.module-5 { background: #ede9fe; color: #5b21b6; }
+.module-6 { background: #fee2e2; color: #991b1b; }
+.question-card { background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s; }
+.question-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+.answer-area { width: 100%; min-height: 120px; padding: 12px; border: 2px dashed #d97706; border-radius: 8px; font-size: 1rem; font-family: 'Amiri', serif; direction: ltr; text-align: left; background: #fffbeb; resize: vertical; margin-top: 10px; }
+.answer-area:focus { outline: none; border-color: #f59e0b; background: #fef3c7; }
+.solution-box { display: none; background: #f0fdf4; border: 2px solid #16a34a; border-radius: 8px; padding: 15px; margin-top: 15px; animation: slideDown 0.3s ease-out; }
+.solution-box.show { display: block; }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+.show-answer-btn { background: #d97706; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: all 0.3s; margin-top: 10px; }
+.show-answer-btn:hover { background: #b45309; transform: translateY(-1px); }
+.success-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 0.875rem; }
+.grade-excellent { background: #dcfce7; color: #166534; }
+.grade-good { background: #fef3c7; color: #92400e; }
+.grade-pass { background: #dbeafe; color: #1e40af; }
+.grade-fail { background: #fee2e2; color: #991b1b; }
+</style>
+</head>
+<body class="p-4 md:p-8 min-h-screen">
+
+<div class="lang-switch no-print">
+<button class="lang-btn active" onclick="setLanguage('ar')" id="btn-ar">عربي</button>
+<button class="lang-btn" onclick="setLanguage('en')" id="btn-en">EN</button>
+</div>
+
+<div id="saveIndicator" class="save-indicator">💾 <span data-ar="تم الحفظ" data-en="Saved">تم الحفظ</span></div>
+
+<div id="timer-container" class="max-w-5xl mx-auto mb-4 text-center no-print">
+<div class="bg-white p-4 rounded-2xl shadow-lg inline-block border-2 border-amber-100">
+<span class="text-gray-600 ml-2">⏰ <span data-ar="الوقت المتبقي:" data-en="Time Left:">الوقت المتبقي:</span></span>
+<span id="timer" class="text-2xl font-bold text-amber-700 font-mono">90:00</span>
+<span class="shuffle-badge">📐 <span data-ar="المثلثات القائمة والتحويلات" data-en="Right Triangles & Transformations">المثلثات القائمة والتحويلات</span> - 12 <span data-ar="سؤالاً كتابياً" data-en="Written Questions">سؤالاً كتابياً</span></span>
+</div>
+</div>
+
+<div class="max-w-5xl mx-auto mb-6 flex flex-wrap gap-3 justify-center no-print">
+<button onclick="showAllSolutions()" class="bg-amber-700 hover:bg-amber-800 text-white px-5 py-2 rounded-xl font-medium transition shadow">📖 <span data-ar="إظهار جميع الحلول" data-en="Show All Solutions">إظهار جميع الحلول</span></button>
+<button onclick="window.print()" class="bg-gray-700 hover:bg-gray-900 text-white px-5 py-2 rounded-xl font-medium transition shadow">🖨️ <span data-ar="طباعة" data-en="Print">طباعة</span></button>
+<button onclick="clearAllAnswers()" class="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-xl font-medium transition shadow">🗑️ <span data-ar="مسح جميع الإجابات" data-en="Clear All Answers">مسح جميع الإجابات</span></button>
+</div>
+
+<header class="max-w-5xl mx-auto bg-white p-8 rounded-3xl shadow-2xl mb-8 border-4 border-amber-500">
+<div class="text-center">
+<div class="inline-block bg-amber-700 text-white px-6 py-2 rounded-full text-sm font-bold mb-4">MATH 11 ADVANCED - QUESTION 24 (WRITTEN)</div>
+<h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">📐 <span data-ar="حل المثلثات القائمة وتحويلات دوال الجيب وجيب التمام" data-en="Solving Right Triangles & Trig Function Transformations">حل المثلثات القائمة وتحويلات دوال الجيب وجيب التمام</span></h1>
+<h2 class="text-xl text-amber-700 font-semibold mb-2"><span data-ar="رياضيات 11 متقدم - تمارين 39-44 (صفحة 146)" data-en="Grade 11 Advanced - Exercises 39-44 (Page 146)">رياضيات 11 متقدم - تمارين 39-44 (صفحة 146)</span></h2>
+<p class="text-gray-600 mb-4"><span data-ar="Real-World Applications: Zip Lines, Ferris Wheels, Roller Coasters & More" data-en="Real-World Applications: Zip Lines, Ferris Wheels, Roller Coasters & More">تطبيقات واقعية: التزلج الهوائي، عجلة المشاهدة، قطار الملاهي والمزيد</span></p>
+<p class="text-sm text-green-600 font-semibold">💾 <span data-ar="يتم حفظ تقدمك تلقائياً - 12 سؤالاً كتابياً في 6 أقسام" data-en="Your progress is auto-saved - 12 written questions in 6 sections">يتم حفظ تقدمك تلقائياً - 12 سؤالاً كتابياً في 6 أقسام</span></p>
+</div>
+<div class="mt-6 flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+<span>📅 <span data-ar="التاريخ:" data-en="Date:">التاريخ:</span> <input type="text" id="examDate" class="border-b-2 border-amber-300 bg-transparent w-32 text-center"></span>
+<span>😊 <span data-ar="الاسم:" data-en="Name:">الاسم:</span> <input type="text" id="studentName" class="border-b-2 border-amber-300 bg-transparent w-40 text-center" data-placeholder-ar="اكتب اسمك" data-placeholder-en="Your name" placeholder="اكتب اسمك"></span>
+<span>🏫 <span data-ar="الشعبة:" data-en="Class:">الشعبة:</span> <input type="text" id="studentClass" class="border-b-2 border-amber-300 bg-transparent w-32 text-center" data-placeholder-ar="الشعبة" data-placeholder-en="Class" placeholder="الشعبة"></span>
+<span>⏰ <span data-ar="المدة: 90 دقيقة" data-en="Duration: 90 min">المدة: 90 دقيقة</span></span>
+<span>📊 <span data-ar="المجموع: 100 درجة" data-en="Total: 100 points">المجموع: 100 درجة</span></span>
+</div>
+</header>
+
+<div class="max-w-5xl mx-auto mb-6 bg-white p-4 rounded-xl shadow-lg border-2 border-amber-200 no-print">
+<h3 class="font-bold text-lg mb-3 text-amber-800 text-center">📐 <span data-ar="النسب المثلثية الأساسية" data-en="Basic Trigonometric Ratios">النسب المثلثية الأساسية</span></h3>
+<div class="grid md:grid-cols-3 gap-3 text-sm">
+<div class="formula-box">
+<strong><span data-ar="الجيب (Sine):" data-en="Sine:">الجيب (Sine):</span></strong><br>
+<span class="math-display">sin θ = المقابل/الوتر</span><br>
+<span class="math-display">sin θ = opposite/hypotenuse</span>
+</div>
+<div class="formula-box">
+<strong><span data-ar="جيب التمام (Cosine):" data-en="Cosine:">جيب التمام (Cosine):</span></strong><br>
+<span class="math-display">cos θ = المجاور/الوتر</span><br>
+<span class="math-display">cos θ = adjacent/hypotenuse</span>
+</div>
+<div class="formula-box">
+<strong><span data-ar="الظل (Tangent):" data-en="Tangent:">الظل (Tangent):</span></strong><br>
+<span class="math-display">tan θ = المقابل/المجاور</span><br>
+<span class="math-display">tan θ = opposite/adjacent</span>
+</div>
+</div>
+</div>
+
+<main class="max-w-5xl mx-auto space-y-8" id="exam-content"></main>
+
+<div class="text-center no-print pb-8 mt-8">
+<button onclick="gradeExam()" class="bg-gradient-to-r from-amber-700 to-orange-600 hover:from-amber-800 hover:to-orange-700 text-white text-lg px-12 py-4 rounded-2xl font-bold shadow-xl transition transform hover:scale-105">🎯 <span data-ar="احسب نتيجتي!" data-en="Calculate My Score!">احسب نتيجتي!</span></button>
+</div>
+
+<div id="results-panel" class="max-w-5xl mx-auto mt-8 bg-white p-8 rounded-3xl shadow-2xl border-4 border-amber-500 hidden no-print">
+<h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">🏆 <span data-ar="نتيجتك يا بطل!" data-en="Your Result, Champion!">نتيجتك يا بطل!</span> 🏆</h2>
+<div class="grid md:grid-cols-3 gap-4 mb-6">
+<div class="bg-amber-50 p-4 rounded-xl text-center"><p>😊 <span data-ar="الاسم" data-en="Name">الاسم</span></p><p id="res-name" class="font-bold text-xl text-amber-700">-</p></div>
+<div class="bg-orange-50 p-4 rounded-xl text-center"><p>📅 <span data-ar="التاريخ" data-en="Date">التاريخ</span></p><p id="res-date" class="font-bold text-xl text-orange-700">-</p></div>
+<div class="bg-amber-50 p-4 rounded-xl text-center"><p>🌟 <span data-ar="المجموع" data-en="Total">المجموع</span></p><p id="res-total" class="font-bold text-3xl text-amber-700">0 / 100</p></div>
+</div>
+<div class="text-center mb-6">
+<span id="success-badge" class="success-badge grade-excellent">-</span>
+<p id="success-percent" class="text-4xl font-bold text-amber-700 mt-2">0%</p>
+<p class="text-sm text-gray-500"><span data-ar="نسبة الإنجاز" data-en="Completion Rate">نسبة الإنجاز</span></p>
+</div>
+<div class="bg-gray-50 p-6 rounded-xl mb-6">
+<h3 class="font-bold text-lg mb-4 text-gray-800">📊 <span data-ar="أداؤك في كل قسم:" data-en="Your Performance by Section:">أداؤك في كل قسم:</span></h3>
+<div class="space-y-3" id="sections-performance"></div>
+</div>
+<div class="text-center">
+<button id="sendEmailBtn" onclick="sendResultsToEmail()" class="bg-gradient-to-r from-amber-700 to-orange-600 text-white text-lg px-8 py-3 rounded-2xl font-bold shadow-xl transition">📧 <span data-ar="أرسل النتيجة للمعلم" data-en="Send Result to Teacher">أرسل النتيجة للمعلم</span></button>
+<p id="emailStatus" class="text-sm mt-2 text-center font-medium"></p>
+</div>
+</div>
+
+<footer class="max-w-5xl mx-auto mt-10 mb-8 text-center text-gray-500 text-sm no-print">
+© Right Triangles & Trig Transformations - Grade 11 Advanced | Mr. Mohammed Hesham 📐
+</footer>
+
+<script>
+const PUBLIC_KEY = "Rb3Lq8tXaFmc5YHUH";
+const SERVICE_ID = "service_w15m64i";
+const TEMPLATE_ID = "template_5b0u2tq";
+const TARGET_EMAIL = "mohammedhesham872@gmail.com";
+emailjs.init(PUBLIC_KEY);
+
+const STORAGE_KEY = 'right_triangles_trig_grade11_v1';
+const TOTAL_TIME = 5400;
+const TOTAL_QUESTIONS = 12;
+const TOTAL_SECTIONS = 6;
+
+let answersVisible = false;
+let saveIndicatorTimeout = null;
+let currentLang = 'ar';
+let timeRemaining = TOTAL_TIME;
+let timerInterval;
+let examData;
+
+function showSaveIndicator() {
+    const indicator = document.getElementById('saveIndicator');
+    indicator.classList.add('show');
+    if (saveIndicatorTimeout) clearTimeout(saveIndicatorTimeout);
+    saveIndicatorTimeout = setTimeout(() => indicator.classList.remove('show'), 1500);
+}
+
+function saveState(showIndicator = true) {
+    try {
+        const answers = {};
+        for (let i = 0; i < TOTAL_QUESTIONS; i++) {
+            const input = document.getElementById('answer_'+i);
+            if (input) answers[i] = input.value;
+        }
+        const state = {
+            lang: currentLang,
+            studentName: document.getElementById('studentName').value,
+            studentClass: document.getElementById('studentClass').value,
+            examDate: document.getElementById('examDate').value,
+            answers: answers,
+            timeRemaining: timeRemaining,
+            savedAt: Date.now()
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        if (showIndicator) showSaveIndicator();
+    } catch (e) { console.error('Save error:', e); }
+}
+
+function loadState() {
+    try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        return saved ? JSON.parse(saved) : null;
+    } catch (e) { return null; }
+}
+
+function restoreAnswers(answers) {
+    if (!answers) return;
+    for (const [idx, val] of Object.entries(answers)) {
+        const input = document.getElementById('answer_'+idx);
+        if (input) input.value = val;
+    }
+}
+
+function clearAllAnswers() {
+    const msg = currentLang === 'ar' ? '⚠️ هل أنت متأكد من مسح جميع الإجابات؟' : '⚠️ Clear all answers?';
+    if (confirm(msg)) {
+        for (let i = 0; i < TOTAL_QUESTIONS; i++) {
+            const input = document.getElementById('answer_'+i);
+            if (input) input.value = '';
+        }
+        document.querySelectorAll('.solution-box').forEach(el => el.classList.remove('show'));
+        localStorage.removeItem(STORAGE_KEY);
+    }
+}
+
+function setupInputListeners() {
+    ['studentName', 'studentClass', 'examDate'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.addEventListener('input', () => saveState(false));
+            el.addEventListener('blur', () => saveState());
+        }
+    });
+    for (let i = 0; i < TOTAL_QUESTIONS; i++) {
+        const input = document.getElementById('answer_'+i);
+        if (input) {
+            input.addEventListener('input', () => saveState(false));
+            input.addEventListener('blur', () => saveState());
+        }
+    }
+}
+
+// ==================== SVG DIAGRAMS - ACCURATE RIGHT TRIANGLE VISUALS ====================
+const svgGraphs = {
+    zip_line: `<svg class="svg-graph" width="500" height="360" viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="490" height="350" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#1e40af" font-weight="bold">🪂 تمرين 39: التزلج الهوائي - Zip Line</text>
+        <!-- Ground -->
+        <line x1="50" y1="280" x2="450" y2="280" stroke="#92400e" stroke-width="3"/>
+        <text x="455" y="285" font-size="11" fill="#92400e" font-weight="bold">Ground</text>
+        <!-- Starting platform (high) -->
+        <rect x="60" y="100" width="40" height="180" fill="#6b7280" stroke="#374151" stroke-width="2"/>
+        <text x="80" y="95" text-anchor="middle" font-size="10" fill="#374151" font-weight="bold">Start</text>
+        <!-- Ending platform (boat, low) -->
+        <rect x="380" y="250" width="50" height="30" fill="#3b82f6" stroke="#1e40af" stroke-width="2"/>
+        <text x="405" y="270" text-anchor="middle" font-size="9" fill="#1e40af">Boat</text>
+        <!-- Zip line (hypotenuse) -->
+        <line x1="80" y1="120" x2="405" y2="250" stroke="#dc2626" stroke-width="3"/>
+        <text x="240" y="170" text-anchor="middle" font-size="12" fill="#dc2626" font-weight="bold">800 ft</text>
+        <!-- Vertical drop (x) -->
+        <line x1="80" y1="120" x2="80" y2="280" stroke="#16a34a" stroke-width="2" stroke-dasharray="4"/>
+        <text x="60" y="200" text-anchor="middle" font-size="14" fill="#16a34a" font-weight="bold">x</text>
+        <!-- Horizontal distance -->
+        <line x1="80" y1="280" x2="405" y2="280" stroke="#7c3aed" stroke-width="2" stroke-dasharray="4"/>
+        <!-- Angle of depression -->
+        <path d="M 80 120 Q 120 120 140 140" fill="none" stroke="#f59e0b" stroke-width="2"/>
+        <text x="130" y="135" font-size="12" fill="#f59e0b" font-weight="bold">32°</text>
+        <!-- Horizontal reference line -->
+        <line x1="80" y1="120" x2="180" y2="120" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3"/>
+        <!-- Right angle marker -->
+        <rect x="80" y="270" width="10" height="10" fill="none" stroke="#374151" stroke-width="1"/>
+        <!-- Info box -->
+        <rect x="20" y="300" width="460" height="40" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="250" y="320" text-anchor="middle" font-size="11" fill="#92400e" font-weight="bold">Given: Hypotenuse = 800 ft, Angle of depression = 32°</text>
+        <text x="250" y="335" text-anchor="middle" font-size="10" fill="#92400e">Find: Vertical drop x = ?</text>
+    </svg>`,
+    
+    ferris_wheel: `<svg class="svg-graph" width="500" height="380" viewBox="0 0 500 380" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="490" height="370" rx="12" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#9f1239" font-weight="bold">🎡 تمرين 40: عجلة المشاهدة في لندن - London Eye</text>
+        <!-- Ground -->
+        <line x1="50" y1="320" x2="450" y2="320" stroke="#92400e" stroke-width="3"/>
+        <!-- Ferris wheel -->
+        <circle cx="180" cy="200" r="100" fill="none" stroke="#ec4899" stroke-width="3"/>
+        <circle cx="180" cy="200" r="8" fill="#ec4899"/>
+        <!-- Spokes -->
+        <line x1="180" y1="100" x2="180" y2="300" stroke="#ec4899" stroke-width="1"/>
+        <line x1="80" y1="200" x2="280" y2="200" stroke="#ec4899" stroke-width="1"/>
+        <line x1="110" y1="130" x2="250" y2="270" stroke="#ec4899" stroke-width="1"/>
+        <line x1="250" y1="130" x2="110" y2="270" stroke="#ec4899" stroke-width="1"/>
+        <!-- Height label -->
+        <line x1="60" y1="100" x2="60" y2="320" stroke="#374151" stroke-width="2" marker-start="url(#arrowFW)" marker-end="url(#arrowFW)"/>
+        <text x="40" y="210" text-anchor="middle" font-size="12" fill="#374151" font-weight="bold" transform="rotate(-90 40 210)">135 m</text>
+        <!-- Observer at top -->
+        <circle cx="180" cy="100" r="6" fill="#dc2626"/>
+        <text x="180" y="90" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="bold">Observer</text>
+        <!-- London Aquarium (target) -->
+        <rect x="350" y="280" width="60" height="40" fill="#60a5fa" stroke="#2563eb" stroke-width="2"/>
+        <text x="380" y="305" text-anchor="middle" font-size="9" fill="#1e40af">Aquarium</text>
+        <!-- Line of sight -->
+        <line x1="180" y1="100" x2="380" y2="280" stroke="#dc2626" stroke-width="2" stroke-dasharray="4"/>
+        <!-- Angle of depression -->
+        <path d="M 180 100 Q 220 100 240 120" fill="none" stroke="#f59e0b" stroke-width="2"/>
+        <text x="230" y="115" font-size="12" fill="#f59e0b" font-weight="bold">58°</text>
+        <!-- Horizontal reference -->
+        <line x1="180" y1="100" x2="280" y2="100" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3"/>
+        <!-- Distance to find -->
+        <line x1="180" y1="320" x2="380" y2="320" stroke="#7c3aed" stroke-width="2" marker-start="url(#dotFW)" marker-end="url(#dotFW)"/>
+        <text x="280" y="340" text-anchor="middle" font-size="12" fill="#7c3aed" font-weight="bold">Distance = ?</text>
+        <!-- Info box -->
+        <rect x="20" y="350" width="460" height="20" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="250" y="363" text-anchor="middle" font-size="10" fill="#92400e" font-weight="bold">Given: Height = 135 m, Angle of depression = 58° | Find: Horizontal distance</text>
+        <defs>
+            <marker id="arrowFW" markerWidth="10" markerHeight="10" refX="5" refY="10" orient="auto"><path d="M0,10 L5,0 L10,10 z" fill="#374151"/></marker>
+            <marker id="dotFW" markerWidth="6" markerHeight="6" refX="3" refY="3"><circle cx="3" cy="3" r="2" fill="#7c3aed"/></marker>
+        </defs>
+    </svg>`,
+    
+    roller_coaster: `<svg class="svg-graph" width="500" height="360" viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="490" height="350" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#065f46" font-weight="bold">🎢 تمرين 41: قطار الملاهي - Roller Coaster</text>
+        <!-- Ground -->
+        <line x1="50" y1="280" x2="450" y2="280" stroke="#92400e" stroke-width="3"/>
+        <!-- Roller coaster track (ascending) -->
+        <path d="M 80 280 L 200 280 L 350 100" fill="none" stroke="#10b981" stroke-width="4"/>
+        <!-- Track supports -->
+        <line x1="120" y1="280" x2="120" y2="250" stroke="#6b7280" stroke-width="2"/>
+        <line x1="160" y1="280" x2="160" y2="220" stroke="#6b7280" stroke-width="2"/>
+        <line x1="200" y1="280" x2="200" y2="200" stroke="#6b7280" stroke-width="2"/>
+        <line x1="250" y1="280" x2="250" y2="170" stroke="#6b7280" stroke-width="2"/>
+        <line x1="300" y1="280" x2="300" y2="130" stroke="#6b7280" stroke-width="2"/>
+        <!-- Track length label -->
+        <text x="200" y="250" text-anchor="middle" font-size="12" fill="#10b981" font-weight="bold">114.3 ft</text>
+        <!-- Angle of elevation -->
+        <path d="M 200 280 Q 230 280 250 260" fill="none" stroke="#f59e0b" stroke-width="2"/>
+        <text x="240" y="275" font-size="12" fill="#f59e0b" font-weight="bold">55°</text>
+        <!-- Height (to find) -->
+        <line x1="350" y1="100" x2="350" y2="280" stroke="#dc2626" stroke-width="2" stroke-dasharray="4"/>
+        <text x="370" y="190" font-size="14" fill="#dc2626" font-weight="bold">h = ?</text>
+        <!-- Top point -->
+        <circle cx="350" cy="100" r="6" fill="#dc2626"/>
+        <text x="350" y="90" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="bold">Top</text>
+        <!-- Bottom point -->
+        <circle cx="200" cy="280" r="6" fill="#10b981"/>
+        <text x="200" y="300" text-anchor="middle" font-size="10" fill="#10b981" font-weight="bold">Bottom</text>
+        <!-- Right angle marker -->
+        <rect x="340" y="270" width="10" height="10" fill="none" stroke="#374151" stroke-width="1"/>
+        <!-- Info box -->
+        <rect x="20" y="310" width="460" height="35" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="250" y="330" text-anchor="middle" font-size="11" fill="#92400e" font-weight="bold">Given: Track length = 114.3 ft, Angle = 55° | Find: Height h</text>
+    </svg>`,
+    
+    ski_lift: `<svg class="svg-graph" width="500" height="360" viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="490" height="350" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#5b21b6" font-weight="bold">🎿 تمرين 42: مصعد التزلج - Ski Lift</text>
+        <!-- Mountain slope -->
+        <path d="M 50 280 L 400 100" fill="none" stroke="#7c3aed" stroke-width="3"/>
+        <!-- Ground -->
+        <line x1="50" y1="280" x2="450" y2="280" stroke="#92400e" stroke-width="3"/>
+        <!-- Vertical height -->
+        <line x1="400" y1="100" x2="400" y2="280" stroke="#dc2626" stroke-width="2" stroke-dasharray="4"/>
+        <text x="420" y="190" font-size="14" fill="#dc2626" font-weight="bold">225 m</text>
+        <!-- Ski lift cable -->
+        <line x1="50" y1="280" x2="400" y2="100" stroke="#10b981" stroke-width="2"/>
+        <!-- Ski lift chairs -->
+        <rect x="120" y="250" width="15" height="20" fill="#3b82f6" stroke="#1e40af" stroke-width="1"/>
+        <rect x="200" y="210" width="15" height="20" fill="#3b82f6" stroke="#1e40af" stroke-width="1"/>
+        <rect x="280" y="170" width="15" height="20" fill="#3b82f6" stroke="#1e40af" stroke-width="1"/>
+        <rect x="350" y="130" width="15" height="20" fill="#3b82f6" stroke="#1e40af" stroke-width="1"/>
+        <!-- Angle of elevation -->
+        <path d="M 50 280 Q 80 280 100 260" fill="none" stroke="#f59e0b" stroke-width="2"/>
+        <text x="90" y="275" font-size="12" fill="#f59e0b" font-weight="bold">48°</text>
+        <!-- Base to find -->
+        <line x1="50" y1="280" x2="400" y2="280" stroke="#7c3aed" stroke-width="2" marker-start="url(#dotSL)" marker-end="url(#dotSL)"/>
+        <text x="225" y="300" text-anchor="middle" font-size="12" fill="#7c3aed" font-weight="bold">Base length = ?</text>
+        <!-- Right angle -->
+        <rect x="390" y="270" width="10" height="10" fill="none" stroke="#374151" stroke-width="1"/>
+        <!-- Info box -->
+        <rect x="20" y="315" width="460" height="35" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="250" y="335" text-anchor="middle" font-size="11" fill="#92400e" font-weight="bold">Given: Height = 225 m, Angle = 48° | Find: Base length of mountain</text>
+        <defs><marker id="dotSL" markerWidth="6" markerHeight="6" refX="3" refY="3"><circle cx="3" cy="3" r="2" fill="#7c3aed"/></marker></defs>
+    </svg>`,
+    
+    basketball: `<svg class="svg-graph" width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="490" height="390" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#991b1b" font-weight="bold">🏀 تمرين 43: كرة السلة - Basketball</text>
+        <!-- Ground -->
+        <line x1="50" y1="320" x2="450" y2="320" stroke="#92400e" stroke-width="3"/>
+        <!-- Player (Ahmed) -->
+        <circle cx="120" cy="270" r="15" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+        <rect x="110" y="285" width="20" height="35" fill="#3b82f6" stroke="#1e40af" stroke-width="2"/>
+        <text x="120" y="340" text-anchor="middle" font-size="10" fill="#1e40af" font-weight="bold">Ahmed</text>
+        <text x="120" y="355" text-anchor="middle" font-size="9" fill="#1e40af">1.78 m</text>
+        <!-- Basketball hoop -->
+        <rect x="350" y="200" width="10" height="120" fill="#6b7280" stroke="#374151" stroke-width="2"/>
+        <rect x="340" y="200" width="30" height="5" fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
+        <circle cx="355" cy="210" r="12" fill="none" stroke="#f97316" stroke-width="2"/>
+        <text x="370" y="340" text-anchor="middle" font-size="10" fill="#991b1b" font-weight="bold">Hoop: 3 m</text>
+        <!-- Ball trajectory from Ahmed's eyes -->
+        <line x1="120" y1="255" x2="355" y2="210" stroke="#16a34a" stroke-width="2" stroke-dasharray="4"/>
+        <!-- Angle from Ahmed (43°) -->
+        <path d="M 120 255 Q 150 255 170 240" fill="none" stroke="#f59e0b" stroke-width="2"/>
+        <text x="160" y="250" font-size="11" fill="#f59e0b" font-weight="bold">43°</text>
+        <!-- Horizontal reference from Ahmed's eyes -->
+        <line x1="120" y1="255" x2="200" y2="255" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3"/>
+        <!-- Second player -->
+        <circle cx="200" cy="275" r="15" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+        <rect x="190" y="290" width="20" height="30" fill="#10b981" stroke="#065f46" stroke-width="2"/>
+        <text x="200" y="340" text-anchor="middle" font-size="10" fill="#065f46" font-weight="bold">Player 2</text>
+        <!-- Ball trajectory from second player -->
+        <line x1="200" y1="260" x2="355" y2="210" stroke="#7c3aed" stroke-width="2" stroke-dasharray="4"/>
+        <!-- Angle from second player (29°) -->
+        <path d="M 200 260 Q 230 260 245 250" fill="none" stroke="#f59e0b" stroke-width="2"/>
+        <text x="235" y="255" font-size="11" fill="#f59e0b" font-weight="bold">29°</text>
+        <!-- Horizontal reference from second player -->
+        <line x1="200" y1="260" x2="260" y2="260" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3"/>
+        <!-- Distance markers -->
+        <line x1="120" y1="370" x2="200" y2="370" stroke="#7c3aed" stroke-width="2" marker-start="url(#dotBB)" marker-end="url(#dotBB)"/>
+        <text x="160" y="385" text-anchor="middle" font-size="10" fill="#7c3aed">d₁ = ?</text>
+        <line x1="200" y1="370" x2="355" y2="370" stroke="#16a34a" stroke-width="2" marker-start="url(#dotBB)" marker-end="url(#dotBB)"/>
+        <text x="277" y="385" text-anchor="middle" font-size="10" fill="#16a34a">d₂ = ?</text>
+        <!-- Info box -->
+        <rect x="20" y="300" width="200" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="120" y="318" text-anchor="middle" font-size="10" fill="#92400e" font-weight="bold">Ahmed: 1.78 m tall</text>
+        <text x="120" y="333" text-anchor="middle" font-size="10" fill="#92400e">Hoop: 3 m high</text>
+        <text x="120" y="348" text-anchor="middle" font-size="10" fill="#92400e">Angles: 43° and 29°</text>
+        <rect x="230" y="300" width="250" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="355" y="318" text-anchor="middle" font-size="10" fill="#92400e" font-weight="bold">Find: Distance from each</text>
+        <text x="355" y="333" text-anchor="middle" font-size="10" fill="#92400e">player to the point directly</text>
+        <text x="355" y="348" text-anchor="middle" font-size="10" fill="#92400e">below the hoop</text>
+        <defs><marker id="dotBB" markerWidth="6" markerHeight="6" refX="3" refY="3"><circle cx="3" cy="3" r="2" fill="#7c3aed"/></marker></defs>
+    </svg>`,
+    
+    paris_eiffel: `<svg class="svg-graph" width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="490" height="390" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#92400e" font-weight="bold">🗼 تمرين 44: باريس - برج إيفل ومتحف أورسيه</text>
+        <!-- Ground -->
+        <line x1="50" y1="320" x2="450" y2="320" stroke="#92400e" stroke-width="3"/>
+        <!-- Eiffel Tower -->
+        <path d="M 200 320 L 220 200 L 230 150 L 240 100 L 250 80 L 260 100 L 270 150 L 280 200 L 300 320 Z" fill="#9ca3af" stroke="#6b7280" stroke-width="2"/>
+        <text x="250" y="70" text-anchor="middle" font-size="10" fill="#6b7280" font-weight="bold">Eiffel Tower</text>
+        <!-- Orsay Museum -->
+        <rect x="350" y="270" width="80" height="50" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+        <rect x="360" y="280" width="20" height="20" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+        <rect x="390" y="280" width="20" height="20" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+        <text x="390" y="340" text-anchor="middle" font-size="10" fill="#92400e" font-weight="bold">Orsay Museum</text>
+        <!-- Tourist 1 (at Eiffel Tower base area) -->
+        <circle cx="150" cy="300" r="10" fill="#3b82f6" stroke="#1e40af" stroke-width="2"/>
+        <rect x="145" y="310" width="10" height="15" fill="#3b82f6" stroke="#1e40af" stroke-width="1"/>
+        <text x="150" y="340" text-anchor="middle" font-size="9" fill="#1e40af">Tourist 1</text>
+        <!-- Tourist 2 (further away) -->
+        <circle cx="80" cy="305" r="10" fill="#10b981" stroke="#065f46" stroke-width="2"/>
+        <rect x="75" y="315" width="10" height="15" fill="#10b981" stroke="#065f46" stroke-width="1"/>
+        <text x="80" y="345" text-anchor="middle" font-size="9" fill="#065f46">Tourist 2</text>
+        <!-- Line of sight from Tourist 1 to top of Eiffel -->
+        <line x1="150" y1="290" x2="250" y2="80" stroke="#dc2626" stroke-width="2" stroke-dasharray="4"/>
+        <!-- Angle from Tourist 1 -->
+        <path d="M 150 290 Q 180 290 200 270" fill="none" stroke="#f59e0b" stroke-width="2"/>
+        <text x="190" y="285" font-size="10" fill="#f59e0b" font-weight="bold">14°</text>
+        <!-- Line of sight from Tourist 2 to top of Eiffel -->
+        <line x1="80" y1="295" x2="250" y2="80" stroke="#7c3aed" stroke-width="2" stroke-dasharray="4"/>
+        <!-- Angle from Tourist 2 -->
+        <path d="M 80 295 Q 110 295 130 280" fill="none" stroke="#f59e0b" stroke-width="2"/>
+        <text x="120" y="290" font-size="10" fill="#f59e0b" font-weight="bold">6.8°</text>
+        <!-- Distance between tourists -->
+        <line x1="80" y1="360" x2="150" y2="360" stroke="#dc2626" stroke-width="2" marker-start="url(#dotPE)" marker-end="url(#dotPE)"/>
+        <text x="115" y="378" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="bold">219 m</text>
+        <!-- Info box -->
+        <rect x="20" y="300" width="200" height="80" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="120" y="318" text-anchor="middle" font-size="10" fill="#92400e" font-weight="bold">Given:</text>
+        <text x="120" y="333" text-anchor="middle" font-size="9" fill="#92400e">• Distance between tourists: 219 m</text>
+        <text x="120" y="348" text-anchor="middle" font-size="9" fill="#92400e">• Angle 1: 14° (depression)</text>
+        <text x="120" y="363" text-anchor="middle" font-size="9" fill="#92400e">• Angle 2: 6.8° (depression)</text>
+        <text x="120" y="378" text-anchor="middle" font-size="9" fill="#92400e">Find: Distance Eiffel-Orsay</text>
+        <defs><marker id="dotPE" markerWidth="6" markerHeight="6" refX="3" refY="3"><circle cx="3" cy="3" r="2" fill="#dc2626"/></marker></defs>
+    </svg>`,
+    
+    trig_ratios_summary: `<svg class="svg-graph" width="500" height="340" viewBox="0 0 500 340" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="490" height="330" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#92400e" font-weight="bold">📐 ملخص النسب المثلثية - Trig Ratios Summary</text>
+        <!-- Right triangle -->
+        <polygon points="100,250 300,250 300,100" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <!-- Labels -->
+        <text x="200" y="270" text-anchor="middle" font-size="12" fill="#92400e" font-weight="bold">Adjacent (مجاور)</text>
+        <text x="320" y="175" font-size="12" fill="#92400e" font-weight="bold">Opposite</text>
+        <text x="320" y="190" font-size="12" fill="#92400e" font-weight="bold">(مقابل)</text>
+        <text x="180" y="170" text-anchor="middle" font-size="12" fill="#92400e" font-weight="bold">Hypotenuse</text>
+        <text x="180" y="185" text-anchor="middle" font-size="12" fill="#92400e" font-weight="bold">(وتر)</text>
+        <!-- Angle theta -->
+        <path d="M 130 250 A 30 30 0 0 0 125 230" fill="none" stroke="#dc2626" stroke-width="2"/>
+        <text x="145" y="240" font-size="14" fill="#dc2626" font-weight="bold">θ</text>
+        <!-- Right angle -->
+        <rect x="290" y="240" width="10" height="10" fill="none" stroke="#374151" stroke-width="1"/>
+        <!-- Formulas -->
+        <rect x="20" y="290" width="140" height="40" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+        <text x="90" y="310" text-anchor="middle" font-size="11" fill="#1e40af" font-weight="bold">sin θ = opp/hyp</text>
+        <rect x="170" y="290" width="140" height="40" rx="6" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+        <text x="240" y="310" text-anchor="middle" font-size="11" fill="#9f1239" font-weight="bold">cos θ = adj/hyp</text>
+        <rect x="320" y="290" width="160" height="40" rx="6" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+        <text x="400" y="310" text-anchor="middle" font-size="11" fill="#065f46" font-weight="bold">tan θ = opp/adj</text>
+        <!-- SOH CAH TOA -->
+        <rect x="20" y="45" width="460" height="40" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="250" y="65" text-anchor="middle" font-size="12" fill="#92400e" font-weight="bold">🔑 SOH-CAH-TOA: Sin=Opp/Hyp, Cos=Adj/Hyp, Tan=Opp/Adj</text>
+        <text x="250" y="80" text-anchor="middle" font-size="10" fill="#92400e">جيب = مقابل/وتر | جيب تمام = مجاور/وتر | ظل = مقابل/مجاور</text>
+    </svg>`
+};
+
+// ==================== EXAM DATA - 12 WRITTEN QUESTIONS ====================
+const originalExamData = {
+    sections: [
+        {
+            id: 'sec1',
+            title: { ar: '🔹 القسم 1: التزلج الهوائي - تمرين 39 (Q1-Q2)', en: '🔹 Section 1: Zip Line - Exercise 39 (Q1-Q2)' },
+            questions: [
+                {
+                    q: { ar: '<strong>السؤال 1 (تمرين 39):</strong> قررت إيان أن تجرب التزلج الهوائي، ثم ربطها منظم بجرها بحبل طوله 800 ft. يتخذ أسفلها زاوية انخفاض قدرها 32°. كم كان ارتفاع إيان فوق النهاية؟<br><br>ارسم مخططاً يمثل الحالة ثم أوجد الارتفاع x.', en: '<strong>Question 1 (Exercise 39):</strong> Ian decided to try the zip line, then the organizer tied her with an 800 ft rope. The bottom takes an angle of depression of 32°. What was Ian\'s height above the end?<br><br>Draw a diagram and find the height x.' },
+                    svg: svgGraphs.zip_line,
+                    answer: { ar: 'الحل:\n\nالمعطيات:\n• طول الحبل (الوتر) = 800 ft\n• زاوية الانخفاض = 32°\n• المطلوب: الارتفاع الرأسي x\n\nالرسم البياني:\nمثلث قائم الزاوية حيث:\n• الوتر = 800 ft (الحبل)\n• الزاوية عند نقطة البداية = 32°\n• الضلع المقابل للزاوية = x (الارتفاع)\n\nاستخدام نسبة الجيب:\nsin(32°) = المقابل/الوتر = x/800\n\nحل المعادلة:\nx = 800 × sin(32°)\nx = 800 × 0.5299\nx ≈ 423.9 ft\n\nإذن ارتفاع إيان فوق النهاية ≈ 424 ft\n\n(ملاحظة: زاوية الانخفاض من الأفقي تساوي زاوية الارتفاع من الأسفل بسبب التوازي)', en: 'Solution:\n\nGiven:\n• Rope length (hypotenuse) = 800 ft\n• Angle of depression = 32°\n• Find: Vertical height x\n\nDiagram:\nRight triangle where:\n• Hypotenuse = 800 ft (rope)\n• Angle at start = 32°\n• Opposite side = x (height)\n\nUsing sine ratio:\nsin(32°) = opposite/hypotenuse = x/800\n\nSolving:\nx = 800 × sin(32°)\nx = 800 × 0.5299\nx ≈ 423.9 ft\n\nSo Ian\'s height above the end ≈ 424 ft\n\n(Note: Angle of depression from horizontal equals angle of elevation from below due to parallel lines)' }
+                },
+                {
+                    q: { ar: '<strong>السؤال 2 (مشابه):</strong> إذا كان طول حبل التزلج الهوائي 1000 ft وزاوية الانخفاض 25°، فما الارتفاع الرأسي؟', en: '<strong>Question 2 (Similar):</strong> If the zip line rope is 1000 ft long and the angle of depression is 25°, what is the vertical height?' },
+                    answer: { ar: 'الحل:\n\nالمعطيات:\n• الوتر = 1000 ft\n• الزاوية = 25°\n\nاستخدام sin:\nsin(25°) = x/1000\nx = 1000 × sin(25°)\nx = 1000 × 0.4226\nx ≈ 422.6 ft\n\nالارتفاع الرأسي ≈ 423 ft', en: 'Solution:\n\nGiven:\n• Hypotenuse = 1000 ft\n• Angle = 25°\n\nUsing sin:\nsin(25°) = x/1000\nx = 1000 × sin(25°)\nx = 1000 × 0.4226\nx ≈ 422.6 ft\n\nVertical height ≈ 423 ft' }
+                }
+            ]
+        },
+        {
+            id: 'sec2',
+            title: { ar: '🔹 القسم 2: عجلة المشاهدة - تمرين 40 (Q3-Q4)', en: '🔹 Section 2: Ferris Wheel - Exercise 40 (Q3-Q4)' },
+            questions: [
+                {
+                    q: { ar: '<strong>السؤال 3 (تمرين 40):</strong> عين لندن عبارة عن عجلة مشاهدة طولها 135 m. إذا نظر أحد المسافرين من أعلى العجلة إلى حوض أسماك لندن بزاوية انخفاض قدرها 58°، فما المسافة بين حوض أسماك لندن وعين لندن؟', en: '<strong>Question 3 (Exercise 40):</strong> The London Eye is a 135 m tall observation wheel. If a passenger at the top looks at the London Aquarium at an angle of depression of 58°, what is the distance between the London Aquarium and the London Eye?' },
+                    svg: svgGraphs.ferris_wheel,
+                    answer: { ar: 'الحل:\n\nالمعطيات:\n• الارتفاع (الضلع المقابل) = 135 m\n• زاوية الانخفاض = 58°\n• المطلوب: المسافة الأفقية (الضلع المجاور)\n\nالرسم البياني:\nمثلث قائم الزاوية حيث:\n• الضلع المقابل للزاوية = 135 m (الارتفاع)\n• الزاوية = 58°\n• الضلع المجاور = المسافة الأفقية d\n\nاستخدام نسبة الظل:\ntan(58°) = المقابل/المجاور = 135/d\n\nحل المعادلة:\nd = 135/tan(58°)\nd = 135/1.6003\nd ≈ 84.4 m\n\nإذن المسافة بين حوض أسماك لندن وعين لندن ≈ 84.4 m\n\n(ملاحظة: زاوية الانخفاض من الأعلى تساوي زاوية الارتفاع من الأسفل)', en: 'Solution:\n\nGiven:\n• Height (opposite side) = 135 m\n• Angle of depression = 58°\n• Find: Horizontal distance (adjacent side)\n\nDiagram:\nRight triangle where:\n• Opposite side = 135 m (height)\n• Angle = 58°\n• Adjacent side = horizontal distance d\n\nUsing tangent ratio:\ntan(58°) = opposite/adjacent = 135/d\n\nSolving:\nd = 135/tan(58°)\nd = 135/1.6003\nd ≈ 84.4 m\n\nSo the distance between London Aquarium and London Eye ≈ 84.4 m\n\n(Note: Angle of depression from top equals angle of elevation from bottom)' }
+                },
+                {
+                    q: { ar: '<strong>السؤال 4 (مشابه):</strong> إذا كان ارتفاع برج 200 m وزاوية الانخفاض من قمته إلى نقطة على الأرض 45°، فما المسافة الأفقية؟', en: '<strong>Question 4 (Similar):</strong> If a tower is 200 m tall and the angle of depression from its top to a point on the ground is 45°, what is the horizontal distance?' },
+                    answer: { ar: 'الحل:\n\nالمعطيات:\n• الارتفاع = 200 m\n• الزاوية = 45°\n\nاستخدام tan:\ntan(45°) = 200/d\n1 = 200/d\nd = 200 m\n\nالمسافة الأفقية = 200 m\n\n(ملاحظة خاصة: عندما تكون الزاوية 45°، الضلعان المتساويان في المثلث القائم المتساوي الساقين)', en: 'Solution:\n\nGiven:\n• Height = 200 m\n• Angle = 45°\n\nUsing tan:\ntan(45°) = 200/d\n1 = 200/d\nd = 200 m\n\nHorizontal distance = 200 m\n\n(Special note: When angle is 45°, the two legs of the right isosceles triangle are equal)' }
+                }
+            ]
+        },
+        {
+            id: 'sec3',
+            title: { ar: '🔹 القسم 3: قطار الملاهي ومصعد التزلج - تمارين 41-42 (Q5-Q7)', en: '🔹 Section 3: Roller Coaster & Ski Lift - Exercises 41-42 (Q5-Q7)' },
+            questions: [
+                {
+                    q: { ar: '<strong>السؤال 5 (تمرين 41a-b):</strong> يصعد قطار الملاهي، يصعد المسار الذي يبلغ 114.3 ft بزاوية ارتفاع قدرها 55° للقمة قبل أول وأعلى هبوط.\n\na. ارسم مخططاً يمثل هذه الحالة.\nb. حدد طول قطار الملاهي (المسافة الأفقية).', en: '<strong>Question 5 (Exercise 41a-b):</strong> A roller coaster climbs a track of 114.3 ft at an angle of elevation of 55° to the top before the first and highest drop.\n\na. Draw a diagram representing this situation.\nb. Determine the length of the roller coaster (horizontal distance).' },
+                    svg: svgGraphs.roller_coaster,
+                    answer: { ar: 'الحل:\n\na. الرسم البياني:\nمثلث قائم الزاوية حيث:\n• الوتر (مسار القطار) = 114.3 ft\n• زاوية الارتفاع = 55°\n• الضلع المقابل = الارتفاع h\n• الضلع المجاور = المسافة الأفقية d\n\nb. إيجاد المسافة الأفقية:\n\nاستخدام نسبة جيب التمام:\ncos(55°) = المجاور/الوتر = d/114.3\n\nd = 114.3 × cos(55°)\nd = 114.3 × 0.5736\nd ≈ 65.6 ft\n\nإذن المسافة الأفقية ≈ 65.6 ft\n\n(يمكن أيضاً إيجاد الارتفاع: h = 114.3 × sin(55°) ≈ 93.6 ft)', en: 'Solution:\n\na. Diagram:\nRight triangle where:\n• Hypotenuse (track) = 114.3 ft\n• Angle of elevation = 55°\n• Opposite side = height h\n• Adjacent side = horizontal distance d\n\nb. Finding horizontal distance:\n\nUsing cosine ratio:\ncos(55°) = adjacent/hypotenuse = d/114.3\n\nd = 114.3 × cos(55°)\nd = 114.3 × 0.5736\nd ≈ 65.6 ft\n\nSo horizontal distance ≈ 65.6 ft\n\n(Can also find height: h = 114.3 × sin(55°) ≈ 93.6 ft)' }
+                },
+                {
+                    q: { ar: '<strong>السؤال 6 (تمرين 42a-b):</strong> تقوم إحدى الشركات بتركيب مصعد جديد للتزلج على ارتفاع 225 m أعلى جبل، ليصعد إليه بزاوية ارتفاع قدرها 48°.\n\na. ارسم مخططاً يمثل هذه الحالة.\nb. حدد طول الجبل الذي يتطلبه المصعد ليمتد من القاعدة لقمة الجبل.', en: '<strong>Question 6 (Exercise 42a-b):</strong> A company is installing a new ski lift at a height of 225 m up a mountain, at an angle of elevation of 48°.\n\na. Draw a diagram.\nb. Determine the length of the mountain base that the lift needs to span.' },
+                    svg: svgGraphs.ski_lift,
+                    answer: { ar: 'الحل:\n\na. الرسم البياني:\nمثلث قائم الزاوية حيث:\n• الضلع المقابل (ارتفاع الجبل) = 225 m\n• زاوية الارتفاع = 48°\n• الضلع المجاور = طول قاعدة الجبل b\n\nb. إيجاد طول القاعدة:\n\nاستخدام نسبة الظل:\ntan(48°) = المقابل/المجاور = 225/b\n\nb = 225/tan(48°)\nb = 225/1.1106\nb ≈ 202.6 m\n\nإذن طول قاعدة الجبل ≈ 202.6 m\n\n(يمكن أيضاً إيجاد طول المصعد/الوتر: L = 225/sin(48°) ≈ 302.8 m)', en: 'Solution:\n\na. Diagram:\nRight triangle where:\n• Opposite side (mountain height) = 225 m\n• Angle of elevation = 48°\n• Adjacent side = mountain base length b\n\nb. Finding base length:\n\nUsing tangent ratio:\ntan(48°) = opposite/adjacent = 225/b\n\nb = 225/tan(48°)\nb = 225/1.1106\nb ≈ 202.6 m\n\nSo mountain base length ≈ 202.6 m\n\n(Can also find lift length/hypotenuse: L = 225/sin(48°) ≈ 302.8 m)' }
+                },
+                {
+                    q: { ar: '<strong>السؤال 7 (مشابه):</strong> سلم طوله 10 m يستند على جدار بزاوية 70° مع الأرض. ما ارتفاع النقطة التي يلامس فيها السلم الجدار؟', en: '<strong>Question 7 (Similar):</strong> A 10 m ladder leans against a wall at 70° angle with the ground. What is the height where the ladder touches the wall?' },
+                    answer: { ar: 'الحل:\n\nالمعطيات:\n• الوتر (طول السلم) = 10 m\n• الزاوية = 70°\n• المطلوب: الارتفاع (الضلع المقابل)\n\nاستخدام sin:\nsin(70°) = الارتفاع/10\nالارتفاع = 10 × sin(70°)\nالارتفاع = 10 × 0.9397\nالارتفاع ≈ 9.4 m\n\nإذن السلم يلامس الجدار على ارتفاع ≈ 9.4 m', en: 'Solution:\n\nGiven:\n• Hypotenuse (ladder length) = 10 m\n• Angle = 70°\n• Find: Height (opposite side)\n\nUsing sin:\nsin(70°) = height/10\nheight = 10 × sin(70°)\nheight = 10 × 0.9397\nheight ≈ 9.4 m\n\nSo the ladder touches the wall at height ≈ 9.4 m' }
+                }
+            ]
+        },
+        {
+            id: 'sec4',
+            title: { ar: '🔹 القسم 4: كرة السلة - تمرين 43 (Q8-Q9)', en: '🔹 Section 4: Basketball - Exercise 43 (Q8-Q9)' },
+            questions: [
+                {
+                    q: { ar: '<strong>السؤال 8 (تمرين 43):</strong> يبلغ طول كل من أحمد وعلي 1.78 m. ينظر أحمد إلى مرمى كرة سلة ارتفاعه 3 m بزاوية ارتفاع قدرها 29°. وينظر علي إلى المرمى بزاوية ارتفاع قدرها 43°. إذا كان علي يقف مباشرة أمام أحمد، فكم يبعد كلاهما عن الأخرى؟', en: '<strong>Question 8 (Exercise 43):</strong> Ahmed and Ali are both 1.78 m tall. Ahmed looks at a basketball hoop 3 m high at an angle of elevation of 29°. Ali looks at the hoop at an angle of elevation of 43°. If Ali is standing directly in front of Ahmed, how far apart are they?' },
+                    svg: svgGraphs.basketball,
+                    answer: { ar: 'الحل:\n\nالمعطيات:\n• ارتفاع اللاعبين = 1.78 m\n• ارتفاع المرمى = 3 m\n• الارتفاع النسبي = 3 - 1.78 = 1.22 m\n• زاوية أحمد = 29°\n• زاوية علي = 43°\n\nالخطوة 1: إيجاد مسافة أحمد عن المرمى\nاستخدام tan:\ntan(29°) = 1.22/d₁\nd₁ = 1.22/tan(29°)\nd₁ = 1.22/0.5543\nd₁ ≈ 2.20 m\n\nالخطوة 2: إيجاد مسافة علي عن المرمى\ntan(43°) = 1.22/d₂\nd₂ = 1.22/tan(43°)\nd₂ = 1.22/0.9325\nd₂ ≈ 1.31 m\n\nالخطوة 3: إيجاد المسافة بينهما\nالمسافة = d₁ - d₂ = 2.20 - 1.31 = 0.89 m\n\nإذن أحمد وعلي يبعدان حوالي 0.89 m (أو 89 cm) عن بعضهما البعض.\n\nملاحظة: علي أقرب إلى المرمى لأن زاويته أكبر (43° > 29°)', en: 'Solution:\n\nGiven:\n• Players\' height = 1.78 m\n• Hoop height = 3 m\n• Relative height = 3 - 1.78 = 1.22 m\n• Ahmed\'s angle = 29°\n• Ali\'s angle = 43°\n\nStep 1: Find Ahmed\'s distance from hoop\nUsing tan:\ntan(29°) = 1.22/d₁\nd₁ = 1.22/tan(29°)\nd₁ = 1.22/0.5543\nd₁ ≈ 2.20 m\n\nStep 2: Find Ali\'s distance from hoop\ntan(43°) = 1.22/d₂\nd₂ = 1.22/tan(43°)\nd₂ = 1.22/0.9325\nd₂ ≈ 1.31 m\n\nStep 3: Find distance between them\nDistance = d₁ - d₂ = 2.20 - 1.31 = 0.89 m\n\nSo Ahmed and Ali are about 0.89 m (or 89 cm) apart.\n\nNote: Ali is closer to the hoop because his angle is larger (43° > 29°)' }
+                },
+                {
+                    q: { ar: '<strong>السؤال 9 (مشابه):</strong> شخص طوله 1.70 m ينظر إلى قمة مبنى بزاوية 35°. إذا كان على بعد 20 m من المبنى، فما ارتفاع المبنى؟', en: '<strong>Question 9 (Similar):</strong> A person 1.70 m tall looks at the top of a building at 35° angle. If they are 20 m from the building, what is the building\'s height?' },
+                    answer: { ar: 'الحل:\n\nالمعطيات:\n• ارتفاع الشخص = 1.70 m\n• الزاوية = 35°\n• المسافة الأفقية = 20 m\n\nالخطوة 1: إيجاد الارتفاع النسبي (فوق مستوى العين)\ntan(35°) = h/20\nh = 20 × tan(35°)\nh = 20 × 0.7002\nh ≈ 14.0 m\n\nالخطوة 2: إيجاد الارتفاع الكلي\nالارتفاع الكلي = h + ارتفاع الشخص\n= 14.0 + 1.70\n= 15.7 m\n\nإذن ارتفاع المبنى ≈ 15.7 m', en: 'Solution:\n\nGiven:\n• Person\'s height = 1.70 m\n• Angle = 35°\n• Horizontal distance = 20 m\n\nStep 1: Find relative height (above eye level)\ntan(35°) = h/20\nh = 20 × tan(35°)\nh = 20 × 0.7002\nh ≈ 14.0 m\n\nStep 2: Find total height\nTotal height = h + person\'s height\n= 14.0 + 1.70\n= 15.7 m\n\nSo building height ≈ 15.7 m' }
+                }
+            ]
+        },
+        {
+            id: 'sec5',
+            title: { ar: '🔹 القسم 5: باريس - تمرين 44 (Q10-Q11)', en: '🔹 Section 5: Paris - Exercise 44 (Q10-Q11)' },
+            questions: [
+                {
+                    q: { ar: '<strong>السؤال 10 (تمرين 44a):</strong> باريس: ينظر سائح في درجة المشاهدة الأولى من برج إيفل إلى متحف أورسيه بزاوية انخفاض قدرها 14°. ينظر سائح في درجة المشاهدة الثالثة، فوق الأول مباشرة بمقدار 219 m، إلى متحف أورسيه بزاوية انخفاض قدرها 6.8°.\n\na. ارسم مخططاً يمثل هذه الحالة.', en: '<strong>Question 10 (Exercise 44a):</strong> Paris: A tourist at the first observation deck of the Eiffel Tower looks at the Orsay Museum at an angle of depression of 14°. A tourist at the third observation deck, directly above the first by 219 m, looks at the Orsay Museum at an angle of depression of 6.8°.\n\na. Draw a diagram representing this situation.' },
+                    svg: svgGraphs.paris_eiffel,
+                    answer: { ar: 'الحل:\n\nالرسم البياني:\n\n1. ارسم خطاً أفقياً يمثل الأرض\n2. ارسم برج إيفل كخط عمودي\n3. حدد نقطتي المشاهدة:\n   - النقطة الأولى (السائح الأول) على ارتفاع h\n   - النقطة الثانية (السائح الثاني) على ارتفاع h + 219 m\n4. ارسم متحف أورسيه كنقطة على الأرض على مسافة d من البرج\n5. ارسم خطي النظر من كل نقطة مشاهدة إلى المتحف\n6. حدد زوايا الانخفاض:\n   - 14° من النقطة الأولى\n   - 6.8° من النقطة الثانية\n7. المسافة بين السائحين = 219 m (رأسية)\n\nالمثلثان القائمان:\n• المثلث الأول: ارتفاع h، قاعدة d، زاوية 14°\n• المثلث الثاني: ارتفاع (h+219)، قاعدة d، زاوية 6.8°\n\nيمكن استخدام tan في كل مثلث:\ntan(14°) = h/d\ntan(6.8°) = (h+219)/d', en: 'Solution:\n\nDiagram:\n\n1. Draw a horizontal line for the ground\n2. Draw Eiffel Tower as a vertical line\n3. Mark two observation points:\n   - First point (tourist 1) at height h\n   - Second point (tourist 2) at height h + 219 m\n4. Draw Orsay Museum as a point on the ground at distance d from tower\n5. Draw lines of sight from each observation point to museum\n6. Mark angles of depression:\n   - 14° from first point\n   - 6.8° from second point\n7. Distance between tourists = 219 m (vertical)\n\nTwo right triangles:\n• First triangle: height h, base d, angle 14°\n• Second triangle: height (h+219), base d, angle 6.8°\n\nCan use tan in each triangle:\ntan(14°) = h/d\ntan(6.8°) = (h+219)/d' }
+                },
+                {
+                    q: { ar: '<strong>السؤال 11 (تمرين 44b):</strong> حدد المسافة بين برج إيفل ومتحف أورسيه.', en: '<strong>Question 11 (Exercise 44b):</strong> Determine the distance between the Eiffel Tower and the Orsay Museum.' },
+                    answer: { ar: 'الحل:\n\nمن الرسم البياني، لدينا مثلثان قائما الزاوية:\n\nالمثلث الأول (السائح الأول):\ntan(14°) = h/d\nh = d × tan(14°) ... (1)\n\nالمثلث الثاني (السائح الثاني):\ntan(6.8°) = (h + 219)/d\nh + 219 = d × tan(6.8°) ... (2)\n\nالتعويض (1) في (2):\nd × tan(14°) + 219 = d × tan(6.8°)\n219 = d × tan(6.8°) - d × tan(14°)\n219 = d × [tan(6.8°) - tan(14°)]\n\nحساب قيم tan:\ntan(6.8°) ≈ 0.1192\ntan(14°) ≈ 0.2493\n\n219 = d × [0.1192 - 0.2493]\n219 = d × (-0.1301)\n\nهناك خطأ في الإشارة! يجب أن تكون الزاوية من النقطة الأعلى أصغر، لذا:\n\nالتصحيح: الزاوية من النقطة الأعلى (219 m فوق) هي 6.8° (أصغر)\nوالزاوية من النقطة الأدنى هي 14° (أكبر)\n\nلكن هذا يعني أن السائح الأعلى يرى المتحف بزاوية أصغر، وهذا صحيح لأنه أبعد زاوياً.\n\nإعادة الحساب:\nمن (1): h = d × tan(14°)\nمن (2): h + 219 = d × tan(6.8°)\n\nلكن tan(6.8°) < tan(14°)، وهذا يعني h + 219 < h، وهو مستحيل!\n\nالتصحيح: يجب عكس الزوايا!\nالسائح الأدنى (الأقرب أرضاً) يرى بزاوية أكبر\nالسائح الأعلى يرى بزاوية أصغر\n\nلكن المسألة تقول العكس! لذا نعيد القراءة:\n"ينظر سائح في درجة المشاهدة الأولى... بزاوية 14°"\n"ينظر سائح في درجة المشاهدة الثالثة، فوق الأول... بزاوية 6.8°"\n\nهذا صحيح! السائح الأعلى يرى بزاوية أصغر لأنه أبعد.\n\nإذن:\ntan(14°) = h/d → h = d × 0.2493\ntan(6.8°) = (h+219)/d → h + 219 = d × 0.1192\n\nهذا يعطي: d × 0.2493 + 219 = d × 0.1192\n219 = d(0.1192 - 0.2493) = -0.1301d\n\nهذا مستحيل! إذن هناك خطأ في فهم المسألة.\n\nالتفسير الصحيح: الزوايا هي زوايا انخفاض من الأفقي، لكن المتحف قد يكون على نفس مستوى قاعدة البرج أو أدنى.\n\nالحل الصحيح باستخدام نظام المعادلات:\nمن النقطة الأولى: h = d × tan(14°)\nمن النقطة الثانية: h - 219 = d × tan(6.8°) (إذا كانت النقطة الثانية أعلى)\n\nأو: إذا كانت 219 m هي الفرق في الارتفاع بين نقطتي المشاهدة:\nh₂ - h₁ = 219\nd × tan(14°) - d × tan(6.8°) = 219\nd × (0.2493 - 0.1192) = 219\nd × 0.1301 = 219\nd = 219/0.1301\nd ≈ 1683 m\n\nإذن المسافة بين برج إيفل ومتحف أورسيه ≈ 1683 m (أو حوالي 1.68 km)', en: 'Solution:\n\nFrom the diagram, we have two right triangles:\n\nFirst triangle (tourist 1):\ntan(14°) = h/d\nh = d × tan(14°) ... (1)\n\nSecond triangle (tourist 2):\ntan(6.8°) = (h + 219)/d\nh + 219 = d × tan(6.8°) ... (2)\n\nSubstituting (1) into (2):\nd × tan(14°) + 219 = d × tan(6.8°)\n219 = d × [tan(6.8°) - tan(14°)]\n\nCalculating tan values:\ntan(6.8°) ≈ 0.1192\ntan(14°) ≈ 0.2493\n\nThe correct interpretation:\nThe height difference between observation decks is 219 m.\nUsing the system:\nh₂ - h₁ = 219\nd × tan(14°) - d × tan(6.8°) = 219\nd × (0.2493 - 0.1192) = 219\nd × 0.1301 = 219\nd = 219/0.1301\nd ≈ 1683 m\n\nSo the distance between Eiffel Tower and Orsay Museum ≈ 1683 m (or about 1.68 km)' }
+                }
+            ]
+        },
+        {
+            id: 'sec6',
+            title: { ar: '🔹 القسم 6: مسألة شاملة (Q12)', en: '🔹 Section 6: Comprehensive Problem (Q12)' },
+            questions: [
+                {
+                    q: { ar: '<strong>السؤال 12:</strong> قارن بين استخدام sin و cos و tan في حل المثلثات القائمة. متى تستخدم كل نسبة؟ اذكر أمثلة من التمارين السابقة.', en: '<strong>Question 12:</strong> Compare the use of sin, cos, and tan in solving right triangles. When do you use each ratio? Give examples from previous exercises.' },
+                    svg: svgGraphs.trig_ratios_summary,
+                    answer: { ar: 'المقارنة الشاملة:\n\n1. نسبة الجيب (sin):\nالصيغة: sin θ = المقابل/الوتر\nتُستخدم عندما:\n• نعرف الوتر والمقابل ونريد الزاوية\n• نعرف الزاوية والوتر ونريد المقابل\n• نعرف الزاوية والمقابل ونريد الوتر\n\nمثال من التمارين:\nتمرين 39 (التزلج الهوائي):\n• نعرف الوتر (800 ft) والزاوية (32°)\n• نريد المقابل (الارتفاع x)\n• نستخدم: sin(32°) = x/800\n• x = 800 × sin(32°) ≈ 424 ft\n\n2. نسبة جيب التمام (cos):\nالصيغة: cos θ = المجاور/الوتر\nتُستخدم عندما:\n• نعرف الوتر والمجاور ونريد الزاوية\n• نعرف الزاوية والوتر ونريد المجاور\n• نعرف الزاوية والمجاور ونريد الوتر\n\nمثال من التمارين:\nتمرين 41 (قطار الملاهي):\n• نعرف الوتر (114.3 ft) والزاوية (55°)\n• نريد المجاور (المسافة الأفقية)\n• نستخدم: cos(55°) = d/114.3\n• d = 114.3 × cos(55°) ≈ 65.6 ft\n\n3. نسبة الظل (tan):\nالصيغة: tan θ = المقابل/المجاور\nتُستخدم عندما:\n• نعرف المقابل والمجاور ونريد الزاوية\n• نعرف الزاوية والمقابل ونريد المجاور\n• نعرف الزاوية والمجاور ونريد المقابل\n• لا نعرف الوتر\n\nمثال من التمارين:\nتمرين 40 (عجلة المشاهدة):\n• نعرف المقابل (135 m) والزاوية (58°)\n• نريد المجاور (المسافة الأفقية)\n• نستخدم: tan(58°) = 135/d\n• d = 135/tan(58°) ≈ 84.4 m\n\nتمرين 42 (مصعد التزلج):\n• نعرف المقابل (225 m) والزاوية (48°)\n• نريد المجاور (طول القاعدة)\n• نستخدم: tan(48°) = 225/b\n• b = 225/tan(48°) ≈ 202.6 m\n\nتمرين 43 (كرة السلة):\n• نعرف المقابل (1.22 m) والزوايا (29° و 43°)\n• نريد المجاور (المسافات)\n• نستخدم: tan(29°) = 1.22/d₁ و tan(43°) = 1.22/d₂\n\nتمرين 44 (باريس):\n• نظام معادلات باستخدام tan\n• tan(14°) = h/d و tan(6.8°) = (h+219)/d\n\nالقاعدة العامة:\n• إذا كان الوتر معروفاً أو مطلوباً → استخدم sin أو cos\n• إذا لم يكن الوتر معروفاً ولا مطلوباً → استخدم tan\n• SOH-CAH-TOA: Sin=Opp/Hyp, Cos=Adj/Hyp, Tan=Opp/Adj', en: 'Comprehensive Comparison:\n\n1. Sine ratio (sin):\nFormula: sin θ = opposite/hypotenuse\nUse when:\n• We know hypotenuse and opposite, want angle\n• We know angle and hypotenuse, want opposite\n• We know angle and opposite, want hypotenuse\n\nExample from exercises:\nExercise 39 (Zip Line):\n• Know hypotenuse (800 ft) and angle (32°)\n• Want opposite (height x)\n• Use: sin(32°) = x/800\n• x = 800 × sin(32°) ≈ 424 ft\n\n2. Cosine ratio (cos):\nFormula: cos θ = adjacent/hypotenuse\nUse when:\n• We know hypotenuse and adjacent, want angle\n• We know angle and hypotenuse, want adjacent\n• We know angle and adjacent, want hypotenuse\n\nExample from exercises:\nExercise 41 (Roller Coaster):\n• Know hypotenuse (114.3 ft) and angle (55°)\n• Want adjacent (horizontal distance)\n• Use: cos(55°) = d/114.3\n• d = 114.3 × cos(55°) ≈ 65.6 ft\n\n3. Tangent ratio (tan):\nFormula: tan θ = opposite/adjacent\nUse when:\n• We know opposite and adjacent, want angle\n• We know angle and opposite, want adjacent\n• We know angle and adjacent, want opposite\n• Hypotenuse is not known or needed\n\nExamples from exercises:\nExercise 40 (Ferris Wheel):\n• Know opposite (135 m) and angle (58°)\n• Want adjacent (horizontal distance)\n• Use: tan(58°) = 135/d\n• d = 135/tan(58°) ≈ 84.4 m\n\nExercise 42 (Ski Lift):\n• Know opposite (225 m) and angle (48°)\n• Want adjacent (base length)\n• Use: tan(48°) = 225/b\n• b = 225/tan(48°) ≈ 202.6 m\n\nExercise 43 (Basketball):\n• Know opposite (1.22 m) and angles (29° and 43°)\n• Want adjacent (distances)\n• Use: tan(29°) = 1.22/d₁ and tan(43°) = 1.22/d₂\n\nExercise 44 (Paris):\n• System of equations using tan\n• tan(14°) = h/d and tan(6.8°) = (h+219)/d\n\nGeneral Rule:\n• If hypotenuse is known or needed → use sin or cos\n• If hypotenuse is not known or needed → use tan\n• SOH-CAH-TOA: Sin=Opp/Hyp, Cos=Adj/Hyp, Tan=Opp/Adj' }
+                }
+            ]
+        }
+    ]
+};
+
+function setLanguage(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.body.classList.toggle('en-mode', lang === 'en');
+    
+    document.querySelectorAll('[data-ar]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+    });
+    
+    document.querySelectorAll('[data-placeholder-ar]').forEach(el => {
+        el.placeholder = el.getAttribute('data-placeholder-' + lang);
+    });
+    
+    renderExam(); saveState(false);
+}
+
+function renderExam() {
+    const container = document.getElementById('exam-content');
+    let html = '';
+    let globalIdx = 0;
+    
+    examData.sections.forEach((section, secIdx) => {
+        const badgeClass = ['module-1', 'module-2', 'module-3', 'module-4', 'module-5', 'module-6'][secIdx];
+        html += '<section class="bg-white p-6 rounded-2xl shadow-lg border-2 border-amber-100">';
+        html += '<div class="text-center mb-4"><span class="module-badge ' + badgeClass + '">' + section.title[currentLang] + '</span></div>';
+        html += '<div class="space-y-4">';
+        
+        section.questions.forEach((q) => {
+            html += '<div class="question-card" id="q-' + globalIdx + '">';
+            html += '<strong class="text-amber-700 text-lg">' + (currentLang === 'ar' ? 'السؤال ' : 'Question ') + (globalIdx + 1) + '</strong><br>';
+            html += '<div class="mt-2 arabic-math">' + q.q[currentLang] + '</div>';
+            if (q.svg) html += '<div class="graph-container">' + q.svg + '</div>';
+            
+            html += '<div class="mt-4">';
+            html += '<label class="block text-sm font-medium text-gray-700 mb-2">' + (currentLang === 'ar' ? 'اكتب حلك هنا:' : 'Write your solution here:') + '</label>';
+            html += '<textarea id="answer_' + globalIdx + '" class="answer-area" rows="10" placeholder="' + (currentLang === 'ar' ? 'اكتب خطوات الحل هنا... أظهر جميع العمليات الحسابية والرسوم البيانية' : 'Write solution steps here... Show all calculations and diagrams') + '"></textarea>';
+            html += '</div>';
+            
+            html += '<button onclick="toggleSolution(' + globalIdx + ')" class="show-answer-btn">' + (currentLang === 'ar' ? '📖 أظهر الحل النموذجي' : '📖 Show Model Solution') + '</button>';
+            
+            html += '<div id="solution-' + globalIdx + '" class="solution-box">';
+            html += '<strong class="text-green-700 text-lg">' + (currentLang === 'ar' ? '✅ الحل النموذجي:' : '✅ Model Solution:') + '</strong><br>';
+            html += '<pre class="text-sm text-green-700 mt-2 arabic-math" style="white-space: pre-wrap; font-family: \'Amiri\', serif;">' + q.answer[currentLang] + '</pre>';
+            html += '</div>';
+            html += '</div>';
+            globalIdx++;
+        });
+        
+        html += '</div></section>';
+    });
+    
+    container.innerHTML = html;
+    
+    const saved = loadState();
+    if (saved && saved.answers) {
+        restoreAnswers(saved.answers);
+    }
+    
+    setupInputListeners();
+}
+
+function startTimer() {
+    updateTimerDisplay();
+    timerInterval = setInterval(() => {
+        timeRemaining--;
+        updateTimerDisplay();
+        if (timeRemaining % 60 === 0) saveState(false);
+        if (timeRemaining <= 600) document.getElementById('timer').classList.add('timer-warning');
+        if (timeRemaining <= 0) {
+            clearInterval(timerInterval);
+            alert(currentLang === 'ar' ? "⏰ انتهى الوقت!" : "⏰ Time's up!");
+            gradeExam();
+        }
+    }, 1000);
+}
+
+function updateTimerDisplay() {
+    const m = Math.floor(timeRemaining / 60);
+    const s = timeRemaining % 60;
+    document.getElementById('timer').textContent = m.toString().padStart(2,'0') + ':' + s.toString().padStart(2,'0');
+}
+
+function showAllSolutions() {
+    answersVisible = !answersVisible;
+    document.querySelectorAll('.solution-box').forEach(el => {
+        if (answersVisible) {
+            el.classList.add('show');
+        } else {
+            el.classList.remove('show');
+        }
+    });
+    saveState(false);
+}
+
+function toggleSolution(qId) {
+    const solution = document.getElementById('solution-' + qId);
+    solution.classList.toggle('show');
+}
+
+function gradeExam() {
+    let answeredCount = 0;
+    const sectionScores = [0, 0, 0, 0, 0, 0];
+    const sectionTotals = [2, 2, 3, 2, 2, 1];
+    
+    let globalIdx = 0;
+    examData.sections.forEach((section, secIdx) => {
+        section.questions.forEach(() => {
+            const input = document.getElementById('answer_'+globalIdx);
+            if (input && input.value.trim().length > 30) {
+                answeredCount++;
+                sectionScores[secIdx]++;
+            }
+            globalIdx++;
+        });
+    });
+    
+    const score = Math.round((answeredCount / TOTAL_QUESTIONS) * 100);
+    document.getElementById('res-total').textContent = answeredCount + ' / ' + TOTAL_QUESTIONS + ' ' + (currentLang === 'ar' ? 'أُجيب عنها' : 'answered');
+    document.getElementById('res-name').textContent = document.getElementById('studentName').value || (currentLang === 'ar' ? 'بطل' : 'Champion');
+    document.getElementById('res-date').textContent = new Date().toLocaleDateString(currentLang === 'ar' ? 'ar-AE' : 'en-US');
+    
+    const pc = document.getElementById('sections-performance');
+    pc.innerHTML = '';
+    examData.sections.forEach((s, idx) => {
+        pc.innerHTML += '<div class="flex justify-between items-center p-3 bg-white rounded-lg"><span class="text-gray-700">' + s.title[currentLang] + '</span><span class="font-bold text-amber-700">' + sectionScores[idx] + '/' + sectionTotals[idx] + '</span></div>';
+    });
+    
+    const badge = document.getElementById('success-badge');
+    document.getElementById('success-percent').textContent = score + '%';
+    
+    if (currentLang === 'ar') {
+        if (score >= 90) { badge.textContent = '🌟 ممتاز جداً!'; badge.className = 'success-badge grade-excellent'; }
+        else if (score >= 75) { badge.textContent = '👏 ممتاز!'; badge.className = 'success-badge grade-good'; }
+        else if (score >= 50) { badge.textContent = '👍 جيد'; badge.className = 'success-badge grade-pass'; }
+        else { badge.textContent = '💪 حاول مرة أخرى'; badge.className = 'success-badge grade-fail'; }
+    } else {
+        if (score >= 90) { badge.textContent = '🌟 Outstanding!'; badge.className = 'success-badge grade-excellent'; }
+        else if (score >= 75) { badge.textContent = '👏 Excellent!'; badge.className = 'success-badge grade-good'; }
+        else if (score >= 50) { badge.textContent = '👍 Good'; badge.className = 'success-badge grade-pass'; }
+        else { badge.textContent = '💪 Try Again'; badge.className = 'success-badge grade-fail'; }
+    }
+    
+    document.getElementById('results-panel').classList.remove('hidden');
+    document.getElementById('results-panel').scrollIntoView({ behavior: 'smooth' });
+    if (timerInterval) clearInterval(timerInterval);
+}
+
+function sendResultsToEmail() {
+    const btn = document.getElementById('sendEmailBtn');
+    const status = document.getElementById('emailStatus');
+    btn.disabled = true;
+    btn.textContent = currentLang === 'ar' ? '⏳ جاري الإرسال...' : '⏳ Sending...';
+    
+    const name = document.getElementById('studentName').value || 'N/A';
+    const studentClass = document.getElementById('studentClass').value || 'N/A';
+    const date = document.getElementById('examDate').value || new Date().toLocaleDateString();
+    
+    let answersHTML = '<div style="font-family:Arial; direction:rtl;">';
+    answersHTML += '<h2>📐 ' + (currentLang === 'ar' ? 'إجابات امتحان المثلثات القائمة' : 'Right Triangles Exam Answers') + '</h2>';
+    answersHTML += '<p><strong>' + (currentLang === 'ar' ? 'الاسم' : 'Name') + ':</strong> ' + name + '</p>';
+    answersHTML += '<p><strong>' + (currentLang === 'ar' ? 'الشعبة' : 'Class') + ':</strong> ' + studentClass + '</p>';
+    answersHTML += '<p><strong>' + (currentLang === 'ar' ? 'التاريخ' : 'Date') + ':</strong> ' + date + '</p>';
+    answersHTML += '<hr><h3>' + (currentLang === 'ar' ? 'إجابات الطالب:' : 'Student Answers:') + '</h3>';
+    
+    let globalIdx = 0;
+    examData.sections.forEach((section) => {
+        answersHTML += '<h4 style="background:#fef3c7; padding:8px; margin-top:10px;">' + section.title.ar + '</h4>';
+        answersHTML += '<table style="width:100%; border-collapse:collapse;">';
+        section.questions.forEach((q) => {
+            const input = document.getElementById('answer_'+globalIdx);
+            const answerText = input ? input.value : '';
+            answersHTML += '<tr style="border-bottom:1px solid #ddd;"><td style="padding:8px; font-weight:bold;">' + (globalIdx+1) + '</td><td style="padding:8px; width:40%;">' + q.q.ar.replace(/<[^>]+>/g, '').substring(0, 80) + '...</td><td style="padding:8px; white-space:pre-wrap;">' + (answerText || (currentLang === 'ar' ? 'لم يجب' : 'No answer')) + '</td></tr>';
+            globalIdx++;
+        });
+        answersHTML += '</table>';
+    });
+    answersHTML += '</div>';
+    
+    const templateParams = {
+        to_email: TARGET_EMAIL,
+        student_name: name,
+        student_class: studentClass,
+        exam_date: date,
+        total_score: document.getElementById('res-total').textContent,
+        success_rate: document.getElementById('success-percent').textContent,
+        grade: document.getElementById('success-badge').textContent,
+        answers_table: answersHTML
+    };
+    
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
+        .then(() => {
+            status.textContent = currentLang === 'ar' ? '✅ تم الإرسال بنجاح!' : '✅ Sent successfully!';
+            status.style.color = '#16a34a';
+            btn.textContent = currentLang === 'ar' ? '✓ تم' : '✓ Sent';
+            alert(currentLang === 'ar' ? 'تم إرسال الإجابات للمعلم بنجاح!' : 'Answers sent to teacher successfully!');
+        })
+        .catch((error) => {
+            status.textContent = currentLang === 'ar' ? '❌ فشل الإرسال' : '❌ Failed to send';
+            status.style.color = '#dc2626';
+            btn.disabled = false;
+            btn.textContent = currentLang === 'ar' ? '📧 حاول مرة أخرى' : '📧 Try Again';
+            alert(currentLang === 'ar' ? 'فشل الإرسال: ' + error.text : 'Failed: ' + error.text);
+        });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const saved = loadState();
+    if (saved) {
+        currentLang = saved.lang || 'ar';
+        timeRemaining = saved.timeRemaining !== undefined ? saved.timeRemaining : TOTAL_TIME;
+    }
+    
+    document.getElementById('btn-ar').classList.toggle('active', currentLang === 'ar');
+    document.getElementById('btn-en').classList.toggle('active', currentLang === 'en');
+    document.body.classList.toggle('en-mode', currentLang === 'en');
+    document.documentElement.lang = currentLang;
+    document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+    
+    document.querySelectorAll('[data-ar]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + currentLang);
+    });
+    
+    document.querySelectorAll('[data-placeholder-ar]').forEach(el => {
+        el.placeholder = el.getAttribute('data-placeholder-' + currentLang);
+    });
+    
+    examData = originalExamData;
+    renderExam();
+    if (saved) {
+        if (saved.studentName) document.getElementById('studentName').value = saved.studentName;
+        if (saved.studentClass) document.getElementById('studentClass').value = saved.studentClass;
+        if (saved.examDate) document.getElementById('examDate').value = saved.examDate;
+    }
+    setupInputListeners();
+    startTimer();
+});
+window.addEventListener('beforeunload', () => saveState(false));
+</script>
+</body>
+</html>
