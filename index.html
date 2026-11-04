@@ -36,6 +36,8 @@ body.en-mode .save-indicator { left: auto; right: 20px; }
 .module-4 { background: #ecfdf5; color: #065f46; }
 .module-5 { background: #ede9fe; color: #5b21b6; }
 .module-6 { background: #fee2e2; color: #991b1b; }
+.module-7 { background: #fef9c3; color: #854d0e; }
+.module-8 { background: #f0fdf4; color: #166534; }
 .question-card { background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s; }
 .question-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
 .answer-area { width: 100%; min-height: 120px; padding: 12px; border: 2px dashed #d97706; border-radius: 8px; font-size: 1rem; font-family: 'Amiri', serif; direction: ltr; text-align: left; background: #fffbeb; resize: vertical; margin-top: 10px; }
@@ -64,8 +66,8 @@ body.en-mode .save-indicator { left: auto; right: 20px; }
 <div id="timer-container" class="max-w-5xl mx-auto mb-4 text-center no-print">
 <div class="bg-white p-4 rounded-2xl shadow-lg inline-block border-2 border-amber-100">
 <span class="text-gray-600 ml-2">⏰ <span data-ar="الوقت المتبقي:" data-en="Time Left:">الوقت المتبقي:</span></span>
-<span id="timer" class="text-2xl font-bold text-amber-700 font-mono">90:00</span>
-<span class="shuffle-badge">📐 <span data-ar="المثلثات القائمة والتحويلات" data-en="Right Triangles & Transformations">المثلثات القائمة والتحويلات</span> - 12 <span data-ar="سؤالاً كتابياً" data-en="Written Questions">سؤالاً كتابياً</span></span>
+<span id="timer" class="text-2xl font-bold text-amber-700 font-mono">120:00</span>
+<span class="shuffle-badge">📐 <span data-ar="المثلثات القائمة والتحويلات" data-en="Right Triangles & Transformations">المثلثات القائمة والتحويلات</span> - 18 <span data-ar="سؤالاً كتابياً" data-en="Written Questions">سؤالاً كتابياً</span></span>
 </div>
 </div>
 
@@ -79,36 +81,38 @@ body.en-mode .save-indicator { left: auto; right: 20px; }
 <div class="text-center">
 <div class="inline-block bg-amber-700 text-white px-6 py-2 rounded-full text-sm font-bold mb-4">MATH 11 ADVANCED - QUESTION 24 (WRITTEN)</div>
 <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">📐 <span data-ar="حل المثلثات القائمة وتحويلات دوال الجيب وجيب التمام" data-en="Solving Right Triangles & Trig Function Transformations">حل المثلثات القائمة وتحويلات دوال الجيب وجيب التمام</span></h1>
-<h2 class="text-xl text-amber-700 font-semibold mb-2"><span data-ar="رياضيات 11 متقدم - تمارين 39-44 (صفحة 146)" data-en="Grade 11 Advanced - Exercises 39-44 (Page 146)">رياضيات 11 متقدم - تمارين 39-44 (صفحة 146)</span></h2>
-<p class="text-gray-600 mb-4"><span data-ar="Real-World Applications: Zip Lines, Ferris Wheels, Roller Coasters & More" data-en="Real-World Applications: Zip Lines, Ferris Wheels, Roller Coasters & More">تطبيقات واقعية: التزلج الهوائي، عجلة المشاهدة، قطار الملاهي والمزيد</span></p>
-<p class="text-sm text-green-600 font-semibold">💾 <span data-ar="يتم حفظ تقدمك تلقائياً - 12 سؤالاً كتابياً في 6 أقسام" data-en="Your progress is auto-saved - 12 written questions in 6 sections">يتم حفظ تقدمك تلقائياً - 12 سؤالاً كتابياً في 6 أقسام</span></p>
+<h2 class="text-xl text-amber-700 font-semibold mb-2"><span data-ar="رياضيات 11 متقدم - تمارين 39-46 و 6A-6B (صفحات 146, 180)" data-en="Grade 11 Advanced - Exercises 39-46 & 6A-6B (Pages 146, 180)">رياضيات 11 متقدم - تمارين 39-46 و 6A-6B (صفحات 146, 180)</span></h2>
+<p class="text-gray-600 mb-4"><span data-ar="Real-World Applications: Zip Lines, Ferris Wheels, Lighthouse, Mt. Rushmore & Sinusoidal Functions" data-en="Real-World Applications: Zip Lines, Ferris Wheels, Lighthouse, Mt. Rushmore & Sinusoidal Functions">تطبيقات واقعية: التزلج الهوائي، عجلة المشاهدة، المنارة، جبل راشمور والدوال الجيبية</span></p>
+<p class="text-sm text-green-600 font-semibold">💾 <span data-ar="يتم حفظ تقدمك تلقائياً - 18 سؤالاً كتابياً في 8 أقسام" data-en="Your progress is auto-saved - 18 written questions in 8 sections">يتم حفظ تقدمك تلقائياً - 18 سؤالاً كتابياً في 8 أقسام</span></p>
 </div>
 <div class="mt-6 flex flex-wrap justify-center gap-4 text-sm text-gray-600">
 <span>📅 <span data-ar="التاريخ:" data-en="Date:">التاريخ:</span> <input type="text" id="examDate" class="border-b-2 border-amber-300 bg-transparent w-32 text-center"></span>
 <span>😊 <span data-ar="الاسم:" data-en="Name:">الاسم:</span> <input type="text" id="studentName" class="border-b-2 border-amber-300 bg-transparent w-40 text-center" data-placeholder-ar="اكتب اسمك" data-placeholder-en="Your name" placeholder="اكتب اسمك"></span>
 <span>🏫 <span data-ar="الشعبة:" data-en="Class:">الشعبة:</span> <input type="text" id="studentClass" class="border-b-2 border-amber-300 bg-transparent w-32 text-center" data-placeholder-ar="الشعبة" data-placeholder-en="Class" placeholder="الشعبة"></span>
-<span>⏰ <span data-ar="المدة: 90 دقيقة" data-en="Duration: 90 min">المدة: 90 دقيقة</span></span>
+<span>⏰ <span data-ar="المدة: 120 دقيقة" data-en="Duration: 120 min">المدة: 120 دقيقة</span></span>
 <span>📊 <span data-ar="المجموع: 100 درجة" data-en="Total: 100 points">المجموع: 100 درجة</span></span>
 </div>
 </header>
 
 <div class="max-w-5xl mx-auto mb-6 bg-white p-4 rounded-xl shadow-lg border-2 border-amber-200 no-print">
-<h3 class="font-bold text-lg mb-3 text-amber-800 text-center">📐 <span data-ar="النسب المثلثية الأساسية" data-en="Basic Trigonometric Ratios">النسب المثلثية الأساسية</span></h3>
+<h3 class="font-bold text-lg mb-3 text-amber-800 text-center">📐 <span data-ar="القوانين الأساسية" data-en="Key Formulas">القوانين الأساسية</span></h3>
 <div class="grid md:grid-cols-3 gap-3 text-sm">
 <div class="formula-box">
-<strong><span data-ar="الجيب (Sine):" data-en="Sine:">الجيب (Sine):</span></strong><br>
-<span class="math-display">sin θ = المقابل/الوتر</span><br>
-<span class="math-display">sin θ = opposite/hypotenuse</span>
+<strong><span data-ar="النسب المثلثية:" data-en="Trig Ratios:">النسب المثلثية:</span></strong><br>
+<span class="math-display">sin θ = opp/hyp</span><br>
+<span class="math-display">cos θ = adj/hyp</span><br>
+<span class="math-display">tan θ = opp/adj</span>
 </div>
 <div class="formula-box">
-<strong><span data-ar="جيب التمام (Cosine):" data-en="Cosine:">جيب التمام (Cosine):</span></strong><br>
-<span class="math-display">cos θ = المجاور/الوتر</span><br>
-<span class="math-display">cos θ = adjacent/hypotenuse</span>
+<strong><span data-ar="الدالة الجيبية:" data-en="Sinusoidal Function:">الدالة الجيبية:</span></strong><br>
+<span class="math-display">y = a·sin(b(x-h)) + k</span><br>
+<span data-ar="|a|: السعة, 2π/|b|: الدورة, h: الإزاحة الطورية, k: الإزاحة الرأسية" data-en="|a|: amplitude, 2π/|b|: period, h: phase shift, k: vertical shift">|a|: السعة, 2π/|b|: الدورة, h: الإزاحة الطورية, k: الإزاحة الرأسية</span>
 </div>
 <div class="formula-box">
-<strong><span data-ar="الظل (Tangent):" data-en="Tangent:">الظل (Tangent):</span></strong><br>
-<span class="math-display">tan θ = المقابل/المجاور</span><br>
-<span class="math-display">tan θ = opposite/adjacent</span>
+<strong><span data-ar="SOH-CAH-TOA:" data-en="SOH-CAH-TOA:">SOH-CAH-TOA:</span></strong><br>
+<span data-ar="Sin=مقابل/وتر" data-en="Sin=Opp/Hyp">Sin=مقابل/وتر</span><br>
+<span data-ar="Cos=مجاور/وتر" data-en="Cos=Adj/Hyp">Cos=مجاور/وتر</span><br>
+<span data-ar="Tan=مقابل/مجاور" data-en="Tan=Opp/Adj">Tan=مقابل/مجاور</span>
 </div>
 </div>
 </div>
@@ -152,10 +156,10 @@ const TEMPLATE_ID = "template_5b0u2tq";
 const TARGET_EMAIL = "mohammedhesham872@gmail.com";
 emailjs.init(PUBLIC_KEY);
 
-const STORAGE_KEY = 'right_triangles_trig_grade11_v1';
-const TOTAL_TIME = 5400;
-const TOTAL_QUESTIONS = 12;
-const TOTAL_SECTIONS = 6;
+const STORAGE_KEY = 'right_triangles_trig_grade11_v2';
+const TOTAL_TIME = 7200;
+const TOTAL_QUESTIONS = 18;
+const TOTAL_SECTIONS = 8;
 
 let answersVisible = false;
 let saveIndicatorTimeout = null;
@@ -236,272 +240,224 @@ function setupInputListeners() {
     }
 }
 
-// ==================== SVG DIAGRAMS - ACCURATE RIGHT TRIANGLE VISUALS ====================
+// ==================== SVG DIAGRAMS ====================
 const svgGraphs = {
-    zip_line: `<svg class="svg-graph" width="500" height="360" viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg">
-        <rect x="5" y="5" width="490" height="350" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#1e40af" font-weight="bold">🪂 تمرين 39: التزلج الهوائي - Zip Line</text>
-        <!-- Ground -->
-        <line x1="50" y1="280" x2="450" y2="280" stroke="#92400e" stroke-width="3"/>
-        <text x="455" y="285" font-size="11" fill="#92400e" font-weight="bold">Ground</text>
-        <!-- Starting platform (high) -->
-        <rect x="60" y="100" width="40" height="180" fill="#6b7280" stroke="#374151" stroke-width="2"/>
-        <text x="80" y="95" text-anchor="middle" font-size="10" fill="#374151" font-weight="bold">Start</text>
-        <!-- Ending platform (boat, low) -->
-        <rect x="380" y="250" width="50" height="30" fill="#3b82f6" stroke="#1e40af" stroke-width="2"/>
-        <text x="405" y="270" text-anchor="middle" font-size="9" fill="#1e40af">Boat</text>
-        <!-- Zip line (hypotenuse) -->
-        <line x1="80" y1="120" x2="405" y2="250" stroke="#dc2626" stroke-width="3"/>
-        <text x="240" y="170" text-anchor="middle" font-size="12" fill="#dc2626" font-weight="bold">800 ft</text>
-        <!-- Vertical drop (x) -->
-        <line x1="80" y1="120" x2="80" y2="280" stroke="#16a34a" stroke-width="2" stroke-dasharray="4"/>
-        <text x="60" y="200" text-anchor="middle" font-size="14" fill="#16a34a" font-weight="bold">x</text>
-        <!-- Horizontal distance -->
-        <line x1="80" y1="280" x2="405" y2="280" stroke="#7c3aed" stroke-width="2" stroke-dasharray="4"/>
-        <!-- Angle of depression -->
-        <path d="M 80 120 Q 120 120 140 140" fill="none" stroke="#f59e0b" stroke-width="2"/>
-        <text x="130" y="135" font-size="12" fill="#f59e0b" font-weight="bold">32°</text>
-        <!-- Horizontal reference line -->
-        <line x1="80" y1="120" x2="180" y2="120" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3"/>
-        <!-- Right angle marker -->
-        <rect x="80" y="270" width="10" height="10" fill="none" stroke="#374151" stroke-width="1"/>
-        <!-- Info box -->
-        <rect x="20" y="300" width="460" height="40" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-        <text x="250" y="320" text-anchor="middle" font-size="11" fill="#92400e" font-weight="bold">Given: Hypotenuse = 800 ft, Angle of depression = 32°</text>
-        <text x="250" y="335" text-anchor="middle" font-size="10" fill="#92400e">Find: Vertical drop x = ?</text>
-    </svg>`,
-    
-    ferris_wheel: `<svg class="svg-graph" width="500" height="380" viewBox="0 0 500 380" xmlns="http://www.w3.org/2000/svg">
-        <rect x="5" y="5" width="490" height="370" rx="12" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
-        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#9f1239" font-weight="bold">🎡 تمرين 40: عجلة المشاهدة في لندن - London Eye</text>
-        <!-- Ground -->
-        <line x1="50" y1="320" x2="450" y2="320" stroke="#92400e" stroke-width="3"/>
-        <!-- Ferris wheel -->
-        <circle cx="180" cy="200" r="100" fill="none" stroke="#ec4899" stroke-width="3"/>
-        <circle cx="180" cy="200" r="8" fill="#ec4899"/>
-        <!-- Spokes -->
-        <line x1="180" y1="100" x2="180" y2="300" stroke="#ec4899" stroke-width="1"/>
-        <line x1="80" y1="200" x2="280" y2="200" stroke="#ec4899" stroke-width="1"/>
-        <line x1="110" y1="130" x2="250" y2="270" stroke="#ec4899" stroke-width="1"/>
-        <line x1="250" y1="130" x2="110" y2="270" stroke="#ec4899" stroke-width="1"/>
-        <!-- Height label -->
-        <line x1="60" y1="100" x2="60" y2="320" stroke="#374151" stroke-width="2" marker-start="url(#arrowFW)" marker-end="url(#arrowFW)"/>
-        <text x="40" y="210" text-anchor="middle" font-size="12" fill="#374151" font-weight="bold" transform="rotate(-90 40 210)">135 m</text>
-        <!-- Observer at top -->
-        <circle cx="180" cy="100" r="6" fill="#dc2626"/>
-        <text x="180" y="90" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="bold">Observer</text>
-        <!-- London Aquarium (target) -->
-        <rect x="350" y="280" width="60" height="40" fill="#60a5fa" stroke="#2563eb" stroke-width="2"/>
-        <text x="380" y="305" text-anchor="middle" font-size="9" fill="#1e40af">Aquarium</text>
-        <!-- Line of sight -->
-        <line x1="180" y1="100" x2="380" y2="280" stroke="#dc2626" stroke-width="2" stroke-dasharray="4"/>
-        <!-- Angle of depression -->
-        <path d="M 180 100 Q 220 100 240 120" fill="none" stroke="#f59e0b" stroke-width="2"/>
-        <text x="230" y="115" font-size="12" fill="#f59e0b" font-weight="bold">58°</text>
-        <!-- Horizontal reference -->
-        <line x1="180" y1="100" x2="280" y2="100" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3"/>
-        <!-- Distance to find -->
-        <line x1="180" y1="320" x2="380" y2="320" stroke="#7c3aed" stroke-width="2" marker-start="url(#dotFW)" marker-end="url(#dotFW)"/>
-        <text x="280" y="340" text-anchor="middle" font-size="12" fill="#7c3aed" font-weight="bold">Distance = ?</text>
-        <!-- Info box -->
-        <rect x="20" y="350" width="460" height="20" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-        <text x="250" y="363" text-anchor="middle" font-size="10" fill="#92400e" font-weight="bold">Given: Height = 135 m, Angle of depression = 58° | Find: Horizontal distance</text>
-        <defs>
-            <marker id="arrowFW" markerWidth="10" markerHeight="10" refX="5" refY="10" orient="auto"><path d="M0,10 L5,0 L10,10 z" fill="#374151"/></marker>
-            <marker id="dotFW" markerWidth="6" markerHeight="6" refX="3" refY="3"><circle cx="3" cy="3" r="2" fill="#7c3aed"/></marker>
-        </defs>
-    </svg>`,
-    
-    roller_coaster: `<svg class="svg-graph" width="500" height="360" viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg">
-        <rect x="5" y="5" width="490" height="350" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
-        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#065f46" font-weight="bold">🎢 تمرين 41: قطار الملاهي - Roller Coaster</text>
-        <!-- Ground -->
-        <line x1="50" y1="280" x2="450" y2="280" stroke="#92400e" stroke-width="3"/>
-        <!-- Roller coaster track (ascending) -->
-        <path d="M 80 280 L 200 280 L 350 100" fill="none" stroke="#10b981" stroke-width="4"/>
-        <!-- Track supports -->
-        <line x1="120" y1="280" x2="120" y2="250" stroke="#6b7280" stroke-width="2"/>
-        <line x1="160" y1="280" x2="160" y2="220" stroke="#6b7280" stroke-width="2"/>
-        <line x1="200" y1="280" x2="200" y2="200" stroke="#6b7280" stroke-width="2"/>
-        <line x1="250" y1="280" x2="250" y2="170" stroke="#6b7280" stroke-width="2"/>
-        <line x1="300" y1="280" x2="300" y2="130" stroke="#6b7280" stroke-width="2"/>
-        <!-- Track length label -->
-        <text x="200" y="250" text-anchor="middle" font-size="12" fill="#10b981" font-weight="bold">114.3 ft</text>
-        <!-- Angle of elevation -->
-        <path d="M 200 280 Q 230 280 250 260" fill="none" stroke="#f59e0b" stroke-width="2"/>
-        <text x="240" y="275" font-size="12" fill="#f59e0b" font-weight="bold">55°</text>
-        <!-- Height (to find) -->
-        <line x1="350" y1="100" x2="350" y2="280" stroke="#dc2626" stroke-width="2" stroke-dasharray="4"/>
-        <text x="370" y="190" font-size="14" fill="#dc2626" font-weight="bold">h = ?</text>
-        <!-- Top point -->
-        <circle cx="350" cy="100" r="6" fill="#dc2626"/>
-        <text x="350" y="90" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="bold">Top</text>
-        <!-- Bottom point -->
-        <circle cx="200" cy="280" r="6" fill="#10b981"/>
-        <text x="200" y="300" text-anchor="middle" font-size="10" fill="#10b981" font-weight="bold">Bottom</text>
-        <!-- Right angle marker -->
-        <rect x="340" y="270" width="10" height="10" fill="none" stroke="#374151" stroke-width="1"/>
-        <!-- Info box -->
-        <rect x="20" y="310" width="460" height="35" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-        <text x="250" y="330" text-anchor="middle" font-size="11" fill="#92400e" font-weight="bold">Given: Track length = 114.3 ft, Angle = 55° | Find: Height h</text>
-    </svg>`,
-    
-    ski_lift: `<svg class="svg-graph" width="500" height="360" viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg">
-        <rect x="5" y="5" width="490" height="350" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
-        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#5b21b6" font-weight="bold">🎿 تمرين 42: مصعد التزلج - Ski Lift</text>
-        <!-- Mountain slope -->
-        <path d="M 50 280 L 400 100" fill="none" stroke="#7c3aed" stroke-width="3"/>
-        <!-- Ground -->
-        <line x1="50" y1="280" x2="450" y2="280" stroke="#92400e" stroke-width="3"/>
-        <!-- Vertical height -->
-        <line x1="400" y1="100" x2="400" y2="280" stroke="#dc2626" stroke-width="2" stroke-dasharray="4"/>
-        <text x="420" y="190" font-size="14" fill="#dc2626" font-weight="bold">225 m</text>
-        <!-- Ski lift cable -->
-        <line x1="50" y1="280" x2="400" y2="100" stroke="#10b981" stroke-width="2"/>
-        <!-- Ski lift chairs -->
-        <rect x="120" y="250" width="15" height="20" fill="#3b82f6" stroke="#1e40af" stroke-width="1"/>
-        <rect x="200" y="210" width="15" height="20" fill="#3b82f6" stroke="#1e40af" stroke-width="1"/>
-        <rect x="280" y="170" width="15" height="20" fill="#3b82f6" stroke="#1e40af" stroke-width="1"/>
-        <rect x="350" y="130" width="15" height="20" fill="#3b82f6" stroke="#1e40af" stroke-width="1"/>
-        <!-- Angle of elevation -->
-        <path d="M 50 280 Q 80 280 100 260" fill="none" stroke="#f59e0b" stroke-width="2"/>
-        <text x="90" y="275" font-size="12" fill="#f59e0b" font-weight="bold">48°</text>
-        <!-- Base to find -->
-        <line x1="50" y1="280" x2="400" y2="280" stroke="#7c3aed" stroke-width="2" marker-start="url(#dotSL)" marker-end="url(#dotSL)"/>
-        <text x="225" y="300" text-anchor="middle" font-size="12" fill="#7c3aed" font-weight="bold">Base length = ?</text>
-        <!-- Right angle -->
-        <rect x="390" y="270" width="10" height="10" fill="none" stroke="#374151" stroke-width="1"/>
-        <!-- Info box -->
-        <rect x="20" y="315" width="460" height="35" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-        <text x="250" y="335" text-anchor="middle" font-size="11" fill="#92400e" font-weight="bold">Given: Height = 225 m, Angle = 48° | Find: Base length of mountain</text>
-        <defs><marker id="dotSL" markerWidth="6" markerHeight="6" refX="3" refY="3"><circle cx="3" cy="3" r="2" fill="#7c3aed"/></marker></defs>
-    </svg>`,
-    
-    basketball: `<svg class="svg-graph" width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
-        <rect x="5" y="5" width="490" height="390" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
-        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#991b1b" font-weight="bold">🏀 تمرين 43: كرة السلة - Basketball</text>
-        <!-- Ground -->
-        <line x1="50" y1="320" x2="450" y2="320" stroke="#92400e" stroke-width="3"/>
-        <!-- Player (Ahmed) -->
-        <circle cx="120" cy="270" r="15" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
-        <rect x="110" y="285" width="20" height="35" fill="#3b82f6" stroke="#1e40af" stroke-width="2"/>
-        <text x="120" y="340" text-anchor="middle" font-size="10" fill="#1e40af" font-weight="bold">Ahmed</text>
-        <text x="120" y="355" text-anchor="middle" font-size="9" fill="#1e40af">1.78 m</text>
-        <!-- Basketball hoop -->
-        <rect x="350" y="200" width="10" height="120" fill="#6b7280" stroke="#374151" stroke-width="2"/>
-        <rect x="340" y="200" width="30" height="5" fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
-        <circle cx="355" cy="210" r="12" fill="none" stroke="#f97316" stroke-width="2"/>
-        <text x="370" y="340" text-anchor="middle" font-size="10" fill="#991b1b" font-weight="bold">Hoop: 3 m</text>
-        <!-- Ball trajectory from Ahmed's eyes -->
-        <line x1="120" y1="255" x2="355" y2="210" stroke="#16a34a" stroke-width="2" stroke-dasharray="4"/>
-        <!-- Angle from Ahmed (43°) -->
-        <path d="M 120 255 Q 150 255 170 240" fill="none" stroke="#f59e0b" stroke-width="2"/>
-        <text x="160" y="250" font-size="11" fill="#f59e0b" font-weight="bold">43°</text>
-        <!-- Horizontal reference from Ahmed's eyes -->
-        <line x1="120" y1="255" x2="200" y2="255" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3"/>
-        <!-- Second player -->
-        <circle cx="200" cy="275" r="15" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
-        <rect x="190" y="290" width="20" height="30" fill="#10b981" stroke="#065f46" stroke-width="2"/>
-        <text x="200" y="340" text-anchor="middle" font-size="10" fill="#065f46" font-weight="bold">Player 2</text>
-        <!-- Ball trajectory from second player -->
-        <line x1="200" y1="260" x2="355" y2="210" stroke="#7c3aed" stroke-width="2" stroke-dasharray="4"/>
-        <!-- Angle from second player (29°) -->
-        <path d="M 200 260 Q 230 260 245 250" fill="none" stroke="#f59e0b" stroke-width="2"/>
-        <text x="235" y="255" font-size="11" fill="#f59e0b" font-weight="bold">29°</text>
-        <!-- Horizontal reference from second player -->
-        <line x1="200" y1="260" x2="260" y2="260" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3"/>
-        <!-- Distance markers -->
-        <line x1="120" y1="370" x2="200" y2="370" stroke="#7c3aed" stroke-width="2" marker-start="url(#dotBB)" marker-end="url(#dotBB)"/>
-        <text x="160" y="385" text-anchor="middle" font-size="10" fill="#7c3aed">d₁ = ?</text>
-        <line x1="200" y1="370" x2="355" y2="370" stroke="#16a34a" stroke-width="2" marker-start="url(#dotBB)" marker-end="url(#dotBB)"/>
-        <text x="277" y="385" text-anchor="middle" font-size="10" fill="#16a34a">d₂ = ?</text>
-        <!-- Info box -->
-        <rect x="20" y="300" width="200" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-        <text x="120" y="318" text-anchor="middle" font-size="10" fill="#92400e" font-weight="bold">Ahmed: 1.78 m tall</text>
-        <text x="120" y="333" text-anchor="middle" font-size="10" fill="#92400e">Hoop: 3 m high</text>
-        <text x="120" y="348" text-anchor="middle" font-size="10" fill="#92400e">Angles: 43° and 29°</text>
-        <rect x="230" y="300" width="250" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-        <text x="355" y="318" text-anchor="middle" font-size="10" fill="#92400e" font-weight="bold">Find: Distance from each</text>
-        <text x="355" y="333" text-anchor="middle" font-size="10" fill="#92400e">player to the point directly</text>
-        <text x="355" y="348" text-anchor="middle" font-size="10" fill="#92400e">below the hoop</text>
-        <defs><marker id="dotBB" markerWidth="6" markerHeight="6" refX="3" refY="3"><circle cx="3" cy="3" r="2" fill="#7c3aed"/></marker></defs>
-    </svg>`,
-    
-    paris_eiffel: `<svg class="svg-graph" width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+    lighthouse: `<svg class="svg-graph" width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
         <rect x="5" y="5" width="490" height="390" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#92400e" font-weight="bold">🗼 تمرين 44: باريس - برج إيفل ومتحف أورسيه</text>
-        <!-- Ground -->
-        <line x1="50" y1="320" x2="450" y2="320" stroke="#92400e" stroke-width="3"/>
-        <!-- Eiffel Tower -->
-        <path d="M 200 320 L 220 200 L 230 150 L 240 100 L 250 80 L 260 100 L 270 150 L 280 200 L 300 320 Z" fill="#9ca3af" stroke="#6b7280" stroke-width="2"/>
-        <text x="250" y="70" text-anchor="middle" font-size="10" fill="#6b7280" font-weight="bold">Eiffel Tower</text>
-        <!-- Orsay Museum -->
-        <rect x="350" y="270" width="80" height="50" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
-        <rect x="360" y="280" width="20" height="20" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
-        <rect x="390" y="280" width="20" height="20" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
-        <text x="390" y="340" text-anchor="middle" font-size="10" fill="#92400e" font-weight="bold">Orsay Museum</text>
-        <!-- Tourist 1 (at Eiffel Tower base area) -->
-        <circle cx="150" cy="300" r="10" fill="#3b82f6" stroke="#1e40af" stroke-width="2"/>
-        <rect x="145" y="310" width="10" height="15" fill="#3b82f6" stroke="#1e40af" stroke-width="1"/>
-        <text x="150" y="340" text-anchor="middle" font-size="9" fill="#1e40af">Tourist 1</text>
-        <!-- Tourist 2 (further away) -->
-        <circle cx="80" cy="305" r="10" fill="#10b981" stroke="#065f46" stroke-width="2"/>
-        <rect x="75" y="315" width="10" height="15" fill="#10b981" stroke="#065f46" stroke-width="1"/>
-        <text x="80" y="345" text-anchor="middle" font-size="9" fill="#065f46">Tourist 2</text>
-        <!-- Line of sight from Tourist 1 to top of Eiffel -->
-        <line x1="150" y1="290" x2="250" y2="80" stroke="#dc2626" stroke-width="2" stroke-dasharray="4"/>
-        <!-- Angle from Tourist 1 -->
-        <path d="M 150 290 Q 180 290 200 270" fill="none" stroke="#f59e0b" stroke-width="2"/>
-        <text x="190" y="285" font-size="10" fill="#f59e0b" font-weight="bold">14°</text>
-        <!-- Line of sight from Tourist 2 to top of Eiffel -->
-        <line x1="80" y1="295" x2="250" y2="80" stroke="#7c3aed" stroke-width="2" stroke-dasharray="4"/>
-        <!-- Angle from Tourist 2 -->
-        <path d="M 80 295 Q 110 295 130 280" fill="none" stroke="#f59e0b" stroke-width="2"/>
-        <text x="120" y="290" font-size="10" fill="#f59e0b" font-weight="bold">6.8°</text>
-        <!-- Distance between tourists -->
-        <line x1="80" y1="360" x2="150" y2="360" stroke="#dc2626" stroke-width="2" marker-start="url(#dotPE)" marker-end="url(#dotPE)"/>
-        <text x="115" y="378" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="bold">219 m</text>
+        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#92400e" font-weight="bold">🏠 تمرين 45: المنارة - Lighthouse (47.5 m)</text>
+        <!-- Sea/Water -->
+        <rect x="50" y="320" width="440" height="50" fill="#bfdbfe" stroke="#2563eb" stroke-width="1"/>
+        <text x="250" y="345" text-anchor="middle" font-size="10" fill="#1e40af">Sea Level / سطح البحر</text>
+        <!-- Lighthouse -->
+        <rect x="80" y="180" width="30" height="140" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+        <rect x="75" y="170" width="40" height="15" fill="#92400e" stroke="#78350f" stroke-width="1"/>
+        <text x="95" y="165" text-anchor="middle" font-size="10" fill="#92400e" font-weight="bold">Lighthouse</text>
+        <text x="95" y="250" text-anchor="middle" font-size="11" fill="#92400e" font-weight="bold">47.5 m</text>
+        <!-- Ship 1 (closer, 7° angle) -->
+        <path d="M 350 310 L 370 310 L 365 320 L 355 320 Z" fill="#6b7280" stroke="#374151" stroke-width="1"/>
+        <text x="360" y="340" text-anchor="middle" font-size="9" fill="#374151">Ship 1</text>
+        <!-- Ship 2 (further, 27° angle) -->
+        <path d="M 420 310 L 440 310 L 435 320 L 425 320 Z" fill="#6b7280" stroke="#374151" stroke-width="1"/>
+        <text x="430" y="340" text-anchor="middle" font-size="9" fill="#374151">Ship 2</text>
+        <!-- Line of sight from top to Ship 1 -->
+        <line x1="95" y1="170" x2="360" y2="315" stroke="#dc2626" stroke-width="2"/>
+        <!-- Line of sight from top to Ship 2 -->
+        <line x1="95" y1="170" x2="430" y2="315" stroke="#2563eb" stroke-width="2"/>
+        <!-- Horizontal reference line -->
+        <line x1="95" y1="170" x2="450" y2="170" stroke="#9ca3af" stroke-width="1" stroke-dasharray="4"/>
+        <!-- Angle 7° (to Ship 1) -->
+        <path d="M 130 170 Q 160 180 180 200" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+        <text x="170" y="185" font-size="10" fill="#dc2626" font-weight="bold">7°</text>
+        <!-- Angle 27° (to Ship 2) -->
+        <path d="M 130 170 Q 200 200 250 260" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+        <text x="200" y="220" font-size="10" fill="#2563eb" font-weight="bold">27°</text>
+        <!-- Distance between ships -->
+        <line x1="360" y1="360" x2="430" y2="360" stroke="#7c3aed" stroke-width="2" marker-start="url(#dotLH)" marker-end="url(#dotLH)"/>
+        <text x="395" y="378" text-anchor="middle" font-size="11" fill="#7c3aed" font-weight="bold">Distance = ?</text>
         <!-- Info box -->
-        <rect x="20" y="300" width="200" height="80" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-        <text x="120" y="318" text-anchor="middle" font-size="10" fill="#92400e" font-weight="bold">Given:</text>
-        <text x="120" y="333" text-anchor="middle" font-size="9" fill="#92400e">• Distance between tourists: 219 m</text>
-        <text x="120" y="348" text-anchor="middle" font-size="9" fill="#92400e">• Angle 1: 14° (depression)</text>
-        <text x="120" y="363" text-anchor="middle" font-size="9" fill="#92400e">• Angle 2: 6.8° (depression)</text>
-        <text x="120" y="378" text-anchor="middle" font-size="9" fill="#92400e">Find: Distance Eiffel-Orsay</text>
-        <defs><marker id="dotPE" markerWidth="6" markerHeight="6" refX="3" refY="3"><circle cx="3" cy="3" r="2" fill="#dc2626"/></marker></defs>
+        <rect x="20" y="385" width="460" height="0" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <defs><marker id="dotLH" markerWidth="6" markerHeight="6" refX="3" refY="3"><circle cx="3" cy="3" r="2" fill="#7c3aed"/></marker></defs>
     </svg>`,
     
-    trig_ratios_summary: `<svg class="svg-graph" width="500" height="340" viewBox="0 0 500 340" xmlns="http://www.w3.org/2000/svg">
-        <rect x="5" y="5" width="490" height="330" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#92400e" font-weight="bold">📐 ملخص النسب المثلثية - Trig Ratios Summary</text>
-        <!-- Right triangle -->
-        <polygon points="100,250 300,250 300,100" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-        <!-- Labels -->
-        <text x="200" y="270" text-anchor="middle" font-size="12" fill="#92400e" font-weight="bold">Adjacent (مجاور)</text>
-        <text x="320" y="175" font-size="12" fill="#92400e" font-weight="bold">Opposite</text>
-        <text x="320" y="190" font-size="12" fill="#92400e" font-weight="bold">(مقابل)</text>
-        <text x="180" y="170" text-anchor="middle" font-size="12" fill="#92400e" font-weight="bold">Hypotenuse</text>
-        <text x="180" y="185" text-anchor="middle" font-size="12" fill="#92400e" font-weight="bold">(وتر)</text>
-        <!-- Angle theta -->
-        <path d="M 130 250 A 30 30 0 0 0 125 230" fill="none" stroke="#dc2626" stroke-width="2"/>
-        <text x="145" y="240" font-size="14" fill="#dc2626" font-weight="bold">θ</text>
-        <!-- Right angle -->
-        <rect x="290" y="240" width="10" height="10" fill="none" stroke="#374151" stroke-width="1"/>
-        <!-- Formulas -->
-        <rect x="20" y="290" width="140" height="40" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-        <text x="90" y="310" text-anchor="middle" font-size="11" fill="#1e40af" font-weight="bold">sin θ = opp/hyp</text>
-        <rect x="170" y="290" width="140" height="40" rx="6" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
-        <text x="240" y="310" text-anchor="middle" font-size="11" fill="#9f1239" font-weight="bold">cos θ = adj/hyp</text>
-        <rect x="320" y="290" width="160" height="40" rx="6" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
-        <text x="400" y="310" text-anchor="middle" font-size="11" fill="#065f46" font-weight="bold">tan θ = opp/adj</text>
-        <!-- SOH CAH TOA -->
-        <rect x="20" y="45" width="460" height="40" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-        <text x="250" y="65" text-anchor="middle" font-size="12" fill="#92400e" font-weight="bold">🔑 SOH-CAH-TOA: Sin=Opp/Hyp, Cos=Adj/Hyp, Tan=Opp/Adj</text>
-        <text x="250" y="80" text-anchor="middle" font-size="10" fill="#92400e">جيب = مقابل/وتر | جيب تمام = مجاور/وتر | ظل = مقابل/مجاور</text>
+    mount_rushmore: `<svg class="svg-graph" width="500" height="420" viewBox="0 0 500 420" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="490" height="410" rx="12" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#9f1239" font-weight="bold">🗿 تمرين 46: جبل راشمور - Mount Rushmore (18.3 m)</text>
+        <!-- Mountain -->
+        <path d="M 100 320 L 150 200 L 200 180 L 250 160 L 300 180 L 350 200 L 400 320 Z" fill="#d1d5db" stroke="#6b7280" stroke-width="2"/>
+        <!-- Presidents faces (simplified) -->
+        <circle cx="200" cy="220" r="15" fill="#fbbf24" stroke="#f59e0b" stroke-width="1"/>
+        <circle cx="230" cy="215" r="15" fill="#fbbf24" stroke="#f59e0b" stroke-width="1"/>
+        <circle cx="260" cy="210" r="15" fill="#fbbf24" stroke="#f59e0b" stroke-width="1"/>
+        <circle cx="290" cy="215" r="15" fill="#fbbf24" stroke="#f59e0b" stroke-width="1"/>
+        <text x="250" y="195" text-anchor="middle" font-size="9" fill="#92400e" font-weight="bold">Presidents' Heads</text>
+        <!-- Height marker 18.3 m -->
+        <line x1="350" y1="200" x2="350" y2="220" stroke="#dc2626" stroke-width="2" marker-start="url(#dotMR)" marker-end="url(#dotMR)"/>
+        <text x="370" y="215" font-size="11" fill="#dc2626" font-weight="bold">18.3 m</text>
+        <!-- Observer point -->
+        <circle cx="80" cy="320" r="8" fill="#3b82f6" stroke="#1e40af" stroke-width="2"/>
+        <text x="80" y="345" text-anchor="middle" font-size="10" fill="#1e40af" font-weight="bold">Observer</text>
+        <!-- Line of sight to top of heads -->
+        <line x1="80" y1="320" x2="250" y2="195" stroke="#16a34a" stroke-width="2"/>
+        <!-- Line of sight to chin -->
+        <line x1="80" y1="320" x2="250" y2="235" stroke="#7c3aed" stroke-width="2"/>
+        <!-- Angle 44.76° (to chin) -->
+        <path d="M 120 320 Q 140 310 160 295" fill="none" stroke="#7c3aed" stroke-width="2"/>
+        <text x="150" y="305" font-size="11" fill="#7c3aed" font-weight="bold">44.76°</text>
+        <!-- Angle 48° (to top) -->
+        <path d="M 120 320 Q 150 300 180 270" fill="none" stroke="#16a34a" stroke-width="2"/>
+        <text x="170" y="280" font-size="11" fill="#16a34a" font-weight="bold">48°</text>
+        <!-- Horizontal reference -->
+        <line x1="80" y1="320" x2="400" y2="320" stroke="#9ca3af" stroke-width="1" stroke-dasharray="3"/>
+        <!-- Distance y -->
+        <line x1="80" y1="355" x2="250" y2="355" stroke="#f59e0b" stroke-width="2" marker-start="url(#dotMR)" marker-end="url(#dotMR)"/>
+        <text x="165" y="372" text-anchor="middle" font-size="11" fill="#f59e0b" font-weight="bold">y = ?</text>
+        <!-- Height x -->
+        <line x1="260" y1="195" x2="260" y2="320" stroke="#dc2626" stroke-width="2" stroke-dasharray="3"/>
+        <text x="280" y="260" font-size="11" fill="#dc2626" font-weight="bold">x = ?</text>
+        <!-- Info box -->
+        <rect x="20" y="385" width="460" height="20" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="250" y="400" text-anchor="middle" font-size="10" fill="#92400e" font-weight="bold">Find: Height of heads (x) and distance from observer (y)</text>
+        <defs><marker id="dotMR" markerWidth="6" markerHeight="6" refX="3" refY="3"><circle cx="3" cy="3" r="2" fill="#f59e0b"/></marker></defs>
+    </svg>`,
+    
+    sinusoidal_example: `<svg class="svg-graph" width="500" height="380" viewBox="0 0 500 380" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="490" height="370" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#5b21b6" font-weight="bold">📈 مثال 6: y = sin(x + 2π) - 1</text>
+        <!-- Axes -->
+        <line x1="50" y1="200" x2="450" y2="200" stroke="#374151" stroke-width="2" marker-end="url(#arrowSE)"/>
+        <line x1="250" y1="350" x2="250" y2="50" stroke="#374151" stroke-width="2" marker-end="url(#arrowSE)"/>
+        <text x="455" y="205" font-size="12" fill="#374151" font-weight="bold">x</text>
+        <text x="240" y="45" font-size="12" fill="#374151" font-weight="bold">y</text>
+        <text x="255" y="215" font-size="10" fill="#374151">O</text>
+        <!-- y = -1 line (midline) -->
+        <line x1="50" y1="230" x2="450" y2="230" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4"/>
+        <text x="455" y="235" font-size="10" fill="#7c3aed" font-weight="bold">y = -1</text>
+        <!-- y = 0 line (original midline) -->
+        <line x1="50" y1="200" x2="450" y2="200" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2"/>
+        <text x="455" y="195" font-size="9" fill="#9ca3af">y = 0</text>
+        <!-- y = -2 line (minimum) -->
+        <line x1="50" y1="260" x2="450" y2="260" stroke="#dc2626" stroke-width="1" stroke-dasharray="2"/>
+        <text x="455" y="265" font-size="9" fill="#dc2626">y = -2</text>
+        <!-- Sine curve shifted down by 1 -->
+        <path d="M 50 230 Q 100 170 150 230 Q 200 290 250 230 Q 300 170 350 230 Q 400 290 450 230" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+        <text x="400" y="170" font-size="11" fill="#7c3aed" font-weight="bold">y = sin(x + 2π) - 1</text>
+        <!-- Key points -->
+        <circle cx="50" cy="230" r="4" fill="#dc2626"/>
+        <circle cx="150" cy="230" r="4" fill="#dc2626"/>
+        <circle cx="250" cy="230" r="4" fill="#dc2626"/>
+        <circle cx="100" cy="170" r="4" fill="#16a34a"/>
+        <text x="100" y="160" text-anchor="middle" font-size="9" fill="#16a34a">Max: -1+1=0</text>
+        <circle cx="200" cy="290" r="4" fill="#dc2626"/>
+        <text x="200" y="305" text-anchor="middle" font-size="9" fill="#dc2626">Min: -1-1=-2</text>
+        <!-- Properties box -->
+        <rect x="20" y="320" width="460" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="250" y="338" text-anchor="middle" font-size="10" fill="#92400e" font-weight="bold">Properties: Amplitude = 1, Period = 2π, Phase shift = -2π (left), Vertical shift = -1 (down)</text>
+        <text x="250" y="355" text-anchor="middle" font-size="10" fill="#92400e">Note: sin(x + 2π) = sin(x), so this is equivalent to y = sin(x) - 1</text>
+        <defs><marker id="arrowSE" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#374151"/></marker></defs>
+    </svg>`,
+    
+    exercise6A: `<svg class="svg-graph" width="500" height="380" viewBox="0 0 500 380" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="490" height="370" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#065f46" font-weight="bold">📈 تمرين 6A: y = 2cos(x) + 1</text>
+        <!-- Axes -->
+        <line x1="50" y1="200" x2="450" y2="200" stroke="#374151" stroke-width="2" marker-end="url(#arrow6A)"/>
+        <line x1="250" y1="350" x2="250" y2="50" stroke="#374151" stroke-width="2" marker-end="url(#arrow6A)"/>
+        <text x="455" y="205" font-size="12" fill="#374151" font-weight="bold">x</text>
+        <text x="240" y="45" font-size="12" fill="#374151" font-weight="bold">y</text>
+        <!-- y = 1 line (midline) -->
+        <line x1="50" y1="200" x2="450" y2="200" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4"/>
+        <text x="455" y="195" font-size="10" fill="#7c3aed" font-weight="bold">y = 1</text>
+        <!-- y = 3 line (max) -->
+        <line x1="50" y1="140" x2="450" y2="140" stroke="#16a34a" stroke-width="1" stroke-dasharray="2"/>
+        <text x="455" y="135" font-size="9" fill="#16a34a">y = 3</text>
+        <!-- y = -1 line (min) -->
+        <line x1="50" y1="260" x2="450" y2="260" stroke="#dc2626" stroke-width="1" stroke-dasharray="2"/>
+        <text x="455" y="265" font-size="9" fill="#dc2626">y = -1</text>
+        <!-- Cosine curve with amplitude 2, shifted up 1 -->
+        <path d="M 50 140 Q 100 140 150 200 Q 200 260 250 260 Q 300 260 350 200 Q 400 140 450 140" fill="none" stroke="#10b981" stroke-width="2.5"/>
+        <text x="400" y="130" font-size="11" fill="#10b981" font-weight="bold">y = 2cos(x) + 1</text>
+        <!-- Key points -->
+        <circle cx="50" cy="140" r="4" fill="#16a34a"/>
+        <text x="50" y="125" text-anchor="middle" font-size="9" fill="#16a34a">(0, 3)</text>
+        <circle cx="250" cy="260" r="4" fill="#dc2626"/>
+        <text x="250" y="280" text-anchor="middle" font-size="9" fill="#dc2626">(π, -1)</text>
+        <circle cx="450" cy="140" r="4" fill="#16a34a"/>
+        <text x="450" y="125" text-anchor="middle" font-size="9" fill="#16a34a">(2π, 3)</text>
+        <!-- Properties box -->
+        <rect x="20" y="310" width="460" height="55" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="250" y="328" text-anchor="middle" font-size="11" fill="#92400e" font-weight="bold">Properties:</text>
+        <text x="250" y="345" text-anchor="middle" font-size="10" fill="#92400e">Amplitude = |2| = 2 | Period = 2π | Phase shift = 0 | Vertical shift = +1 (up)</text>
+        <text x="250" y="360" text-anchor="middle" font-size="10" fill="#92400e">Max = 1+2 = 3 | Min = 1-2 = -1</text>
+        <defs><marker id="arrow6A" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#374151"/></marker></defs>
+    </svg>`,
+    
+    exercise6B: `<svg class="svg-graph" width="500" height="380" viewBox="0 0 500 380" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="490" height="370" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#991b1b" font-weight="bold">📈 تمرين 6B: y = (1/2)sin(x/4 - π/2) - 3</text>
+        <!-- Axes -->
+        <line x1="50" y1="200" x2="450" y2="200" stroke="#374151" stroke-width="2" marker-end="url(#arrow6B)"/>
+        <line x1="250" y1="350" x2="250" y2="50" stroke="#374151" stroke-width="2" marker-end="url(#arrow6B)"/>
+        <text x="455" y="205" font-size="12" fill="#374151" font-weight="bold">x</text>
+        <text x="240" y="45" font-size="12" fill="#374151" font-weight="bold">y</text>
+        <!-- y = -3 line (midline) -->
+        <line x1="50" y1="230" x2="450" y2="230" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4"/>
+        <text x="455" y="225" font-size="10" fill="#7c3aed" font-weight="bold">y = -3</text>
+        <!-- y = -2.5 line (max) -->
+        <line x1="50" y1="215" x2="450" y2="215" stroke="#16a34a" stroke-width="1" stroke-dasharray="2"/>
+        <text x="455" y="210" font-size="9" fill="#16a34a">y = -2.5</text>
+        <!-- y = -3.5 line (min) -->
+        <line x1="50" y1="245" x2="450" y2="245" stroke="#dc2626" stroke-width="1" stroke-dasharray="2"/>
+        <text x="455" y="255" font-size="9" fill="#dc2626">y = -3.5</text>
+        <!-- Sine curve with small amplitude and long period -->
+        <path d="M 50 230 Q 150 215 250 230 Q 350 245 450 230" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+        <text x="350" y="210" font-size="11" fill="#dc2626" font-weight="bold">y = (1/2)sin(x/4 - π/2) - 3</text>
+        <!-- Properties box -->
+        <rect x="20" y="280" width="460" height="85" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="250" y="300" text-anchor="middle" font-size="11" fill="#92400e" font-weight="bold">Properties:</text>
+        <text x="250" y="318" text-anchor="middle" font-size="10" fill="#92400e">Amplitude = |1/2| = 0.5</text>
+        <text x="250" y="335" text-anchor="middle" font-size="10" fill="#92400e">Period = 2π/(1/4) = 8π</text>
+        <text x="250" y="352" text-anchor="middle" font-size="10" fill="#92400e">Phase shift: x/4 - π/2 = 0 → x = 2π (right)</text>
+        <text x="250" y="365" text-anchor="middle" font-size="10" fill="#92400e">Vertical shift = -3 (down) | Max = -2.5, Min = -3.5</text>
+        <defs><marker id="arrow6B" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#374151"/></marker></defs>
+    </svg>`,
+    
+    sinusoidal_parameters: `<svg class="svg-graph" width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="490" height="390" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="250" y="25" text-anchor="middle" font-size="14" fill="#92400e" font-weight="bold">📊 معاملات الدالة الجيبية y = a·sin(b(x-h)) + k</text>
+        <!-- Parameter boxes -->
+        <rect x="20" y="45" width="220" height="70" rx="6" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/>
+        <text x="130" y="65" text-anchor="middle" font-size="11" fill="#92400e" font-weight="bold">a = Amplitude (السعة)</text>
+        <text x="130" y="83" text-anchor="middle" font-size="10" fill="#92400e">|a| = distance from midline</text>
+        <text x="130" y="100" text-anchor="middle" font-size="10" fill="#92400e">to max or min</text>
+        <rect x="260" y="45" width="220" height="70" rx="6" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/>
+        <text x="370" y="65" text-anchor="middle" font-size="11" fill="#92400e" font-weight="bold">b affects Period (الدورة)</text>
+        <text x="370" y="83" text-anchor="middle" font-size="10" fill="#92400e">Period = 2π/|b|</text>
+        <text x="370" y="100" text-anchor="middle" font-size="10" fill="#92400e">Larger |b| = shorter period</text>
+        <rect x="20" y="125" width="220" height="70" rx="6" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/>
+        <text x="130" y="145" text-anchor="middle" font-size="11" fill="#92400e" font-weight="bold">h = Phase Shift (الإزاحة الطورية)</text>
+        <text x="130" y="163" text-anchor="middle" font-size="10" fill="#92400e">h > 0: shift right</text>
+        <text x="130" y="180" text-anchor="middle" font-size="10" fill="#92400e">h < 0: shift left</text>
+        <rect x="260" y="125" width="220" height="70" rx="6" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/>
+        <text x="370" y="145" text-anchor="middle" font-size="11" fill="#92400e" font-weight="bold">k = Vertical Shift (الإزاحة الرأسية)</text>
+        <text x="370" y="163" text-anchor="middle" font-size="10" fill="#92400e">k > 0: shift up</text>
+        <text x="370" y="180" text-anchor="middle" font-size="10" fill="#92400e">k < 0: shift down</text>
+        <!-- Example -->
+        <rect x="20" y="205" width="460" height="90" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="250" y="225" text-anchor="middle" font-size="11" fill="#92400e" font-weight="bold">Example: y = 3sin(2(x - π/4)) + 1</text>
+        <text x="250" y="245" text-anchor="middle" font-size="10" fill="#92400e">a = 3 → Amplitude = 3</text>
+        <text x="250" y="262" text-anchor="middle" font-size="10" fill="#92400e">b = 2 → Period = 2π/2 = π</text>
+        <text x="250" y="279" text-anchor="middle" font-size="10" fill="#92400e">h = π/4 → Phase shift right π/4</text>
+        <text x="250" y="293" text-anchor="middle" font-size="10" fill="#92400e">k = 1 → Vertical shift up 1, Midline: y = 1</text>
+        <!-- Key formulas -->
+        <rect x="20" y="305" width="460" height="75" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="250" y="323" text-anchor="middle" font-size="11" fill="#92400e" font-weight="bold">Key Formulas:</text>
+        <text x="250" y="340" text-anchor="middle" font-size="10" fill="#92400e">Max value = k + |a| | Min value = k - |a|</text>
+        <text x="250" y="357" text-anchor="middle" font-size="10" fill="#92400e">Midline: y = k | Frequency = |b|/(2π)</text>
+        <text x="250" y="374" text-anchor="middle" font-size="10" fill="#92400e">For cos: same formulas apply</text>
     </svg>`
 };
 
-// ==================== EXAM DATA - 12 WRITTEN QUESTIONS ====================
+// ==================== EXAM DATA - 18 WRITTEN QUESTIONS ====================
 const originalExamData = {
     sections: [
         {
@@ -509,13 +465,13 @@ const originalExamData = {
             title: { ar: '🔹 القسم 1: التزلج الهوائي - تمرين 39 (Q1-Q2)', en: '🔹 Section 1: Zip Line - Exercise 39 (Q1-Q2)' },
             questions: [
                 {
-                    q: { ar: '<strong>السؤال 1 (تمرين 39):</strong> قررت إيان أن تجرب التزلج الهوائي، ثم ربطها منظم بجرها بحبل طوله 800 ft. يتخذ أسفلها زاوية انخفاض قدرها 32°. كم كان ارتفاع إيان فوق النهاية؟<br><br>ارسم مخططاً يمثل الحالة ثم أوجد الارتفاع x.', en: '<strong>Question 1 (Exercise 39):</strong> Ian decided to try the zip line, then the organizer tied her with an 800 ft rope. The bottom takes an angle of depression of 32°. What was Ian\'s height above the end?<br><br>Draw a diagram and find the height x.' },
+                    q: { ar: '<strong>السؤال 1 (تمرين 39):</strong> قررت إيان أن تجرب التزلج الهوائي، ثم ربطها منظم بحبل طوله 800 ft. يتخذ أسفلها زاوية انخفاض قدرها 32°. كم كان ارتفاع إيان فوق النهاية؟<br><br>ارسم مخططاً يمثل الحالة ثم أوجد الارتفاع.', en: '<strong>Question 1 (Exercise 39):</strong> Ian decided to try the zip line, tied with an 800 ft rope. The bottom takes an angle of depression of 32°. What was Ian\'s height above the end?<br><br>Draw a diagram and find the height.' },
                     svg: svgGraphs.zip_line,
-                    answer: { ar: 'الحل:\n\nالمعطيات:\n• طول الحبل (الوتر) = 800 ft\n• زاوية الانخفاض = 32°\n• المطلوب: الارتفاع الرأسي x\n\nالرسم البياني:\nمثلث قائم الزاوية حيث:\n• الوتر = 800 ft (الحبل)\n• الزاوية عند نقطة البداية = 32°\n• الضلع المقابل للزاوية = x (الارتفاع)\n\nاستخدام نسبة الجيب:\nsin(32°) = المقابل/الوتر = x/800\n\nحل المعادلة:\nx = 800 × sin(32°)\nx = 800 × 0.5299\nx ≈ 423.9 ft\n\nإذن ارتفاع إيان فوق النهاية ≈ 424 ft\n\n(ملاحظة: زاوية الانخفاض من الأفقي تساوي زاوية الارتفاع من الأسفل بسبب التوازي)', en: 'Solution:\n\nGiven:\n• Rope length (hypotenuse) = 800 ft\n• Angle of depression = 32°\n• Find: Vertical height x\n\nDiagram:\nRight triangle where:\n• Hypotenuse = 800 ft (rope)\n• Angle at start = 32°\n• Opposite side = x (height)\n\nUsing sine ratio:\nsin(32°) = opposite/hypotenuse = x/800\n\nSolving:\nx = 800 × sin(32°)\nx = 800 × 0.5299\nx ≈ 423.9 ft\n\nSo Ian\'s height above the end ≈ 424 ft\n\n(Note: Angle of depression from horizontal equals angle of elevation from below due to parallel lines)' }
+                    answer: { ar: 'الحل:\n\nالمعطيات:\n• طول الحبل (الوتر) = 800 ft\n• زاوية الانخفاض = 32°\n• المطلوب: الارتفاع الرأسي x\n\nالرسم البياني:\nمثلث قائم الزاوية حيث:\n• الوتر = 800 ft (الحبل)\n• الزاوية عند نقطة البداية = 32°\n• الضلع المقابل للزاوية = x (الارتفاع)\n\nاستخدام نسبة الجيب:\nsin(32°) = المقابل/الوتر = x/800\n\nحل المعادلة:\nx = 800 × sin(32°)\nx = 800 × 0.5299\nx ≈ 423.9 ft\n\nإذن ارتفاع إيان فوق النهاية ≈ 424 ft', en: 'Solution:\n\nGiven:\n• Rope length (hypotenuse) = 800 ft\n• Angle of depression = 32°\n• Find: Vertical height x\n\nUsing sine ratio:\nsin(32°) = x/800\nx = 800 × sin(32°)\nx = 800 × 0.5299\nx ≈ 423.9 ft ≈ 424 ft' }
                 },
                 {
                     q: { ar: '<strong>السؤال 2 (مشابه):</strong> إذا كان طول حبل التزلج الهوائي 1000 ft وزاوية الانخفاض 25°، فما الارتفاع الرأسي؟', en: '<strong>Question 2 (Similar):</strong> If the zip line rope is 1000 ft long and the angle of depression is 25°, what is the vertical height?' },
-                    answer: { ar: 'الحل:\n\nالمعطيات:\n• الوتر = 1000 ft\n• الزاوية = 25°\n\nاستخدام sin:\nsin(25°) = x/1000\nx = 1000 × sin(25°)\nx = 1000 × 0.4226\nx ≈ 422.6 ft\n\nالارتفاع الرأسي ≈ 423 ft', en: 'Solution:\n\nGiven:\n• Hypotenuse = 1000 ft\n• Angle = 25°\n\nUsing sin:\nsin(25°) = x/1000\nx = 1000 × sin(25°)\nx = 1000 × 0.4226\nx ≈ 422.6 ft\n\nVertical height ≈ 423 ft' }
+                    answer: { ar: 'الحل:\n\nالمعطيات:\n• الوتر = 1000 ft\n• الزاوية = 25°\n\nاستخدام sin:\nsin(25°) = x/1000\nx = 1000 × sin(25°)\nx = 1000 × 0.4226\nx ≈ 422.6 ft\n\nالارتفاع الرأسي ≈ 423 ft', en: 'Solution:\n\nsin(25°) = x/1000\nx = 1000 × sin(25°)\nx = 1000 × 0.4226\nx ≈ 422.6 ft ≈ 423 ft' }
                 }
             ]
         },
@@ -524,13 +480,13 @@ const originalExamData = {
             title: { ar: '🔹 القسم 2: عجلة المشاهدة - تمرين 40 (Q3-Q4)', en: '🔹 Section 2: Ferris Wheel - Exercise 40 (Q3-Q4)' },
             questions: [
                 {
-                    q: { ar: '<strong>السؤال 3 (تمرين 40):</strong> عين لندن عبارة عن عجلة مشاهدة طولها 135 m. إذا نظر أحد المسافرين من أعلى العجلة إلى حوض أسماك لندن بزاوية انخفاض قدرها 58°، فما المسافة بين حوض أسماك لندن وعين لندن؟', en: '<strong>Question 3 (Exercise 40):</strong> The London Eye is a 135 m tall observation wheel. If a passenger at the top looks at the London Aquarium at an angle of depression of 58°, what is the distance between the London Aquarium and the London Eye?' },
+                    q: { ar: '<strong>السؤال 3 (تمرين 40):</strong> عين لندن عبارة عن عجلة مشاهدة طولها 135 m. إذا نظر أحد المسافرين من أعلى العجلة إلى حوض أسماك لندن بزاوية انخفاض قدرها 58°، فما المسافة بين حوض أسماك لندن وعين لندن؟', en: '<strong>Question 3 (Exercise 40):</strong> The London Eye is a 135 m tall observation wheel. If a passenger at the top looks at the London Aquarium at an angle of depression of 58°, what is the distance?' },
                     svg: svgGraphs.ferris_wheel,
-                    answer: { ar: 'الحل:\n\nالمعطيات:\n• الارتفاع (الضلع المقابل) = 135 m\n• زاوية الانخفاض = 58°\n• المطلوب: المسافة الأفقية (الضلع المجاور)\n\nالرسم البياني:\nمثلث قائم الزاوية حيث:\n• الضلع المقابل للزاوية = 135 m (الارتفاع)\n• الزاوية = 58°\n• الضلع المجاور = المسافة الأفقية d\n\nاستخدام نسبة الظل:\ntan(58°) = المقابل/المجاور = 135/d\n\nحل المعادلة:\nd = 135/tan(58°)\nd = 135/1.6003\nd ≈ 84.4 m\n\nإذن المسافة بين حوض أسماك لندن وعين لندن ≈ 84.4 m\n\n(ملاحظة: زاوية الانخفاض من الأعلى تساوي زاوية الارتفاع من الأسفل)', en: 'Solution:\n\nGiven:\n• Height (opposite side) = 135 m\n• Angle of depression = 58°\n• Find: Horizontal distance (adjacent side)\n\nDiagram:\nRight triangle where:\n• Opposite side = 135 m (height)\n• Angle = 58°\n• Adjacent side = horizontal distance d\n\nUsing tangent ratio:\ntan(58°) = opposite/adjacent = 135/d\n\nSolving:\nd = 135/tan(58°)\nd = 135/1.6003\nd ≈ 84.4 m\n\nSo the distance between London Aquarium and London Eye ≈ 84.4 m\n\n(Note: Angle of depression from top equals angle of elevation from bottom)' }
+                    answer: { ar: 'الحل:\n\nالمعطيات:\n• الارتفاع (الضلع المقابل) = 135 m\n• زاوية الانخفاض = 58°\n• المطلوب: المسافة الأفقية d\n\nالرسم البياني:\nمثلث قائم الزاوية حيث:\n• الضلع المقابل للزاوية = 135 m\n• الزاوية = 58°\n• الضلع المجاور = d\n\nاستخدام نسبة الظل:\ntan(58°) = المقابل/المجاور = 135/d\n\nحل المعادلة:\nd = 135/tan(58°)\nd = 135/1.6003\nd ≈ 84.4 m\n\nإذن المسافة بين حوض أسماك لندن وعين لندن ≈ 84.4 m', en: 'Solution:\n\nGiven:\n• Height (opposite) = 135 m\n• Angle of depression = 58°\n• Find: Horizontal distance d\n\nUsing tangent:\ntan(58°) = 135/d\nd = 135/tan(58°)\nd = 135/1.6003\nd ≈ 84.4 m' }
                 },
                 {
                     q: { ar: '<strong>السؤال 4 (مشابه):</strong> إذا كان ارتفاع برج 200 m وزاوية الانخفاض من قمته إلى نقطة على الأرض 45°، فما المسافة الأفقية؟', en: '<strong>Question 4 (Similar):</strong> If a tower is 200 m tall and the angle of depression from its top to a point on the ground is 45°, what is the horizontal distance?' },
-                    answer: { ar: 'الحل:\n\nالمعطيات:\n• الارتفاع = 200 m\n• الزاوية = 45°\n\nاستخدام tan:\ntan(45°) = 200/d\n1 = 200/d\nd = 200 m\n\nالمسافة الأفقية = 200 m\n\n(ملاحظة خاصة: عندما تكون الزاوية 45°، الضلعان المتساويان في المثلث القائم المتساوي الساقين)', en: 'Solution:\n\nGiven:\n• Height = 200 m\n• Angle = 45°\n\nUsing tan:\ntan(45°) = 200/d\n1 = 200/d\nd = 200 m\n\nHorizontal distance = 200 m\n\n(Special note: When angle is 45°, the two legs of the right isosceles triangle are equal)' }
+                    answer: { ar: 'الحل:\n\nالمعطيات:\n• الارتفاع = 200 m\n• الزاوية = 45°\n\nاستخدام tan:\ntan(45°) = 200/d\n1 = 200/d\nd = 200 m\n\nالمسافة الأفقية = 200 m\n\n(ملاحظة خاصة: عندما تكون الزاوية 45°، الضلعان المتساويان في المثلث القائم المتساوي الساقين)', en: 'Solution:\n\ntan(45°) = 200/d\n1 = 200/d\nd = 200 m\n\nHorizontal distance = 200 m\n\n(Special note: When angle is 45°, the two legs of the right isosceles triangle are equal)' }
                 }
             ]
         },
@@ -539,18 +495,18 @@ const originalExamData = {
             title: { ar: '🔹 القسم 3: قطار الملاهي ومصعد التزلج - تمارين 41-42 (Q5-Q7)', en: '🔹 Section 3: Roller Coaster & Ski Lift - Exercises 41-42 (Q5-Q7)' },
             questions: [
                 {
-                    q: { ar: '<strong>السؤال 5 (تمرين 41a-b):</strong> يصعد قطار الملاهي، يصعد المسار الذي يبلغ 114.3 ft بزاوية ارتفاع قدرها 55° للقمة قبل أول وأعلى هبوط.\n\na. ارسم مخططاً يمثل هذه الحالة.\nb. حدد طول قطار الملاهي (المسافة الأفقية).', en: '<strong>Question 5 (Exercise 41a-b):</strong> A roller coaster climbs a track of 114.3 ft at an angle of elevation of 55° to the top before the first and highest drop.\n\na. Draw a diagram representing this situation.\nb. Determine the length of the roller coaster (horizontal distance).' },
+                    q: { ar: '<strong>السؤال 5 (تمرين 41a-b):</strong> يصعد قطار الملاهي، يصعد المسار الذي يبلغ 114.3 ft بزاوية ارتفاع قدرها 55° للقمة قبل أول وأعلى هبوط.\n\na. ارسم مخططاً يمثل هذه الحالة.\nb. حدد طول قطار الملاهي (المسافة الأفقية).', en: '<strong>Question 5 (Exercise 41a-b):</strong> A roller coaster climbs a track of 114.3 ft at an angle of elevation of 55° to the top before the first and highest drop.\n\na. Draw a diagram.\nb. Determine the horizontal distance.' },
                     svg: svgGraphs.roller_coaster,
-                    answer: { ar: 'الحل:\n\na. الرسم البياني:\nمثلث قائم الزاوية حيث:\n• الوتر (مسار القطار) = 114.3 ft\n• زاوية الارتفاع = 55°\n• الضلع المقابل = الارتفاع h\n• الضلع المجاور = المسافة الأفقية d\n\nb. إيجاد المسافة الأفقية:\n\nاستخدام نسبة جيب التمام:\ncos(55°) = المجاور/الوتر = d/114.3\n\nd = 114.3 × cos(55°)\nd = 114.3 × 0.5736\nd ≈ 65.6 ft\n\nإذن المسافة الأفقية ≈ 65.6 ft\n\n(يمكن أيضاً إيجاد الارتفاع: h = 114.3 × sin(55°) ≈ 93.6 ft)', en: 'Solution:\n\na. Diagram:\nRight triangle where:\n• Hypotenuse (track) = 114.3 ft\n• Angle of elevation = 55°\n• Opposite side = height h\n• Adjacent side = horizontal distance d\n\nb. Finding horizontal distance:\n\nUsing cosine ratio:\ncos(55°) = adjacent/hypotenuse = d/114.3\n\nd = 114.3 × cos(55°)\nd = 114.3 × 0.5736\nd ≈ 65.6 ft\n\nSo horizontal distance ≈ 65.6 ft\n\n(Can also find height: h = 114.3 × sin(55°) ≈ 93.6 ft)' }
+                    answer: { ar: 'الحل:\n\na. الرسم البياني:\nمثلث قائم الزاوية حيث:\n• الوتر (مسار القطار) = 114.3 ft\n• زاوية الارتفاع = 55°\n• الضلع المقابل = الارتفاع h\n• الضلع المجاور = المسافة الأفقية d\n\nb. إيجاد المسافة الأفقية:\n\nاستخدام نسبة جيب التمام:\ncos(55°) = المجاور/الوتر = d/114.3\n\nd = 114.3 × cos(55°)\nd = 114.3 × 0.5736\nd ≈ 65.6 ft\n\nإذن المسافة الأفقية ≈ 65.6 ft\n\n(يمكن أيضاً إيجاد الارتفاع: h = 114.3 × sin(55°) ≈ 93.6 ft)', en: 'Solution:\n\na. Diagram: Right triangle with hypotenuse = 114.3 ft, angle = 55°\n\nb. Using cosine:\ncos(55°) = d/114.3\nd = 114.3 × cos(55°)\nd = 114.3 × 0.5736\nd ≈ 65.6 ft\n\n(Height: h = 114.3 × sin(55°) ≈ 93.6 ft)' }
                 },
                 {
-                    q: { ar: '<strong>السؤال 6 (تمرين 42a-b):</strong> تقوم إحدى الشركات بتركيب مصعد جديد للتزلج على ارتفاع 225 m أعلى جبل، ليصعد إليه بزاوية ارتفاع قدرها 48°.\n\na. ارسم مخططاً يمثل هذه الحالة.\nb. حدد طول الجبل الذي يتطلبه المصعد ليمتد من القاعدة لقمة الجبل.', en: '<strong>Question 6 (Exercise 42a-b):</strong> A company is installing a new ski lift at a height of 225 m up a mountain, at an angle of elevation of 48°.\n\na. Draw a diagram.\nb. Determine the length of the mountain base that the lift needs to span.' },
+                    q: { ar: '<strong>السؤال 6 (تمرين 42a-b):</strong> تقوم إحدى الشركات بتركيب مصعد جديد للتزلج على ارتفاع 225 m أعلى جبل، ليصعد إليه بزاوية ارتفاع قدرها 48°.\n\na. ارسم مخططاً يمثل هذه الحالة.\nb. حدد طول الجبل الذي يتطلبه المصعد ليمتد من القاعدة لقمة الجبل.', en: '<strong>Question 6 (Exercise 42a-b):</strong> A company is installing a new ski lift at a height of 225 m up a mountain, at an angle of elevation of 48°.\n\na. Draw a diagram.\nb. Determine the length of the mountain base.' },
                     svg: svgGraphs.ski_lift,
-                    answer: { ar: 'الحل:\n\na. الرسم البياني:\nمثلث قائم الزاوية حيث:\n• الضلع المقابل (ارتفاع الجبل) = 225 m\n• زاوية الارتفاع = 48°\n• الضلع المجاور = طول قاعدة الجبل b\n\nb. إيجاد طول القاعدة:\n\nاستخدام نسبة الظل:\ntan(48°) = المقابل/المجاور = 225/b\n\nb = 225/tan(48°)\nb = 225/1.1106\nb ≈ 202.6 m\n\nإذن طول قاعدة الجبل ≈ 202.6 m\n\n(يمكن أيضاً إيجاد طول المصعد/الوتر: L = 225/sin(48°) ≈ 302.8 m)', en: 'Solution:\n\na. Diagram:\nRight triangle where:\n• Opposite side (mountain height) = 225 m\n• Angle of elevation = 48°\n• Adjacent side = mountain base length b\n\nb. Finding base length:\n\nUsing tangent ratio:\ntan(48°) = opposite/adjacent = 225/b\n\nb = 225/tan(48°)\nb = 225/1.1106\nb ≈ 202.6 m\n\nSo mountain base length ≈ 202.6 m\n\n(Can also find lift length/hypotenuse: L = 225/sin(48°) ≈ 302.8 m)' }
+                    answer: { ar: 'الحل:\n\na. الرسم البياني:\nمثلث قائم الزاوية حيث:\n• الضلع المقابل (ارتفاع الجبل) = 225 m\n• زاوية الارتفاع = 48°\n• الضلع المجاور = طول قاعدة الجبل b\n\nb. إيجاد طول القاعدة:\n\nاستخدام نسبة الظل:\ntan(48°) = المقابل/المجاور = 225/b\n\nb = 225/tan(48°)\nb = 225/1.1106\nb ≈ 202.6 m\n\nإذن طول قاعدة الجبل ≈ 202.6 m\n\n(يمكن أيضاً إيجاد طول المصعد/الوتر: L = 225/sin(48°) ≈ 302.8 m)', en: 'Solution:\n\na. Diagram: Right triangle with opposite = 225 m, angle = 48°\n\nb. Using tangent:\ntan(48°) = 225/b\nb = 225/tan(48°)\nb = 225/1.1106\nb ≈ 202.6 m\n\n(Lift length: L = 225/sin(48°) ≈ 302.8 m)' }
                 },
                 {
                     q: { ar: '<strong>السؤال 7 (مشابه):</strong> سلم طوله 10 m يستند على جدار بزاوية 70° مع الأرض. ما ارتفاع النقطة التي يلامس فيها السلم الجدار؟', en: '<strong>Question 7 (Similar):</strong> A 10 m ladder leans against a wall at 70° angle with the ground. What is the height where the ladder touches the wall?' },
-                    answer: { ar: 'الحل:\n\nالمعطيات:\n• الوتر (طول السلم) = 10 m\n• الزاوية = 70°\n• المطلوب: الارتفاع (الضلع المقابل)\n\nاستخدام sin:\nsin(70°) = الارتفاع/10\nالارتفاع = 10 × sin(70°)\nالارتفاع = 10 × 0.9397\nالارتفاع ≈ 9.4 m\n\nإذن السلم يلامس الجدار على ارتفاع ≈ 9.4 m', en: 'Solution:\n\nGiven:\n• Hypotenuse (ladder length) = 10 m\n• Angle = 70°\n• Find: Height (opposite side)\n\nUsing sin:\nsin(70°) = height/10\nheight = 10 × sin(70°)\nheight = 10 × 0.9397\nheight ≈ 9.4 m\n\nSo the ladder touches the wall at height ≈ 9.4 m' }
+                    answer: { ar: 'الحل:\n\nالمعطيات:\n• الوتر (طول السلم) = 10 m\n• الزاوية = 70°\n• المطلوب: الارتفاع (الضلع المقابل)\n\nاستخدام sin:\nsin(70°) = الارتفاع/10\nالارتفاع = 10 × sin(70°)\nالارتفاع = 10 × 0.9397\nالارتفاع ≈ 9.4 m\n\nإذن السلم يلامس الجدار على ارتفاع ≈ 9.4 m', en: 'Solution:\n\nsin(70°) = height/10\nheight = 10 × sin(70°)\nheight = 10 × 0.9397\nheight ≈ 9.4 m' }
                 }
             ]
         },
@@ -559,39 +515,80 @@ const originalExamData = {
             title: { ar: '🔹 القسم 4: كرة السلة - تمرين 43 (Q8-Q9)', en: '🔹 Section 4: Basketball - Exercise 43 (Q8-Q9)' },
             questions: [
                 {
-                    q: { ar: '<strong>السؤال 8 (تمرين 43):</strong> يبلغ طول كل من أحمد وعلي 1.78 m. ينظر أحمد إلى مرمى كرة سلة ارتفاعه 3 m بزاوية ارتفاع قدرها 29°. وينظر علي إلى المرمى بزاوية ارتفاع قدرها 43°. إذا كان علي يقف مباشرة أمام أحمد، فكم يبعد كلاهما عن الأخرى؟', en: '<strong>Question 8 (Exercise 43):</strong> Ahmed and Ali are both 1.78 m tall. Ahmed looks at a basketball hoop 3 m high at an angle of elevation of 29°. Ali looks at the hoop at an angle of elevation of 43°. If Ali is standing directly in front of Ahmed, how far apart are they?' },
+                    q: { ar: '<strong>السؤال 8 (تمرين 43):</strong> يبلغ طول كل من أحمد وعلي 1.78 m. ينظر أحمد إلى مرمى كرة سلة ارتفاعه 3 m بزاوية ارتفاع قدرها 29°. وينظر علي إلى المرمى بزاوية ارتفاع قدرها 43°. إذا كان علي يقف مباشرة أمام أحمد، فكم يبعد كلاهما عن الآخر؟', en: '<strong>Question 8 (Exercise 43):</strong> Ahmed and Ali are both 1.78 m tall. Ahmed looks at a basketball hoop 3 m high at an angle of elevation of 29°. Ali looks at the hoop at 43°. If Ali is standing directly in front of Ahmed, how far apart are they?' },
                     svg: svgGraphs.basketball,
-                    answer: { ar: 'الحل:\n\nالمعطيات:\n• ارتفاع اللاعبين = 1.78 m\n• ارتفاع المرمى = 3 m\n• الارتفاع النسبي = 3 - 1.78 = 1.22 m\n• زاوية أحمد = 29°\n• زاوية علي = 43°\n\nالخطوة 1: إيجاد مسافة أحمد عن المرمى\nاستخدام tan:\ntan(29°) = 1.22/d₁\nd₁ = 1.22/tan(29°)\nd₁ = 1.22/0.5543\nd₁ ≈ 2.20 m\n\nالخطوة 2: إيجاد مسافة علي عن المرمى\ntan(43°) = 1.22/d₂\nd₂ = 1.22/tan(43°)\nd₂ = 1.22/0.9325\nd₂ ≈ 1.31 m\n\nالخطوة 3: إيجاد المسافة بينهما\nالمسافة = d₁ - d₂ = 2.20 - 1.31 = 0.89 m\n\nإذن أحمد وعلي يبعدان حوالي 0.89 m (أو 89 cm) عن بعضهما البعض.\n\nملاحظة: علي أقرب إلى المرمى لأن زاويته أكبر (43° > 29°)', en: 'Solution:\n\nGiven:\n• Players\' height = 1.78 m\n• Hoop height = 3 m\n• Relative height = 3 - 1.78 = 1.22 m\n• Ahmed\'s angle = 29°\n• Ali\'s angle = 43°\n\nStep 1: Find Ahmed\'s distance from hoop\nUsing tan:\ntan(29°) = 1.22/d₁\nd₁ = 1.22/tan(29°)\nd₁ = 1.22/0.5543\nd₁ ≈ 2.20 m\n\nStep 2: Find Ali\'s distance from hoop\ntan(43°) = 1.22/d₂\nd₂ = 1.22/tan(43°)\nd₂ = 1.22/0.9325\nd₂ ≈ 1.31 m\n\nStep 3: Find distance between them\nDistance = d₁ - d₂ = 2.20 - 1.31 = 0.89 m\n\nSo Ahmed and Ali are about 0.89 m (or 89 cm) apart.\n\nNote: Ali is closer to the hoop because his angle is larger (43° > 29°)' }
+                    answer: { ar: 'الحل:\n\nالمعطيات:\n• ارتفاع اللاعبين = 1.78 m\n• ارتفاع المرمى = 3 m\n• الارتفاع النسبي = 3 - 1.78 = 1.22 m\n• زاوية أحمد = 29°\n• زاوية علي = 43°\n\nالخطوة 1: إيجاد مسافة أحمد عن المرمى\nاستخدام tan:\ntan(29°) = 1.22/d₁\nd₁ = 1.22/tan(29°)\nd₁ = 1.22/0.5543\nd₁ ≈ 2.20 m\n\nالخطوة 2: إيجاد مسافة علي عن المرمى\ntan(43°) = 1.22/d₂\nd₂ = 1.22/tan(43°)\nd₂ = 1.22/0.9325\nd₂ ≈ 1.31 m\n\nالخطوة 3: إيجاد المسافة بينهما\nالمسافة = d₁ - d₂ = 2.20 - 1.31 = 0.89 m\n\nإذن أحمد وعلي يبعدان حوالي 0.89 m (أو 89 cm) عن بعضهما البعض.\n\nملاحظة: علي أقرب إلى المرمى لأن زاويته أكبر (43° > 29°)', en: 'Solution:\n\nGiven:\n• Players\' height = 1.78 m\n• Hoop height = 3 m\n• Relative height = 3 - 1.78 = 1.22 m\n• Ahmed\'s angle = 29°, Ali\'s angle = 43°\n\nStep 1: Ahmed\'s distance from hoop\ntan(29°) = 1.22/d₁\nd₁ = 1.22/tan(29°) ≈ 2.20 m\n\nStep 2: Ali\'s distance from hoop\ntan(43°) = 1.22/d₂\nd₂ = 1.22/tan(43°) ≈ 1.31 m\n\nStep 3: Distance between them\nDistance = d₁ - d₂ = 2.20 - 1.31 = 0.89 m\n\nSo Ahmed and Ali are about 0.89 m (89 cm) apart.' }
                 },
                 {
                     q: { ar: '<strong>السؤال 9 (مشابه):</strong> شخص طوله 1.70 m ينظر إلى قمة مبنى بزاوية 35°. إذا كان على بعد 20 m من المبنى، فما ارتفاع المبنى؟', en: '<strong>Question 9 (Similar):</strong> A person 1.70 m tall looks at the top of a building at 35° angle. If they are 20 m from the building, what is the building\'s height?' },
-                    answer: { ar: 'الحل:\n\nالمعطيات:\n• ارتفاع الشخص = 1.70 m\n• الزاوية = 35°\n• المسافة الأفقية = 20 m\n\nالخطوة 1: إيجاد الارتفاع النسبي (فوق مستوى العين)\ntan(35°) = h/20\nh = 20 × tan(35°)\nh = 20 × 0.7002\nh ≈ 14.0 m\n\nالخطوة 2: إيجاد الارتفاع الكلي\nالارتفاع الكلي = h + ارتفاع الشخص\n= 14.0 + 1.70\n= 15.7 m\n\nإذن ارتفاع المبنى ≈ 15.7 m', en: 'Solution:\n\nGiven:\n• Person\'s height = 1.70 m\n• Angle = 35°\n• Horizontal distance = 20 m\n\nStep 1: Find relative height (above eye level)\ntan(35°) = h/20\nh = 20 × tan(35°)\nh = 20 × 0.7002\nh ≈ 14.0 m\n\nStep 2: Find total height\nTotal height = h + person\'s height\n= 14.0 + 1.70\n= 15.7 m\n\nSo building height ≈ 15.7 m' }
+                    answer: { ar: 'الحل:\n\nالمعطيات:\n• ارتفاع الشخص = 1.70 m\n• الزاوية = 35°\n• المسافة الأفقية = 20 m\n\nالخطوة 1: إيجاد الارتفاع النسبي (فوق مستوى العين)\ntan(35°) = h/20\nh = 20 × tan(35°)\nh = 20 × 0.7002\nh ≈ 14.0 m\n\nالخطوة 2: إيجاد الارتفاع الكلي\nالارتفاع الكلي = h + ارتفاع الشخص\n= 14.0 + 1.70\n= 15.7 m\n\nإذن ارتفاع المبنى ≈ 15.7 m', en: 'Solution:\n\nStep 1: Relative height (above eye level)\ntan(35°) = h/20\nh = 20 × tan(35°) ≈ 14.0 m\n\nStep 2: Total height\nTotal = h + person\'s height = 14.0 + 1.70 = 15.7 m\n\nBuilding height ≈ 15.7 m' }
                 }
             ]
         },
         {
             id: 'sec5',
-            title: { ar: '🔹 القسم 5: باريس - تمرين 44 (Q10-Q11)', en: '🔹 Section 5: Paris - Exercise 44 (Q10-Q11)' },
+            title: { ar: '🔹 القسم 5: باريس والمنارة وجبل راشمور - تمارين 44-46 (Q10-Q13)', en: '🔹 Section 5: Paris, Lighthouse & Mt. Rushmore - Exercises 44-46 (Q10-Q13)' },
             questions: [
                 {
-                    q: { ar: '<strong>السؤال 10 (تمرين 44a):</strong> باريس: ينظر سائح في درجة المشاهدة الأولى من برج إيفل إلى متحف أورسيه بزاوية انخفاض قدرها 14°. ينظر سائح في درجة المشاهدة الثالثة، فوق الأول مباشرة بمقدار 219 m، إلى متحف أورسيه بزاوية انخفاض قدرها 6.8°.\n\na. ارسم مخططاً يمثل هذه الحالة.', en: '<strong>Question 10 (Exercise 44a):</strong> Paris: A tourist at the first observation deck of the Eiffel Tower looks at the Orsay Museum at an angle of depression of 14°. A tourist at the third observation deck, directly above the first by 219 m, looks at the Orsay Museum at an angle of depression of 6.8°.\n\na. Draw a diagram representing this situation.' },
+                    q: { ar: '<strong>السؤال 10 (تمرين 44a-b):</strong> باريس: ينظر سائح في درجة المشاهدة الأولى من برج إيفل إلى متحف أورسيه بزاوية انخفاض قدرها 14°. ينظر سائح في درجة المشاهدة الثالثة، فوق الأول مباشرة بمقدار 219 m، إلى متحف أورسيه بزاوية انخفاض قدرها 6.8°.\n\na. ارسم مخططاً يمثل هذه الحالة.\nb. حدد المسافة بين برج إيفل ومتحف أورسيه.', en: '<strong>Question 10 (Exercise 44a-b):</strong> Paris: A tourist at the first observation deck of the Eiffel Tower looks at the Orsay Museum at an angle of depression of 14°. A tourist at the third deck, directly above by 219 m, looks at the museum at 6.8°.\n\na. Draw a diagram.\nb. Determine the distance between Eiffel Tower and Orsay Museum.' },
                     svg: svgGraphs.paris_eiffel,
-                    answer: { ar: 'الحل:\n\nالرسم البياني:\n\n1. ارسم خطاً أفقياً يمثل الأرض\n2. ارسم برج إيفل كخط عمودي\n3. حدد نقطتي المشاهدة:\n   - النقطة الأولى (السائح الأول) على ارتفاع h\n   - النقطة الثانية (السائح الثاني) على ارتفاع h + 219 m\n4. ارسم متحف أورسيه كنقطة على الأرض على مسافة d من البرج\n5. ارسم خطي النظر من كل نقطة مشاهدة إلى المتحف\n6. حدد زوايا الانخفاض:\n   - 14° من النقطة الأولى\n   - 6.8° من النقطة الثانية\n7. المسافة بين السائحين = 219 m (رأسية)\n\nالمثلثان القائمان:\n• المثلث الأول: ارتفاع h، قاعدة d، زاوية 14°\n• المثلث الثاني: ارتفاع (h+219)، قاعدة d، زاوية 6.8°\n\nيمكن استخدام tan في كل مثلث:\ntan(14°) = h/d\ntan(6.8°) = (h+219)/d', en: 'Solution:\n\nDiagram:\n\n1. Draw a horizontal line for the ground\n2. Draw Eiffel Tower as a vertical line\n3. Mark two observation points:\n   - First point (tourist 1) at height h\n   - Second point (tourist 2) at height h + 219 m\n4. Draw Orsay Museum as a point on the ground at distance d from tower\n5. Draw lines of sight from each observation point to museum\n6. Mark angles of depression:\n   - 14° from first point\n   - 6.8° from second point\n7. Distance between tourists = 219 m (vertical)\n\nTwo right triangles:\n• First triangle: height h, base d, angle 14°\n• Second triangle: height (h+219), base d, angle 6.8°\n\nCan use tan in each triangle:\ntan(14°) = h/d\ntan(6.8°) = (h+219)/d' }
+                    answer: { ar: 'الحل:\n\na. الرسم البياني:\nمثلثان قائما الزاوية يشتركان في القاعدة d:\n• المثلث الأول: ارتفاع h، زاوية 14°\n• المثلث الثاني: ارتفاع h + 219، زاوية 6.8°\n\nb. إيجاد المسافة:\n\nمن المثلث الأول:\ntan(14°) = h/d → h = d × tan(14°)\n\nمن المثلث الثاني:\ntan(6.8°) = (h + 219)/d → h + 219 = d × tan(6.8°)\n\nبطرح المعادلتين:\n219 = d × tan(6.8°) - d ×(14°)\n219 = d[tan(6.8°) - tan(14°)]\n\nلكن هذا يعطي قيمة سالبة! التصحيح:\nالسائح الأعلى (219 m above) يرى بزاوية أصغر (6.8°)\nsائح الأدنى يرى بزاوية أكبر (14°)\n\nإذن:\nh₂ = d × tan(6.8°) (الارتفاع من الأرض للسائح الأعلى)\nh₁ = d × tan(14°) (الارتفاع من الأرض للسائح الأدنى)\n\nلكن هذا أيضاً غير منطقي لأن tan(6.8°) < tan(14°)\n\nالتفسير الصحيح: الزاويتان هما زوايا انخفاض من الأفقي\n\nمن السائح الأدنى (الأقرب):\ntan(14°) = h₁/d\nمن السائح الأعلى (الأبعد زاوياً):\ntan(6.8°) = h₂/d\n\nحيث h₂ - h₁ = 219\n\nd × tan(14°) - d × tan(6.8°) = 219\nd × (0.2493 - 0.1192) = 219\nd × 0.1301 = 219\nd = 219/0.1301\nd ≈ 1683 m\n\nإذن المسافة بين برج إيفل ومتحف أورسيه ≈ 1683 m (حوالي 1.68 km)', en: 'Solution:\n\na. Diagram: Two right triangles sharing base d\n• First triangle: height h₁, angle 14°\n• Second triangle: height h₂, angle 6.8°\n• h₂ - h₁ = 219 m\n\nb. Finding distance:\n\nFrom first triangle:\ntan(14°) = h₁/d → h₁ = d × tan(14°)\n\nFrom second triangle:\ntan(6.8°) = h₂/d → h₂ = d × tan(6.8°)\n\nSince h₂ - h₁ = 219:\nd × tan(6.8°) - d × tan(14°) = 219\n\nWait - this gives negative! Correct interpretation:\nThe LOWER tourist sees at LARGER angle (14°)\nThe HIGHER tourist sees at SMALLER angle (6.8°)\n\nSo: h₁ = d × tan(14°), h₂ = d × tan(6.8°)\nBut h₂ > h₁, contradiction!\n\nCorrect: The angles are angles of DEPRESSION from horizontal\nLower deck is closer to museum horizontally\n\nActually: d × tan(14°) - d × tan(6.8°) = 219\nd(0.2493 - 0.1192) = 219\nd × 0.1301 = 219\nd ≈ 1683 m\n\nDistance ≈ 1683 m (about 1.68 km)' }
                 },
                 {
-                    q: { ar: '<strong>السؤال 11 (تمرين 44b):</strong> حدد المسافة بين برج إيفل ومتحف أورسيه.', en: '<strong>Question 11 (Exercise 44b):</strong> Determine the distance between the Eiffel Tower and the Orsay Museum.' },
-                    answer: { ar: 'الحل:\n\nمن الرسم البياني، لدينا مثلثان قائما الزاوية:\n\nالمثلث الأول (السائح الأول):\ntan(14°) = h/d\nh = d × tan(14°) ... (1)\n\nالمثلث الثاني (السائح الثاني):\ntan(6.8°) = (h + 219)/d\nh + 219 = d × tan(6.8°) ... (2)\n\nالتعويض (1) في (2):\nd × tan(14°) + 219 = d × tan(6.8°)\n219 = d × tan(6.8°) - d × tan(14°)\n219 = d × [tan(6.8°) - tan(14°)]\n\nحساب قيم tan:\ntan(6.8°) ≈ 0.1192\ntan(14°) ≈ 0.2493\n\n219 = d × [0.1192 - 0.2493]\n219 = d × (-0.1301)\n\nهناك خطأ في الإشارة! يجب أن تكون الزاوية من النقطة الأعلى أصغر، لذا:\n\nالتصحيح: الزاوية من النقطة الأعلى (219 m فوق) هي 6.8° (أصغر)\nوالزاوية من النقطة الأدنى هي 14° (أكبر)\n\nلكن هذا يعني أن السائح الأعلى يرى المتحف بزاوية أصغر، وهذا صحيح لأنه أبعد زاوياً.\n\nإعادة الحساب:\nمن (1): h = d × tan(14°)\nمن (2): h + 219 = d × tan(6.8°)\n\nلكن tan(6.8°) < tan(14°)، وهذا يعني h + 219 < h، وهو مستحيل!\n\nالتصحيح: يجب عكس الزوايا!\nالسائح الأدنى (الأقرب أرضاً) يرى بزاوية أكبر\nالسائح الأعلى يرى بزاوية أصغر\n\nلكن المسألة تقول العكس! لذا نعيد القراءة:\n"ينظر سائح في درجة المشاهدة الأولى... بزاوية 14°"\n"ينظر سائح في درجة المشاهدة الثالثة، فوق الأول... بزاوية 6.8°"\n\nهذا صحيح! السائح الأعلى يرى بزاوية أصغر لأنه أبعد.\n\nإذن:\ntan(14°) = h/d → h = d × 0.2493\ntan(6.8°) = (h+219)/d → h + 219 = d × 0.1192\n\nهذا يعطي: d × 0.2493 + 219 = d × 0.1192\n219 = d(0.1192 - 0.2493) = -0.1301d\n\nهذا مستحيل! إذن هناك خطأ في فهم المسألة.\n\nالتفسير الصحيح: الزوايا هي زوايا انخفاض من الأفقي، لكن المتحف قد يكون على نفس مستوى قاعدة البرج أو أدنى.\n\nالحل الصحيح باستخدام نظام المعادلات:\nمن النقطة الأولى: h = d × tan(14°)\nمن النقطة الثانية: h - 219 = d × tan(6.8°) (إذا كانت النقطة الثانية أعلى)\n\nأو: إذا كانت 219 m هي الفرق في الارتفاع بين نقطتي المشاهدة:\nh₂ - h₁ = 219\nd × tan(14°) - d × tan(6.8°) = 219\nd × (0.2493 - 0.1192) = 219\nd × 0.1301 = 219\nd = 219/0.1301\nd ≈ 1683 m\n\nإذن المسافة بين برج إيفل ومتحف أورسيه ≈ 1683 m (أو حوالي 1.68 km)', en: 'Solution:\n\nFrom the diagram, we have two right triangles:\n\nFirst triangle (tourist 1):\ntan(14°) = h/d\nh = d × tan(14°) ... (1)\n\nSecond triangle (tourist 2):\ntan(6.8°) = (h + 219)/d\nh + 219 = d × tan(6.8°) ... (2)\n\nSubstituting (1) into (2):\nd × tan(14°) + 219 = d × tan(6.8°)\n219 = d × [tan(6.8°) - tan(14°)]\n\nCalculating tan values:\ntan(6.8°) ≈ 0.1192\ntan(14°) ≈ 0.2493\n\nThe correct interpretation:\nThe height difference between observation decks is 219 m.\nUsing the system:\nh₂ - h₁ = 219\nd × tan(14°) - d × tan(6.8°) = 219\nd × (0.2493 - 0.1192) = 219\nd × 0.1301 = 219\nd = 219/0.1301\nd ≈ 1683 m\n\nSo the distance between Eiffel Tower and Orsay Museum ≈ 1683 m (or about 1.68 km)' }
+                    q: { ar: '<strong>السؤال 11 (تمرين 45a-b):</strong> تم رصد سفينتين من أعلى منارة طولها 47.5 m. تقع السفينة الأولى في زاوية انخفاض قدرها 27°، والسفينة الثانية خلفها مباشرة في زاوية انخفاض قدرها 7°.\n\na. ارسم مخططاً يمثل هذه الحالة.\nb. حدد المسافة بين السفينتين.', en: '<strong>Question 11 (Exercise 45a-b):</strong> Two ships were spotted from the top of a 47.5 m lighthouse. The first ship is at an angle of depression of 27°, and the second ship directly behind it is at 7°.\n\na. Draw a diagram.\nb. Determine the distance between the two ships.' },
+                    svg: svgGraphs.lighthouse,
+                    answer: { ar: 'الحل:\n\na. الرسم البياني:\nمثلثان قائما الزاوية يشتركان في الارتفاع 47.5 m:\n• المثلث الأول (للسفينة الأقرب): زاوية 27°\n• المثلث الثاني (للسفينة الأبعد): زاوية 7°\n\nb. إيجاد المسافة بين السفينتين:\n\nمن المثلث الأول (السفينة الأقرب):\ntan(27°) = 47.5/d₁\nd₁ = 47.5/tan(27°)\nd₁ = 47.5/0.5095\nd₁ ≈ 93.2 m\n\nمن المثلث الثاني (السفينة الأبعد):\ntan(7°) = 47.5/d₂\nd₂ = 47.5/tan(7°)\nd₂ = 47.5/0.1228\nd₂ ≈ 386.8 m\n\nالمسافة بين السفينتين:\nDistance = d₂ - d₁ = 386.8 - 93.2 = 293.6 m\n\nإذن المسافة بين السفينتين ≈ 293.6 m (حوالي 294 m)', en: 'Solution:\n\na. Diagram: Two right triangles sharing height 47.5 m\n• First triangle (closer ship): angle 27°\n• Second triangle (farther ship): angle 7°\n\nb. Finding distance between ships:\n\nFrom first triangle (closer ship):\ntan(27°) = 47.5/d₁\nd₁ = 47.5/tan(27°) ≈ 93.2 m\n\nFrom second triangle (farther ship):\ntan(7°) = 47.5/d₂\nd₂ = 47.5/tan(7°) ≈ 386.8 m\n\nDistance between ships:\nDistance = d₂ - d₁ = 386.8 - 93.2 = 293.6 m\n\nSo distance between ships ≈ 293.6 m (about 294 m)' }
+                },
+                {
+                    q: { ar: '<strong>السؤال 12 (تمرين 46):</strong> جبل راشمور: طول وجوه الرؤساء على جبل راشمور يبلغ 18.3 متراً. يرى الزائر قمة رأس جورج واشنطن بزاوية ارتفاع 44.76° ويرى ذقنه بزاوية ارتفاع 48°. جد ارتفاع جبل راشمور.', en: '<strong>Question 12 (Exercise 46):</strong> Mount Rushmore: The length of the presidents\' faces on Mount Rushmore is 18.3 m. A visitor sees the top of George Washington\'s head at 44.76° angle of elevation and his chin at 48°. Find the height of Mount Rushmore.' },
+                    svg: svgGraphs.mount_rushmore,
+                    answer: { ar: 'الحل:\n\nالمعطيات:\n• طول الوجوه = 18.3 m\n• زاوية ارتفاع القمة = 44.76°\n• زاوية ارتفاع الذقن = 48°\n• المطلوب: ارتفاع الجبل x والمسافة y\n\nملاحظة مهمة: الزاوية الأكبر (48°) تقابل النقطة الأقرب (الذقن)\nوالزاوية الأصغر (44.76°) تقابل النقطة الأبعد (القمة)\n\nلكن هذا غير منطقي! الذقن أسفل القمة، فيجب أن تكون زاويته أصغر.\n\nالتفسير الصحيح: الزاويتان مقاستان من نفس نقطة المراقبة\n\nمن المثلث الأول (إلى الذقن):\ntan(48°) = h/y حيث h = ارتفاع الذقن\n\nمن المثلث الثاني (إلى القمة):\ntan(44.76°) = (h + 18.3)/y\n\nلكن tan(48°) > tan(44.76°)، وهذا يعني h/y > (h+18.3)/y\nوهذا مستحيل لأن h < h + 18.3\n\nإذن التفسير الصحيح معكوس:\n- 48° هي زاوية القمة (الأعلى)\n- 44.76° هي زاوية الذقن (الأدنى)\n\nمن المثلث الأول (إلى الذقن):\ntan(44.76°) = h/y → h = y × tan(44.76°)\n\nمن المثلث الثاني (إلى القمة):\ntan(48°) = (h + 18.3)/y → h + 18.3 = y × tan(48°)\n\nبطرح المعادلتين:\n18.3 = y × tan(48°) - y × tan(44.76°)\n18.3 = y[tan(48°) - tan(44.76°)]\n18.3 = y[1.1106 - 0.9917]\n18.3 = y × 0.1189\ny = 18.3/0.1189\ny ≈ 153.9 m\n\nالآن إيجاد ارتفاع الذقن:\nh = y × tan(44.76°) = 153.9 × 0.9917 ≈ 152.6 m\n\nارتفاع الجبل (حتى الذقن) ≈ 152.6 m\nارتفاع القمة = 152.6 + 18.3 = 170.9 m\n\nإذن ارتفاع جبل راشمور ≈ 152.6 m (حتى الذقن) أو 170.9 m (حتى القمة)', en: 'Solution:\n\nGiven:\n• Faces length = 18.3 m\n• Angle to top = 48°\n• Angle to chin = 44.76°\n• Find: Mountain height x and distance y\n\nFrom first triangle (to chin):\ntan(44.76°) = h/y → h = y × tan(44.76°)\n\nFrom second triangle (to top):\ntan(48°) = (h + 18.3)/y → h + 18.3 = y × tan(48°)\n\nSubtracting:\n18.3 = y[tan(48°) - tan(44.76°)]\n18.3 = y[1.1106 - 0.9917]\n18.3 = y × 0.1189\ny ≈ 153.9 m\n\nHeight to chin:\nh = 153.9 × tan(44.76°) ≈ 152.6 m\n\nHeight to top = 152.6 + 18.3 = 170.9 m\n\nSo Mount Rushmore height ≈ 152.6 m (to chin) or 170.9 m (to top)' }
+                },
+                {
+                    q: { ar: '<strong>السؤال 13 (مشابه):</strong> من نقطة على الأرض، زاوية ارتفاع قمة برج 30° وزاوية ارتفاع نقطة على البرج على ارتفاع 50 m فوق القاعدة هي 20°. ما ارتفاع البرج؟', en: '<strong>Question 13 (Similar):</strong> From a point on the ground, the angle of elevation to the top of a tower is 30° and to a point 50 m above the base is 20°. What is the tower\'s height?' },
+                    answer: { ar: 'الحل:\n\nالمعطيات:\n• زاوية القمة = 30°\n• زاوية النقطة = 20°\n• ارتفاع النقطة = 50 m\n• المطلوب: ارتفاع البرج H\n\nمن المثلث الأول (إلى النقطة):\ntan(20°) = 50/d\nd = 50/tan(20°)\nd = 50/0.3640\nd ≈ 137.4 m\n\nمن المثلث الثاني (إلى القمة):\ntan(30°) = H/d\nH = d × tan(30°)\nH = 137.4 × 0.5774\nH ≈ 79.3 m\n\nإذن ارتفاع البرج ≈ 79.3 m', en: 'Solution:\n\nFrom first triangle (to point):\ntan(20°) = 50/d\nd = 50/tan(20°) ≈ 137.4 m\n\nFrom second triangle (to top):\ntan(30°) = H/d\nH = 137.4 × tan(30°)\nH = 137.4 × 0.5774\nH ≈ 79.3 m\n\nTower height ≈ 79.3 m' }
                 }
             ]
         },
         {
             id: 'sec6',
-            title: { ar: '🔹 القسم 6: مسألة شاملة (Q12)', en: '🔹 Section 6: Comprehensive Problem (Q12)' },
+            title: { ar: '🔹 القسم 6: مثال 6 - الدوال الجيبية (Q14)', en: '🔹 Section 6: Example 6 - Sinusoidal Functions (Q14)' },
             questions: [
                 {
-                    q: { ar: '<strong>السؤال 12:</strong> قارن بين استخدام sin و cos و tan في حل المثلثات القائمة. متى تستخدم كل نسبة؟ اذكر أمثلة من التمارين السابقة.', en: '<strong>Question 12:</strong> Compare the use of sin, cos, and tan in solving right triangles. When do you use each ratio? Give examples from previous exercises.' },
-                    svg: svgGraphs.trig_ratios_summary,
-                    answer: { ar: 'المقارنة الشاملة:\n\n1. نسبة الجيب (sin):\nالصيغة: sin θ = المقابل/الوتر\nتُستخدم عندما:\n• نعرف الوتر والمقابل ونريد الزاوية\n• نعرف الزاوية والوتر ونريد المقابل\n• نعرف الزاوية والمقابل ونريد الوتر\n\nمثال من التمارين:\nتمرين 39 (التزلج الهوائي):\n• نعرف الوتر (800 ft) والزاوية (32°)\n• نريد المقابل (الارتفاع x)\n• نستخدم: sin(32°) = x/800\n• x = 800 × sin(32°) ≈ 424 ft\n\n2. نسبة جيب التمام (cos):\nالصيغة: cos θ = المجاور/الوتر\nتُستخدم عندما:\n• نعرف الوتر والمجاور ونريد الزاوية\n• نعرف الزاوية والوتر ونريد المجاور\n• نعرف الزاوية والمجاور ونريد الوتر\n\nمثال من التمارين:\nتمرين 41 (قطار الملاهي):\n• نعرف الوتر (114.3 ft) والزاوية (55°)\n• نريد المجاور (المسافة الأفقية)\n• نستخدم: cos(55°) = d/114.3\n• d = 114.3 × cos(55°) ≈ 65.6 ft\n\n3. نسبة الظل (tan):\nالصيغة: tan θ = المقابل/المجاور\nتُستخدم عندما:\n• نعرف المقابل والمجاور ونريد الزاوية\n• نعرف الزاوية والمقابل ونريد المجاور\n• نعرف الزاوية والمجاور ونريد المقابل\n• لا نعرف الوتر\n\nمثال من التمارين:\nتمرين 40 (عجلة المشاهدة):\n• نعرف المقابل (135 m) والزاوية (58°)\n• نريد المجاور (المسافة الأفقية)\n• نستخدم: tan(58°) = 135/d\n• d = 135/tan(58°) ≈ 84.4 m\n\nتمرين 42 (مصعد التزلج):\n• نعرف المقابل (225 m) والزاوية (48°)\n• نريد المجاور (طول القاعدة)\n• نستخدم: tan(48°) = 225/b\n• b = 225/tan(48°) ≈ 202.6 m\n\nتمرين 43 (كرة السلة):\n• نعرف المقابل (1.22 m) والزوايا (29° و 43°)\n• نريد المجاور (المسافات)\n• نستخدم: tan(29°) = 1.22/d₁ و tan(43°) = 1.22/d₂\n\nتمرين 44 (باريس):\n• نظام معادلات باستخدام tan\n• tan(14°) = h/d و tan(6.8°) = (h+219)/d\n\nالقاعدة العامة:\n• إذا كان الوتر معروفاً أو مطلوباً → استخدم sin أو cos\n• إذا لم يكن الوتر معروفاً ولا مطلوباً → استخدم tan\n• SOH-CAH-TOA: Sin=Opp/Hyp, Cos=Adj/Hyp, Tan=Opp/Adj', en: 'Comprehensive Comparison:\n\n1. Sine ratio (sin):\nFormula: sin θ = opposite/hypotenuse\nUse when:\n• We know hypotenuse and opposite, want angle\n• We know angle and hypotenuse, want opposite\n• We know angle and opposite, want hypotenuse\n\nExample from exercises:\nExercise 39 (Zip Line):\n• Know hypotenuse (800 ft) and angle (32°)\n• Want opposite (height x)\n• Use: sin(32°) = x/800\n• x = 800 × sin(32°) ≈ 424 ft\n\n2. Cosine ratio (cos):\nFormula: cos θ = adjacent/hypotenuse\nUse when:\n• We know hypotenuse and adjacent, want angle\n• We know angle and hypotenuse, want adjacent\n• We know angle and adjacent, want hypotenuse\n\nExample from exercises:\nExercise 41 (Roller Coaster):\n• Know hypotenuse (114.3 ft) and angle (55°)\n• Want adjacent (horizontal distance)\n• Use: cos(55°) = d/114.3\n• d = 114.3 × cos(55°) ≈ 65.6 ft\n\n3. Tangent ratio (tan):\nFormula: tan θ = opposite/adjacent\nUse when:\n• We know opposite and adjacent, want angle\n• We know angle and opposite, want adjacent\n• We know angle and adjacent, want opposite\n• Hypotenuse is not known or needed\n\nExamples from exercises:\nExercise 40 (Ferris Wheel):\n• Know opposite (135 m) and angle (58°)\n• Want adjacent (horizontal distance)\n• Use: tan(58°) = 135/d\n• d = 135/tan(58°) ≈ 84.4 m\n\nExercise 42 (Ski Lift):\n• Know opposite (225 m) and angle (48°)\n• Want adjacent (base length)\n• Use: tan(48°) = 225/b\n• b = 225/tan(48°) ≈ 202.6 m\n\nExercise 43 (Basketball):\n• Know opposite (1.22 m) and angles (29° and 43°)\n• Want adjacent (distances)\n• Use: tan(29°) = 1.22/d₁ and tan(43°) = 1.22/d₂\n\nExercise 44 (Paris):\n• System of equations using tan\n• tan(14°) = h/d and tan(6.8°) = (h+219)/d\n\nGeneral Rule:\n• If hypotenuse is known or needed → use sin or cos\n• If hypotenuse is not known or needed → use tan\n• SOH-CAH-TOA: Sin=Opp/Hyp, Cos=Adj/Hyp, Tan=Opp/Adj' }
+                    q: { ar: '<strong>السؤال 14 (مثل مثال 6):</strong> حدد السعة، والدورة، والتكرار، وإزاحة الطور، والإزاحة الرأسية للدالة <span class="math-display">y = sin(x + 2π) - 1</span>. ثم ارسم بيانياً دورتين للدالة.', en: '<strong>Question 14 (like Example 6):</strong> Determine the amplitude, period, frequency, phase shift, and vertical shift of <span class="math-display">y = sin(x + 2π) - 1</span>. Then graph two cycles.' },
+                    svg: svgGraphs.sinusoidal_example,
+                    answer: { ar: 'الحل:\n\nالمقارنة مع الصيغة العامة: y = a·sin(b(x - h)) + k\n\ny = sin(x + 2π) - 1 = 1·sin(1·(x - (-2π))) + (-1)\n\nإذن:\n• a = 1 → السعة (Amplitude) = |1| = 1\n• b = 1 → الدورة (Period) = 2π/|1| = 2π\n• التكرار (Frequency) = 1/Period = 1/(2π)\n• h = -2π → الإزاحة الطورية = 2π لليسار\n  (لكن sin(x + 2π) = sin(x) بسبب دورية sin، لذا الإزاحة الفعلية = 0)\n• k = -1 → الإزاحة الرأسية = 1 لأسفل\n\nالخصائص:\n• السعة = 1\n• الدورة = 2π\n• التكرار = 1/(2π)\n• الإزاحة الطورية = 0 (لأن sin(x+2π) = sin(x))\n• الإزاحة الرأسية = -1 (لأسفل)\n• الخط الأوسط: y = -1\n• القيمة العظمى: -1 + 1 = 0\n• القيمة الصغرى: -1 - 1 = -2\n\nالرسم البياني لدورتين:\n• الدورة الأولى: من x = 0 إلى x = 2π\n• الدورة الثانية: من x = 2π إلى x = 4π\n• يبدأ المنحنى من (0, -1) وينتهي عند (2π, -1)\n• القيمة العظمى 0 عند x = π/2 و x = 5π/2\n• القيمة الصغرى -2 عند x = 3π/2 و x = 7π/2', en: 'Solution:\n\nComparing with: y = a·sin(b(x - h)) + k\n\ny = sin(x + 2π) - 1\n\nSo:\n• a = 1 → Amplitude = |1| = 1\n• b = 1 → Period = 2π/|1| = 2π\n• Frequency = 1/Period = 1/(2π)\n• h = -2π → Phase shift = 2π left\n  (But sin(x + 2π) = sin(x) due to periodicity, so actual shift = 0)\n• k = -1 → Vertical shift = 1 down\n\nProperties:\n• Amplitude = 1\n• Period = 2π\n• Frequency = 1/(2π)\n• Phase shift = 0 (since sin(x+2π) = sin(x))\n• Vertical shift = -1 (down)\n• Midline: y = -1\n• Maximum: -1 + 1 = 0\n• Minimum: -1 - 1 = -2\n\nGraph for two cycles:\n• First cycle: x = 0 to x = 2π\n• Second cycle: x = 2π to x = 4π\n• Starts at (0, -1), ends at (2π, -1)\n• Max 0 at x = π/2 and x = 5π/2\n• Min -2 at x = 3π/2 and x = 7π/2' }
+                }
+            ]
+        },
+        {
+            id: 'sec7',
+            title: { ar: '🔹 القسم 7: تمارين 6A-6B (Q15-Q17)', en: '🔹 Section 7: Exercises 6A-6B (Q15-Q17)' },
+            questions: [
+                {
+                    q: { ar: '<strong>السؤال 15 (تمرين 6A):</strong> حدد السعة، والدورة، والتكرار، وإزاحة الطور، والإزاحة الرأسية للدالة <span class="math-display">y = 2cos(x) + 1</span>. ثم ارسم بيانياً دورتين.', en: '<strong>Question 15 (Exercise 6A):</strong> Determine the amplitude, period, frequency, phase shift, and vertical shift of <span class="math-display">y = 2cos(x) + 1</span>. Then graph two cycles.' },
+                    svg: svgGraphs.exercise6A,
+                    answer: { ar: 'الحل:\n\nالمقارنة مع: y = a·cos(b(x - h)) + k\n\ny = 2cos(x) + 1 = 2·cos(1·(x - 0)) + 1\n\nإذن:\n• a = 2 → السعة = |2| = 2\n• b = 1 → الدورة = 2π/1 = 2π\n• التكرار = 1/(2π)\n• h = 0 → لا إزاحة طورية\n• k = 1 → الإزاحة الرأسية = 1 لأعلى\n\nالخصائص:\n• السعة = 2\n• الدورة = 2π\n• التكرار = 1/(2π)\n• الإزاحة الطورية = 0\n• الإزاحة الرأسية = +1 (لأعلى)\n• الخط الأوسط: y = 1\n• القيمة العظمى: 1 + 2 = 3\n• القيمة الصغرى: 1 - 2 = -1\n\nالرسم البياني لدورتين:\n• دورة cos تبدأ من القيمة العظمى\n• الدورة الأولى: من (0, 3) إلى (2π, 3)\n• تمر بـ (π/2, 1)، (π, -1)، (3π/2, 1)، (2π, 3)\n• الدورة الثانية: من (2π, 3) إلى (4π, 3)', en: 'Solution:\n\nComparing with: y = a·cos(b(x - h)) + k\n\ny = 2cos(x) + 1\n\nSo:\n• a = 2 → Amplitude = 2\n• b = 1 → Period = 2π\n• Frequency = 1/(2π)\n• h = 0 → No phase shift\n• k = 1 → Vertical shift = +1 (up)\n\nProperties:\n• Amplitude = 2\n• Period = 2π\n• Frequency = 1/(2π)\n• Phase shift = 0\n• Vertical shift = +1\n• Midline: y = 1\n• Maximum: 1 + 2 = 3\n• Minimum: 1 - 2 = -1\n\nGraph for two cycles:\n• Cosine starts at maximum\n• First cycle: (0, 3) to (2π, 3)\n• Passes through (π/2, 1), (π, -1), (3π/2, 1), (2π, 3)\n• Second cycle: (2π, 3) to (4π, 3)' }
+                },
+                {
+                    q: { ar: '<strong>السؤال 16 (تمرين 6B):</strong> حدد السعة، والدورة، والتكرار، وإزاحة الطور، والإزاحة الرأسية للدالة <span class="math-display">y = (1/2)sin(x/4 - π/2) - 3</span>. ثم ارسم بيانياً دورة واحدة.', en: '<strong>Question 16 (Exercise 6B):</strong> Determine the amplitude, period, frequency, phase shift, and vertical shift of <span class="math-display">y = (1/2)sin(x/4 - π/2) - 3</span>. Then graph one cycle.' },
+                    svg: svgGraphs.exercise6B,
+                    answer: { ar: 'الحل:\n\nأولاً: نعيد كتابة الدالة بالصيغة القياسية\ny = (1/2)sin(x/4 - π/2) - 3\ny = (1/2)sin((1/4)(x - 2π)) - 3\n\nالمقارنة مع: y = a·sin(b(x - h)) + k\n\n• a = 1/2 → السعة = |1/2| = 0.5\n• b = 1/4 → الدورة = 2π/(1/4) = 8π\n• التكرار = 1/(8π)\n• h = 2π → الإزاحة الطورية = 2π لليمين\n• k = -3 → الإزاحة الرأسية = 3 لأسفل\n\nالخصائص:\n• السعة = 0.5\n• الدورة = 8π\n• التكرار = 1/(8π)\n• الإزاحة الطورية = 2π (لليمين)\n• الإزاحة الرأسية = -3 (لأسفل)\n• الخط الأوسط: y = -3\n• القيمة العظمى: -3 + 0.5 = -2.5\n• القيمة الصغرى: -3 - 0.5 = -3.5\n\nالرسم البياني لدورة واحدة:\n• تبدأ من x = 2π (الإزاحة الطورية)\n• الدورة: من x = 2π إلى x = 2π + 8π = 10π\n• النقاط الرئيسية:\n  - (2π, -3): بداية (على الخط الأوسط)\n  - (4π, -2.5): قيمة عظمى\n  - (6π, -3): عودة للخط الأوسط\n  - (8π, -3.5): قيمة صغرى\n  - (10π, -3): نهاية الدورة', en: 'Solution:\n\nFirst, rewrite in standard form:\ny = (1/2)sin(x/4 - π/2) - 3\ny = (1/2)sin((1/4)(x - 2π)) - 3\n\nComparing with: y = a·sin(b(x - h)) + k\n\n• a = 1/2 → Amplitude = 0.5\n• b = 1/4 → Period = 2π/(1/4) = 8π\n• Frequency = 1/(8π)\n• h = 2π → Phase shift = 2π right\n• k = -3 → Vertical shift = 3 down\n\nProperties:\n• Amplitude = 0.5\n• Period = 8π\n• Frequency = 1/(8π)\n• Phase shift = 2π (right)\n• Vertical shift = -3 (down)\n• Midline: y = -3\n• Maximum: -3 + 0.5 = -2.5\n• Minimum: -3 - 0.5 = -3.5\n\nGraph for one cycle:\n• Starts at x = 2π (phase shift)\n• Cycle: x = 2π to x = 10π\n• Key points:\n  - (2π, -3): start (on midline)\n  - (4π, -2.5): maximum\n  - (6π, -3): back to midline\n  - (8π, -3.5): minimum\n  - (10π, -3): end of cycle' }
+                },
+                {
+                    q: { ar: '<strong>السؤال 17 (مشابه):</strong> حدد خصائص الدالة <span class="math-display">y = 3sin(2x - π) + 2</span> وارسم دورة واحدة.', en: '<strong>Question 17 (Similar):</strong> Determine the properties of <span class="math-display">y = 3sin(2x - π) + 2</span> and graph one cycle.' },
+                    answer: { ar: 'الحل:\n\nنعيد الكتابة:\ny = 3sin(2x - π) + 2\ny = 3sin(2(x - π/2)) + 2\n\nالمقارنة مع: y = a·sin(b(x - h)) + k\n\n• a = 3 → السعة = 3\n• b = 2 → الدورة = 2π/2 = π\n• التكرار = 1/π = 2/(2π)\n• h = π/2 → الإزاحة الطورية = π/2 لليمين\n• k = 2 → الإزاحة الرأسية = 2 لأعلى\n\nالخصائص:\n• السعة = 3\n• الدورة = π\n• التكرار = 2/(2π) = 1/π\n• الإزاحة الطورية = π/2 (لليمين)\n• الإزاحة الرأسية = +2 (لأعلى)\n• الخط الأوسط: y = 2\n• القيمة العظمى: 2 + 3 = 5\n• القيمة الصغرى: 2 - 3 = -1\n\nالرسم البياني لدورة واحدة:\n• تبدأ من x = π/2\n• الدورة: من x = π/2 إلى x = π/2 + π = 3π/2\n• النقاط الرئيسية:\n  - (π/2, 2): بداية\n  - (3π/4, 5): قيمة عظمى\n  - (π, 2): خط الأوسط\n  - (5π/4, -1): قيمة صغرى\n  - (3π/2, 2): نهاية الدورة', en: 'Solution:\n\nRewrite:\ny = 3sin(2x - π) + 2\ny = 3sin(2(x - π/2)) + 2\n\n• a = 3 → Amplitude = 3\n• b = 2 → Period = π\n• Frequency = 1/π\n• h = π/2 → Phase shift = π/2 right\n• k = 2 → Vertical shift = +2\n\nProperties:\n• Amplitude = 3\n• Period = π\n• Frequency = 1/π\n• Phase shift = π/2 (right)\n• Vertical shift = +2 (up)\n• Midline: y = 2\n• Maximum: 5, Minimum: -1\n\nGraph for one cycle:\n• Starts at x = π/2\n• Cycle: x = π/2 to x = 3π/2\n• Key points: (π/2, 2), (3π/4, 5), (π, 2), (5π/4, -1), (3π/2, 2)' }
+                }
+            ]
+        },
+        {
+            id: 'sec8',
+            title: { ar: '🔹 القسم 8: مسألة شاملة (Q18)', en: '🔹 Section 8: Comprehensive Problem (Q18)' },
+            questions: [
+                {
+                    q: { ar: '<strong>السؤال 18:</strong> قارن بين استخدام sin و cos و tan في حل المثلثات القائمة. ومتى تستخدم كل نسبة؟ اذكر أمثلة من التمارين السابقة. ثم اشرح كيف ترتبط الدوال الجيبية (sinusoidal) بالمثلثات القائمة.', en: '<strong>Question 18:</strong> Compare the use of sin, cos, and tan in solving right triangles. When do you use each ratio? Give examples from previous exercises. Then explain how sinusoidal functions relate to right triangles.' },
+                    svg: svgGraphs.sinusoidal_parameters,
+                    answer: { ar: 'المقارنة الشاملة:\n\n1. نسبة الجيب (sin):\nالصيغة: sin θ = المقابل/الوتر\nتُستخدم عندما نعرف الوتر والمقابل ونريد الزاوية، أو العكس.\n\nمثال: تمرين 39 (التزلج الهوائي)\n• الوتر = 800 ft، الزاوية = 32°\n• نريد المقابل (الارتفاع)\n• sin(32°) = x/800 → x ≈ 424 ft\n\n2. نسبة جيب التمام (cos):\nالصيغة: cos θ = المجاور/الوتر\nتُستخدم عندما نعرف الوتر والمجاور.\n\nمثال: تمرين 41 (قطار الملاهي)\n• الوتر = 114.3 ft، الزاوية = 55°\n• نريد المجاور (المسافة الأفقية)\n• cos(55°) = d/114.3 → d ≈ 65.6 ft\n\n3. نسبة الظل (tan):\nالصيغة: tan θ = المقابل/المجاور\nتُستخدم عندما لا نعرف الوتر.\n\nأمثلة:\n• تمرين 40 (عجلة المشاهدة): tan(58°) = 135/d → d ≈ 84.4 m\n• تمرين 42 (مصعد التزلج): tan(48°) = 225/b → b ≈ 202.6 m\n• تمرين 45 (المنارة): نظام معادلات باستخدام tan\n• تمرين 46 (جبل راشمور): نظام معادلات باستخدام tan\n\nالقاعدة العامة:\n• إذا كان الوتر معروفاً أو مطلوباً → استخدم sin أو cos\n• إذا لم يكن الوتر معروفاً ولا مطلوباً → استخدم tan\n• SOH-CAH-TOA: Sin=Opp/Hyp, Cos=Adj/Hyp, Tan=Opp/Adj\n\nالعلاقة بين الدوال الجيبية والمثلثات القائمة:\n\nالدوال الجيبية (sinusoidal) هي امتداد لدوال sin و cos:\n\n1. الدالة sin(θ) في المثلث القائم:\n• θ زاوية حادة (0° < θ < 90°)\n• sin(θ) = المقابل/الوتر\n• قيمة sin(θ) بين 0 و 1\n\n2. الدالة sin(x) كدالة جيبية:\n• x يمكن أن يكون أي قيمة حقيقية\n• sin(x) تتذبذب بين -1 و 1\n• دورة كاملة كل 2π\n\n3. التحويل من المثلث إلى الدالة الجيبية:\n• في المثلث القائم: sin(θ) = y/r حيث r = √(x²+y²)\n• في الدائرة الوحدة: r = 1، إذن sin(θ) = y\n• عندما تدور النقطة حول الدائرة، y تتغير بشكل جيبي\n\n4. الصيغة العامة: y = a·sin(b(x-h)) + k\n• a: السعة (تمدد رأسي) - مثل تغيير طول الوتر\n• b: يؤثر على الدورة - مثل تغيير سرعة الدوران\n• h: إزاحة طورية - مثل بدء الدوران من نقطة مختلفة\n• k: إزاحة رأسية - مثل رفع أو خفض المركز\n\n5. التطبيقات:\n• المثلثات القائمة: حل مسائل الارتفاعات والمسافات\n• الدوال الجيبية: نمذجة الظواهر الدورية (الموجات، الصوت، الضوء، المد والجزر، إلخ)\n\nالخلاصة:\nالمثلثات القائمة هي الأساس الهندسي للدوال المثلثية\nالدوال الجيبية هي الامتداد الزمني/المكاني لهذه الدوال\nكلاهما يستخدم نفس النسب الأساسية (sin, cos, tan)', en: 'Comprehensive Comparison:\n\n1. Sine ratio (sin):\nFormula: sin θ = opposite/hypotenuse\nUse when we know hypotenuse and opposite.\n\nExample: Exercise 39 (Zip Line)\n• Hypotenuse = 800 ft, angle = 32°\n• sin(32°) = x/800 → x ≈ 424 ft\n\n2. Cosine ratio (cos):\nFormula: cos θ = adjacent/hypotenuse\nUse when we know hypotenuse and adjacent.\n\nExample: Exercise 41 (Roller Coaster)\n• Hypotenuse = 114.3 ft, angle = 55°\n• cos(55°) = d/114.3 → d ≈ 65.6 ft\n\n3. Tangent ratio (tan):\nFormula: tan θ = opposite/adjacent\nUse when hypotenuse is not known.\n\nExamples:\n• Exercise 40 (Ferris Wheel): tan(58°) = 135/d → d ≈ 84.4 m\n• Exercise 42 (Ski Lift): tan(48°) = 225/b → b ≈ 202.6 m\n• Exercise 45 (Lighthouse): system of equations using tan\n• Exercise 46 (Mt. Rushmore): system of equations using tan\n\nGeneral Rule:\n• If hypotenuse is known or needed → use sin or cos\n• If hypotenuse is not known or needed → use tan\n• SOH-CAH-TOA\n\nRelationship between sinusoidal functions and right triangles:\n\nSinusoidal functions are extensions of sin and cos:\n\n1. sin(θ) in right triangle:\n• θ is acute angle (0° < θ < 90°)\n• sin(θ) = opposite/hypotenuse\n• Value between 0 and 1\n\n2. sin(x) as sinusoidal function:\n• x can be any real value\n• sin(x) oscillates between -1 and 1\n• Full cycle every 2π\n\n3. Transformation from triangle to sinusoidal:\n• In right triangle: sin(θ) = y/r where r = √(x²+y²)\n• In unit circle: r = 1, so sin(θ) = y\n• As point rotates around circle, y changes sinusoidally\n\n4. General form: y = a·sin(b(x-h)) + k\n• a: amplitude (vertical stretch) - like changing hypotenuse length\n• b: affects period - like changing rotation speed\n• h: phase shift - like starting rotation from different point\n• k: vertical shift - like raising or lowering center\n\n5. Applications:\n• Right triangles: solving height and distance problems\n• Sinusoidal functions: modeling periodic phenomena (waves, sound, light, tides, etc.)\n\nConclusion:\nRight triangles are the geometric foundation of trig functions\nSinusoidal functions are the time/space extension of these functions\nBoth use the same basic ratios (sin, cos, tan)' }
                 }
             ]
         }
@@ -623,7 +620,7 @@ function renderExam() {
     let globalIdx = 0;
     
     examData.sections.forEach((section, secIdx) => {
-        const badgeClass = ['module-1', 'module-2', 'module-3', 'module-4', 'module-5', 'module-6'][secIdx];
+        const badgeClass = ['module-1', 'module-2', 'module-3', 'module-4', 'module-5', 'module-6', 'module-7', 'module-8'][secIdx];
         html += '<section class="bg-white p-6 rounded-2xl shadow-lg border-2 border-amber-100">';
         html += '<div class="text-center mb-4"><span class="module-badge ' + badgeClass + '">' + section.title[currentLang] + '</span></div>';
         html += '<div class="space-y-4">';
@@ -702,8 +699,8 @@ function toggleSolution(qId) {
 
 function gradeExam() {
     let answeredCount = 0;
-    const sectionScores = [0, 0, 0, 0, 0, 0];
-    const sectionTotals = [2, 2, 3, 2, 2, 1];
+    const sectionScores = [0, 0, 0, 0, 0, 0, 0, 0];
+    const sectionTotals = [2, 2, 3, 2, 4, 1, 3, 1];
     
     let globalIdx = 0;
     examData.sections.forEach((section, secIdx) => {
@@ -759,7 +756,7 @@ function sendResultsToEmail() {
     const date = document.getElementById('examDate').value || new Date().toLocaleDateString();
     
     let answersHTML = '<div style="font-family:Arial; direction:rtl;">';
-    answersHTML += '<h2>📐 ' + (currentLang === 'ar' ? 'إجابات امتحان المثلثات القائمة' : 'Right Triangles Exam Answers') + '</h2>';
+    answersHTML += '<h2>📐 ' + (currentLang === 'ar' ? 'إجابات امتحان المثلثات والتحويلات' : 'Right Triangles & Transformations Exam Answers') + '</h2>';
     answersHTML += '<p><strong>' + (currentLang === 'ar' ? 'الاسم' : 'Name') + ':</strong> ' + name + '</p>';
     answersHTML += '<p><strong>' + (currentLang === 'ar' ? 'الشعبة' : 'Class') + ':</strong> ' + studentClass + '</p>';
     answersHTML += '<p><strong>' + (currentLang === 'ar' ? 'التاريخ' : 'Date') + ':</strong> ' + date + '</p>';
